@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карьера - INDUSTRUS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                        <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                        <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                        <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                        <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                        <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                        <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                        <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                        <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                        <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                        <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                        <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='profile.html'">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="career-spiral">
+                <div class="spiral-path"></div>
+                <div class="spiral-marker marker-1"></div>
+                <div class="spiral-marker marker-2"></div>
+                <div class="spiral-marker marker-3"></div>
+                <div class="spiral-marker marker-4"></div>
+                <div class="spiral-marker marker-5"></div>
+                <div class="spiral-arrow arrow-1"></div>
+                <div class="spiral-arrow arrow-2"></div>
+                <div class="spiral-arrow arrow-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Карьера в промышленном дизайне</h1>
+            <h2>Вакансии, фриланс-проекты и инвестиции для дизайнеров</h2>
+            <p>Найдите работу мечты, присоединитесь к интересным проектам или найдите инвестиции для своего стартапа</p>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="showJobModal()">Разместить вакансию</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="career-tabs">
+                <button class="career-tab active" onclick="switchCareerTab('jobs')">Вакансии</button>
+                <button class="career-tab" onclick="switchCareerTab('freelance')">Фриланс</button>
+                <button class="career-tab" onclick="switchCareerTab('investments')">Инвестиции</button>
+            </div>
+
+            <div id="jobs-content" class="career-tab-content active">
+                <div class="content-header">
+                    <h2>Активные вакансии</h2>
+                    <div class="sort-options">
+                        <select class="sort-select" onchange="sortJobs(this.value)">
+                            <option value="newest">По дате (новые)</option>
+                            <option value="salary">По зарплате</option>
+                            <option value="company">По компании</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="jobs-grid">
+                    <div class="job-card" onclick="location.href='pages/job-detail.html?id=1'">
+                        <div class="job-header">
+                            <div class="job-company">
+                                <div class="company-logo">
+                                    <img src="icons/company.jpg" alt="ГАЗ Групп" class="company-image" style="width: 88px; height: 88px;">
+                                </div>
+                                <div class="company-info">
+                                    <div class="company-name">ГАЗ Групп</div>
+                                    <div class="job-meta">Москва • Опыт от 3 лет</div>
+                                </div>
+                            </div>
+                            <div class="job-salary">от 150 000 ₽</div>
+                        </div>
+                        <h3 class="job-title">Дизайнер автомобильных интерьеров</h3>
+                        <p class="job-description">Разработка концептов интерьеров для новых моделей автомобилей, работа с материалами и эргономикой</p>
+                        <div class="job-tags">
+                            <span class="tag">Автопром</span>
+                            <span class="tag">3D-моделирование</span>
+                            <span class="tag">Полная занятость</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); applyForJob(1)">Откликнуться</button>
+                    </div>
+
+                    <div class="job-card" onclick="location.href='pages/job-detail.html?id=2'">
+                        <div class="job-header">
+                            <div class="job-company">
+                                <div class="company-logo">
+                                    <img src="icons/company.jpg" alt="Яндекс" class="company-image" style="width: 88px; height: 88px;">
+                                </div>
+                                <div class="company-info">
+                                    <div class="company-name">Яндекс</div>
+                                    <div class="job-meta">Санкт-Петербург • Опыт от 1 года</div>
+                                </div>
+                            </div>
+                            <div class="job-salary">от 120 000 ₽</div>
+                        </div>
+                        <h3 class="job-title">Промдизайнер умных устройств</h3>
+                        <p class="job-description">Разработка дизайна для умной колонки и других IoT устройств экосистемы Яндекса</p>
+                        <div class="job-tags">
+                            <span class="tag">Электроника</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Удалённо</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); applyForJob(2)">Откликнуться</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="freelance-content" class="career-tab-content">
+                <div class="content-header">
+                    <h2>Фриланс-проекты</h2>
+                    <button class="cta-button" onclick="showProjectModal()">+ Новый проект</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" onclick="location.href='pages/project-detail.html?id=1'">
+                        <div class="project-header">
+                            <h3>Дизайн умного светильника</h3>
+                            <div class="project-budget">50 000 ₽</div>
+                        </div>
+                        <div class="project-image">
+                            <img src="icons/project-lamp.jpg" alt="Дизайн умного светильника" class="project-img">
+                        </div>
+                        <p class="project-description">Разработка дизайна для умного светильника с управлением через приложение</p>
+                        <div class="project-stats">
+                            <span class="tag">2 недели</span>
+                            <span class="tag">5 откликов</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); applyForProject(1)">Подать заявку</button>
+                    </div>
+
+                    <div class="project-card" onclick="location.href='pages/project-detail.html?id=2'">
+                        <div class="project-header">
+                            <h3>Концепт мебели для коворкинга</h3>
+                            <div class="project-budget">80 000 ₽</div>
+                        </div>
+                        <div class="project-image">
+                            <img src="icons/project-furniture.jpg" alt="Концепт мебели для коворкинга" class="project-img">
+                        </div>
+                        <p class="project-description">Создание модульной мебельной системы для современных коворкинг-пространств</p>
+                        <div class="project-stats">
+                            <span class="tag">3 недели</span>
+                            <span class="tag">12 откликов</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); applyForProject(2)">Подать заявку</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="investments-content" class="career-tab-content">
+                <div class="content-header">
+                    <h2>Инвестиционные предложения</h2>
+                    <button class="cta-button" onclick="showInvestmentModal()">+ Искать инвестора</button>
+                </div>
+
+                <div class="investments-grid">
+                    <div class="investment-card" onclick="location.href='pages/investment-detail.html?id=1'">
+                        <div class="investment-header">
+                            <h3>Эко-мебель из переработанного пластика</h3>
+                            <div class="investment-amount">2 000 000 ₽</div>
+                        </div>
+                        <div class="investment-image">
+                            <img src="icons/investment-eco.jpg" alt="Эко-мебель из переработанного пластика" class="investment-img">
+                        </div>
+                        <p class="investment-description">Стартап по производству мебели из переработанных материалов с уникальным дизайном</p>
+                        <div class="investment-stats">
+                            <span class="tag">15% доля</span>
+                            <span class="tag">3 инвестора</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); showInvestmentDetails(1)">Подробнее</button>
+                    </div>
+
+                    <div class="investment-card" onclick="location.href='pages/investment-detail.html?id=2'">
+                        <div class="investment-header">
+                            <h3>Умная система хранения вещей</h3>
+                            <div class="investment-amount">1 500 000 ₽</div>
+                        </div>
+                        <div class="investment-image">
+                            <img src="icons/investment-storage.jpg" alt="Умная система хранения вещей" class="investment-img">
+                        </div>
+                        <p class="investment-description">Разработка умной модульной системы хранения с IoT-функционалом</p>
+                        <div class="investment-stats">
+                            <span class="tag">10% доля</span>
+                            <span class="tag">2 инвестора</span>
+                        </div>
+                        <button class="cta-button" onclick="event.stopPropagation(); showInvestmentDetails(2)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('jobModal')">&times;</span>
+            <h2>Разместить вакансию</h2>
+            <form id="jobForm">
+                <div class="form-group">
+                    <label>Название вакансии *</label>
+                    <input type="text" id="jobTitle" required placeholder="Например: Дизайнер автомобильных интерьеров">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Компания *</label>
+                        <input type="text" id="jobCompany" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Зарплата</label>
+                        <input type="text" id="jobSalary" placeholder="от 150 000 ₽">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Описание вакансии *</label>
+                    <textarea id="jobDescription" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Опубликовать</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="pages/archive-objects.html">Объекты</a>
+                        <a href="pages/archive-collections.html">Коллекции</a>
+                        <a href="pages/archive-authors.html">Авторы</a>
+                        <a href="pages/archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="pages/community-forum.html">Форум</a>
+                        <a href="pages/community-projects.html">Проекты</a>
+                        <a href="pages/community-experts.html">Эксперты</a>
+                        <a href="pages/community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="events.html">События</a>
+                        <a href="career.html">Карьера</a>
+                        <a href="pages/virtual-tour.html">Виртуальный тур</a>
+                        <a href="pages/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function switchCareerTab(tabName) {
+            document.querySelectorAll('.career-tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.career-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName + '-content').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function showJobModal() {
+            showModal('jobModal');
+        }
+
+        function applyForJob(jobId) {
+            showNotification('Заявка отправлена!', 'success');
+        }
+
+        function applyForProject(projectId) {
+            showNotification('Заявка на проект отправлена!', 'success');
+        }
+
+        function showInvestmentDetails(investmentId) {
+            showNotification('Открыты детали инвестиции!', 'success');
+        }
+
+        document.getElementById('jobForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showNotification('Вакансия опубликована!', 'success');
+            closeModal('jobModal');
+        });
+
+        // Обработчики для изображений на странице карьеры
+        function initCareerImageHandlers() {
+            // Для логотипов компаний
+            const companyImages = document.querySelectorAll('.company-image');
+            companyImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить логотип компании:', this.src);
+                    this.style.display = 'none';
+                    const parent = this.closest('.company-logo');
+                    if (parent) {
+                        parent.innerHTML = '🏢';
+                        parent.style.fontSize = '24px';
+                        parent.style.display = 'flex';
+                        parent.style.alignItems = 'center';
+                        parent.style.justifyContent = 'center';
+                    }
+                });
+            });
+
+            // Для изображений проектов
+            const projectImages = document.querySelectorAll('.project-img');
+            projectImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение проекта:', this.src);
+                    this.style.display = 'none';
+                });
+            });
+
+            // Для изображений инвестиций
+            const investmentImages = document.querySelectorAll('.investment-img');
+            investmentImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение инвестиции:', this.src);
+                    this.style.display = 'none';
+                });
+            });
+        }
+
+        // Вызовите функцию после загрузки DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            initCareerImageHandlers();
+        });
+    </script>
+</body>
+</html>

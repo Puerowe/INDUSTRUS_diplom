@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События - Промдизайн.ру</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Резервные стили на случай, если JS не загрузится */
+        .header {
+            height: 70px !important;
+            position: fixed !important;
+            top: 0 !important;
+            width: 100% !important;
+            z-index: 1000 !important;
+        }
+        .hero, .features, .archive-main {
+            margin-top: 70px !important;
+        }
+        body {
+            padding-top: 70px !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                        <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                        <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                        <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                        <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                        <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                        <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                        <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                        <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                        <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                        <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                        <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='profile.html'">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                 <!-- Верхние угловые круги -->
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <!-- Нижние угловые круги -->
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>События сообщества</h1>
+            <h2>Вебинары, выставки, конкурсы и встречи для профессионалов</h2>
+            <p>Присоединяйтесь к мероприятиям, расширяйте знания и находите новые возможности для collaboration</p>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="showEventForm()">+ Создать событие</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="events-filter">
+                <button class="filter-btn active" onclick="filterEvents('all')">Все события</button>
+                <button class="filter-btn" onclick="filterEvents('webinar')">Вебинары</button>
+                <button class="filter-btn" onclick="filterEvents('exhibition')">Выставки</button>
+                <button class="filter-btn" onclick="filterEvents('competition')">Конкурсы</button>
+                <button class="filter-btn" onclick="filterEvents('conference')">Конференции</button>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card webinar-event" onclick="location.href='pages/event-detail.html?type=webinar&id=1'">
+                    <div class="event-badge webinar">Вебинар</div>
+                    <div class="feature-icon">
+                        <img src="icons/vebinar.jpg" alt="Инновации в автомобильном дизайне" class="feature-image">
+                    </div>
+                    <h3>Инновации в автомобильном дизайне</h3>
+                    <p>Обсуждение последних тенденций в дизайне автомобилей, новые материалы и технологии с экспертами ГАЗ</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> 21 ноября, 19:00</span>
+                        <span><img src="icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img"> 147 участников</span>
+                        <span><img src="icons/speaker.jpg" alt="Новые материалы" class="discussion-img"> Петров И.В. (ГАЗ)</span>
+                    </div>
+                </div>
+
+                <div class="feature-card exhibition-event" onclick="location.href='pages/event-detail.html?type=exhibition&id=2'">
+                    <div class="event-badge exhibition">Выставка</div>
+                    <div class="feature-icon">
+                        <img src="icons/even_vistav.jpg" alt="Выставка Дизайн-революция 2024" class="feature-image">
+                    </div>
+                    <h3>Выставка "Дизайн-революция 2024"</h3>
+                    <p>Крупнейшая выставка промышленного дизайна с участием ведущих компаний и дизайнеров</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> 25-30 ноября</span>
+                        <span><img src="icons/company.jpg" alt="Новые материалы" class="discussion-img"> 45 компаний</span>
+                        <span><img src="icons/addres.jpg" alt="Новые материалы" class="discussion-img"> Москва, Арт-центр</span>
+                    </div>
+                </div>
+
+                <div class="feature-card competition-event" onclick="location.href='pages/event-detail.html?type=competition&id=3'">
+                    <div class="event-badge competition">Конкурс</div>
+                    <div class="feature-icon">
+                        <img src="icons/konkurs.jpg" alt="Конкурс молодых дизайнеров" class="feature-image">
+                    </div>
+                    <h3>Конкурс "Лучший молодой дизайнер 2024"</h3>
+                    <p>Ежегодный конкурс для молодых дизайнеров. Тема: "Устойчивый дизайн для городов будущего"</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> До 30 ноября</span>
+                        <span><img src="icons/priz_fond.jpg" alt="Новые материалы" class="discussion-img"> 500,000 ₽ призовой фонд</span>
+                        <span><img src="icons/project.jpg" alt="Новые материалы" class="discussion-img"> 89 проектов</span>
+                    </div>
+                </div>
+
+                <div class="feature-card conference-event" onclick="location.href='pages/event-detail.html?type=conference&id=4'">
+                    <div class="event-badge conference">Конференция</div>
+                    <div class="feature-icon">
+                        <img src="icons/conference.jpg" alt="Конференция ПРОДИЗАЙН" class="feature-image">
+                    </div>
+                    <h3>PROДИЗАЙН: Стратегия, Экономика, Результат</h3>
+                    <p>Практическая конференция о бизнес-аспектах дизайна. Кейсы от ведущих российских компаний</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> 15 декабря</span>
+                        <span><img src="icons/speaker.jpg" alt="Новые материалы" class="discussion-img"> 15 спикеров</span>
+                        <span><img src="icons/addres.jpg" alt="Новые материалы" class="discussion-img"> Онлайн</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Прошедшие события -->
+            <div class="past-events">
+                <h2 class="section-title">Прошедшие события</h2>
+                <div class="objects-grid">
+                    <div class="object-card" onclick="location.href='pages/event-detail.html?type=conference&id=5'">
+                        <div class="object-image">
+                            <img src="icons/diz_misl.jpg" alt="Конференция Дизайн-мышление 2024" class="object-img">
+                            <div class="image-placeholder">Конференция "Дизайн-мышление 2024"</div>
+                        </div>
+                        <div class="object-info">
+                            <div class="object-name">Конференция "Дизайн-мышление 2024"</div>
+                            <div class="object-meta">15 октября 2024</div>
+                            <div class="object-description">Итоги крупнейшей конференции о дизайн-мышлении в бизнесе</div>
+                            <div class="object-tags">
+                                <span class="tag">245 фото</span>
+                                <span class="tag">15 видео</span>
+                                <span class="tag">320 участников</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-card" onclick="location.href='pages/event-detail.html?type=workshop&id=6'">
+                        <div class="object-image">
+                            <img src="icons/workshop.jpg" alt="Воркшоп по 3D-моделированию" class="object-img">
+                            <div class="image-placeholder">Воркшоп по 3D-моделированию</div>
+                        </div>
+                        <div class="object-info">
+                            <div class="object-name">Воркшоп по 3D-моделированию</div>
+                            <div class="object-meta">8 октября 2024</div>
+                            <div class="object-description">Практический воркшоп по созданию 3D-моделей для промышленного дизайна</div>
+                            <div class="object-tags">
+                                <span class="tag">189 фото</span>
+                                <span class="tag">45 работ</span>
+                                <span class="tag">48 участников</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно создания события -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEventForm()">&times;</span>
+            <h2>Создать новое событие</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label>Название события *</label>
+                    <input type="text" id="eventTitle" required placeholder="Например: Вебинар по автомобильному дизайну">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Тип события *</label>
+                        <select id="eventType" required>
+                            <option value="">Выберите тип</option>
+                            <option value="webinar">🎤 Вебинар</option>
+                            <option value="exhibition">📍 Выставка</option>
+                            <option value="competition">🏆 Конкурс</option>
+                            <option value="conference">💼 Конференция</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Дата и время *</label>
+                        <input type="datetime-local" id="eventDateTime" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Описание события *</label>
+                    <textarea id="eventDescription" rows="4" required placeholder="Подробное описание вашего события..."></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Создать событие</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="pages/archive-objects.html">Объекты</a>
+                        <a href="pages/archive-collections.html">Коллекции</a>
+                        <a href="pages/archive-authors.html">Авторы</a>
+                        <a href="pages/archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="pages/community-forum.html">Форум</a>
+                        <a href="pages/community-projects.html">Проекты</a>
+                        <a href="pages/community-experts.html">Эксперты</a>
+                        <a href="pages/community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="events.html">События</a>
+                        <a href="career.html">Карьера</a>
+                        <a href="pages/virtual-tour.html">Виртуальный тур</a>
+                        <a href="pages/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterEvents(filter) {
+            const cards = document.querySelectorAll('.feature-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+        
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        
+            cards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter + '-event')) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function showEventForm() {
+            document.getElementById('eventModal').style.display = 'block';
+        }
+
+        function closeEventForm() {
+            document.getElementById('eventModal').style.display = 'none';
+        }
+
+        // Обработчик формы события
+        document.getElementById('eventForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+        
+            const eventData = {
+                title: document.getElementById('eventTitle').value,
+                type: document.getElementById('eventType').value,
+                datetime: document.getElementById('eventDateTime').value,
+                description: document.getElementById('eventDescription').value
+            };
+        
+            // Сохраняем в localStorage
+            saveFormData('event_submission', eventData);
+        
+            showNotification('Событие успешно создано!', 'success');
+            closeEventForm();
+            this.reset();
+        });
+
+        // Закрытие модального окна
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('eventModal');
+            if (event.target === modal) {
+                closeEventForm();
+            }
+        });
+
+        function showNotification(message, type = 'info') {
+            // Создаем уведомление
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            `;
+            notification.textContent = message;
+    
+            document.body.appendChild(notification);
+    
+            // Автоудаление через 3 секунды
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Обработчики для изображений на странице событий
+        function initEventImageHandlers() {
+            // Для feature-изображений
+            const featureImages = document.querySelectorAll('.feature-image');
+            featureImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение события:', this.src);
+                    this.style.display = 'none';
+                    const parent = this.closest('.feature-icon');
+                    if (parent) {
+                        const eventType = parent.closest('.feature-card').classList[1];
+                        let fallbackIcon = '📅';
+                        if (eventType.includes('webinar')) fallbackIcon = '🎤';
+                        else if (eventType.includes('exhibition')) fallbackIcon = '📍';
+                        else if (eventType.includes('competition')) fallbackIcon = '🏆';
+                        else if (eventType.includes('conference')) fallbackIcon = '💼';
+                        
+                        parent.innerHTML = fallbackIcon;
+                        parent.style.fontSize = '32px';
+                        parent.style.display = 'flex';
+                        parent.style.alignItems = 'center';
+                        parent.style.justifyContent = 'center';
+                    }
+                });
+            });
+
+            // Для object-изображений (прошедшие события)
+            const objectImages = document.querySelectorAll('.object-img');
+            objectImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение прошедшего события:', this.src);
+                    this.style.display = 'none';
+                    const placeholder = this.nextElementSibling;
+                    if (placeholder && placeholder.classList.contains('image-placeholder')) {
+                        placeholder.style.position = 'relative';
+                        placeholder.style.background = 'linear-gradient(135deg, var(--aluminum) 0%, var(--light-gray) 100%)';
+                        placeholder.style.height = '100%';
+                        placeholder.style.display = 'flex';
+                        placeholder.style.alignItems = 'center';
+                        placeholder.style.justifyContent = 'center';
+                        placeholder.style.fontSize = '16px';
+                    }
+                });
+            });
+        }
+
+        // Вызовите функцию после загрузки DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            initEventImageHandlers();
+        });
+    </script>
+</body>
+</html>

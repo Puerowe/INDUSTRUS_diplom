@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщество - Промдизайн.ру</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                        <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                        <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                        <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                        <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                        <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                        <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                        <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                        <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                        <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                        <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                        <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='profile.html'">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="community-collab">
+                <div class="collab-circle circle-1"></div>
+                <div class="collab-circle circle-2"></div>
+                <div class="collab-circle circle-3"></div>
+                <div class="collab-circle circle-4"></div>
+                <div class="collab-line line-1"></div>
+                <div class="collab-line line-2"></div>
+                <div class="collab-line line-3"></div>
+                <div class="collab-line line-4"></div>
+                <div class="collab-line line-5"></div>
+                <div class="collab-line line-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Сообщество дизайнеров</h1>
+            <h2>5,000+ специалистов, обсуждения, проекты и коллаборации</h2>
+            <p>Присоединяйтесь к профессиональному сообществу, делитесь опытом и находите партнеров для проектов</p>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="showNewPostModal()">Новый пост</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="community-layout">
+                <!-- Activity Feed -->
+                <div class="activity-feed">
+                    <div class="content-header">
+                        <h2>Лента активностей</h2>
+                        <button class="cta-button" onclick="showNewPostModal()">+ Новый пост</button>
+                    </div>
+
+                    <div class="activity-list">
+                        <!-- Статья в блоге -->
+                        <div class="activity-item" onclick="location.href='pages/blog-detail.html?id=1'">
+                            <div class="activity-avatar" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=1'">
+                                <img src="icons/lich_cab.jpg" alt="Иван Петров" class="profile-image">
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-header">
+                                    <span class="activity-user" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=1'">Иван Петров</span>
+                                    <span class="activity-time">2 часа назад</span>
+                                </div>
+                                <div class="activity-text">Опубликовал статью "Тенденции автомобильного дизайна 2024"</div>
+                                <div class="activity-actions">
+                                    <button class="action-btn" onclick="event.stopPropagation(); likePost(1)"><img src="icons/like.jpg" alt="Новые материалы" class="discussion-img"> 12</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); commentOnPost(1)"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 3</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); sharePost(1)"><img src="icons/share.jpg" alt="Новые материалы" class="discussion-img"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Обсуждение на форуме -->
+                        <div class="activity-item" onclick="location.href='pages/discussion-detail.html?id=2'">
+                            <div class="activity-avatar" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=2'">
+                                <img src="icons/lich_cab.jpg" alt="Мария Сидорова" class="profile-image">
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-header">
+                                    <span class="activity-user" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=2'">Мария Сидорова</span>
+                                    <span class="activity-time">5 часов назад</span>
+                                </div>
+                                <div class="activity-text">Прокомментировала тему "Будущее мебельного дизайна в России"</div>
+                                <div class="activity-actions">
+                                    <button class="action-btn" onclick="event.stopPropagation(); likePost(2)"><img src="icons/like.jpg" alt="Новые материалы" class="discussion-img"> 8</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); commentOnPost(2)"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 7</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); sharePost(2)"><img src="icons/share.jpg" alt="Новые материалы" class="discussion-img"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проект -->
+                        <div class="activity-item" onclick="location.href='pages/project-detail.html?id=3'">
+                            <div class="activity-avatar" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=3'">
+                                <img src="icons/lich_cab.jpg" alt="Алексей Козлов" class="profile-image">
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-header">
+                                    <span class="activity-user" onclick="event.stopPropagation(); location.href='pages/expert-detail.html?id=3'">Алексей Козлов</span>
+                                    <span class="activity-time">Вчера</span>
+                                </div>
+                                <div class="activity-text">Создал новый проект "Концепт электромобиля для городской среды"</div>
+                                <div class="activity-actions">
+                                    <button class="action-btn" onclick="event.stopPropagation(); likePost(3)"><img src="icons/like.jpg" alt="Новые материалы" class="discussion-img"> 24</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); commentOnPost(3)"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 5</button>
+                                    <button class="action-btn" onclick="event.stopPropagation(); sharePost(3)"><img src="icons/share.jpg" alt="Новые материалы" class="discussion-img"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="community-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Популярные обсуждения</h3>
+                        <div class="discussion-list">
+                            <div class="discussion-item" onclick="location.href='pages/discussion-detail.html?id=1'">
+                                <div class="discussion-image">
+                                    <img src="icons/prof_com.jpg" alt="Новые материалы" class="discussion-img" style="width: 74px; height: 74px;">
+                                </div>
+                                <div class="discussion-info">
+                                    <div class="discussion-title">Новые материалы в промдизайне</div>
+                                    <div class="discussion-stats"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 45</div>
+                                </div>
+                            </div>
+                            <div class="discussion-item" onclick="location.href='pages/discussion-detail.html?id=2'">
+                                <div class="discussion-image">
+                                    <img src="icons/even_vistav.jpg" alt="Выставка" class="discussion-img" style="width: 74px; height: 74px;">
+                                </div>
+                                <div class="discussion-info">
+                                    <div class="discussion-title">Выставка "Дизайн 2024"</div>
+                                    <div class="discussion-stats"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 32</div>
+                                </div>
+                            </div>
+                            <div class="discussion-item" onclick="location.href='pages/discussion-detail.html?id=3'">
+                                <div class="discussion-image">
+                                    <img src="icons/project.jpg" alt="Образование" class="discussion-img" style="width: 74px; height: 74px;">
+                                </div>
+                                <div class="discussion-info">
+                                    <div class="discussion-title">Проблемы дизайн-образования</div>
+                                    <div class="discussion-stats"><img src="icons/comments.jpg" alt="Новые материалы" class="discussion-img"> 28</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Рекомендуемые эксперты</h3>
+                        <div class="experts-grid">
+                            <div class="expert-card" onclick="location.href='pages/expert-detail.html?id=5'">
+                                <div class="expert-avatar">
+                                    <img src="icons/lich_cab.jpg" alt="Иванов А." class="profile-image">
+                                </div>
+                                <div class="expert-info">
+                                    <div class="expert-name">Иванов А.</div>
+                                    <div class="expert-spec">Транспортный дизайн</div>
+                                </div>
+                                <button class="follow-btn" onclick="event.stopPropagation(); followExpert(1)">+</button>
+                            </div>
+                            <div class="expert-card" onclick="location.href='pages/expert-detail.html?id=2'">
+                                <div class="expert-avatar">
+                                    <img src="icons/lich_cab.jpg" alt="Петрова М." class="profile-image">
+                                </div>
+                                <div class="expert-info">
+                                    <div class="expert-name">Петрова М.</div>
+                                    <div class="expert-spec">Дизайн мебели</div>
+                                </div>
+                                <button class="follow-btn" onclick="event.stopPropagation(); followExpert(2)">+</button>
+                            </div>
+                            <div class="expert-card" onclick="location.href='pages/expert-detail.html?id=4'">
+                                <div class="expert-avatar">
+                                    <img src="icons/lich_cab.jpg" alt="Сидоров П." class="profile-image">
+                                </div>
+                                <div class="expert-info">
+                                    <div class="expert-name">Сидоров П.</div>
+                                    <div class="expert-spec">Промышленный дизайн</div>
+                                </div>
+                                <button class="follow-btn" onclick="event.stopPropagation(); followExpert(3)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Активные проекты</h3>
+                        <div class="projects-list">
+                            <div class="project-item" onclick="location.href='pages/project-detail.html?id=1'">
+                                <div class="project-image">
+                                    <img src="icons/project2.jpg" alt="Эко-мебель" class="project-img" style="width: 74px; height: 74px;">
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-name">Эко-мебель для города</div>
+                                    <div class="project-stats"><img src="icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img"> 15 участников</div>
+                                </div>
+                            </div>
+                            <div class="project-item" onclick="location.href='pages/project-detail.html?id=2'">
+                                <div class="project-image">
+                                    <img src="icons/project2.jpg" alt="Умный дом" class="project-img" style="width: 74px; height: 74px;">
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-name">Умный дом будущего</div>
+                                    <div class="project-stats"><img src="icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img"> 23 участника</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for new post -->
+    <div id="newPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('newPostModal')">&times;</span>
+            <h2>Создать новый пост</h2>
+            <form id="newPostForm">
+                <div class="form-group">
+                    <label>Заголовок</label>
+                    <input type="text" id="postTitle" required placeholder="Введите заголовок поста">
+                </div>
+                <div class="form-group">
+                    <label>Содержание</label>
+                    <textarea id="postContent" rows="6" required placeholder="Напишите ваш пост..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Тэги</label>
+                    <input type="text" id="postTags" placeholder="Добавьте тэги через запятую">
+                </div>
+                <button type="submit" class="cta-button">Опубликовать</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="pages/archive-objects.html">Объекты</a>
+                        <a href="pages/archive-collections.html">Коллекции</a>
+                        <a href="pages/archive-authors.html">Авторы</a>
+                        <a href="pages/archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="pages/community-forum.html">Форум</a>
+                        <a href="pages/community-projects.html">Проекты</a>
+                        <a href="pages/community-experts.html">Эксперты</a>
+                        <a href="pages/community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="events.html">События</a>
+                        <a href="career.html">Карьера</a>
+                        <a href="pages/virtual-tour.html">Виртуальный тур</a>
+                        <a href="pages/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showNewPostModal() {
+            showModal('newPostModal');
+        }
+
+        function likePost(postId) {
+            showNotification('Лайк добавлен!', 'success');
+        }
+
+        function commentOnPost(postId) {
+            const comment = prompt('Введите ваш комментарий:');
+            if (comment) {
+                showNotification('Комментарий добавлен!', 'success');
+            }
+        }
+
+        function sharePost(postId) {
+            showNotification('Ссылка скопирована в буфер обмена', 'info');
+        }
+
+        function followExpert(expertId) {
+            const btn = event.target;
+            btn.textContent = '✓';
+            btn.disabled = true;
+            showNotification('Вы подписались на эксперта!', 'success');
+        }
+
+        document.getElementById('newPostModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal('newPostModal');
+            }
+        });
+
+        document.getElementById('newPostForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showNotification('Пост успешно опубликован!', 'success');
+            closeModal('newPostModal');
+        });
+
+        // Обработчики для изображений на странице сообщества
+        function initCommunityImageHandlers() {
+            // Для аватаров пользователей
+            const profileImages = document.querySelectorAll('.activity-avatar .profile-image');
+            profileImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить аватар:', this.src);
+                    this.style.display = 'none';
+                    const parent = this.parentElement;
+                    parent.innerHTML = '👤';
+                    parent.style.fontSize = '24px';
+                    parent.style.display = 'flex';
+                    parent.style.alignItems = 'center';
+                    parent.style.justifyContent = 'center';
+                });
+            });
+
+            // Для изображений обсуждений
+            const discussionImages = document.querySelectorAll('.discussion-img');
+            discussionImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение обсуждения:', this.src);
+                    this.style.display = 'none';
+                });
+            });
+
+            // Для аватаров экспертов
+            const expertImages = document.querySelectorAll('.expert-avatar .profile-image');
+            expertImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить аватар эксперта:', this.src);
+                    this.style.display = 'none';
+                    const parent = this.parentElement;
+                    parent.innerHTML = '👨‍🎓';
+                    parent.style.fontSize = '20px';
+                    parent.style.display = 'flex';
+                    parent.style.alignItems = 'center';
+                    parent.style.justifyContent = 'center';
+                });
+            });
+
+            // Для изображений проектов
+            const projectImages = document.querySelectorAll('.project-img');
+            projectImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Не удалось загрузить изображение проекта:', this.src);
+                    this.style.display = 'none';
+                });
+            });
+        }
+
+        // Вызовите функцию после загрузки DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            initCommunityImageHandlers();
+        });
+    </script>
+</body>
+</html>

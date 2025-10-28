@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - Промдизайн.ру</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                        <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                        <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                        <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                        <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                        <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                        <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                        <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                        <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                        <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                        <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                        <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='profile.html'">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="profile-circles">
+                <div class="concentric-circle circle-1"></div>
+                <div class="concentric-circle circle-2"></div>
+                <div class="concentric-circle circle-3"></div>
+                <div class="profile-center-dot"></div>
+                <div class="profile-line line-vertical"></div>
+                <div class="profile-line line-horizontal"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Личный кабинет</h1>
+            <h2>Управляйте вашим профилем, проектами и настройками</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Боковая панель профиля -->
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <div class="avatar-image">
+                                <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image" >
+                            </div>
+                            <button class="edit-avatar-btn">✏️</button>
+                        </div>
+                        <h3 class="profile-name">Иван Петров</h3>
+                        <p class="profile-title">Промышленный дизайнер</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <div class="stat-number">24</div>
+                                <div class="stat-label">Проекта</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">127</div>
+                                <div class="stat-label">Лайков</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">45</div>
+                                <div class="stat-label">Подписчиков</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-menu">
+                        <button class="menu-item active" onclick="switchProfileTab('profile')">
+                            <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image" style="width: 50px; height: 50px;"> Профиль
+                        </button>
+                        <button class="menu-item" onclick="switchProfileTab('projects')">
+                            <img src="icons/project2.jpg" alt="Личный кабинет" class="feature-image" style="width: 50px; height: 50px;"> Мои проекты
+                        </button>
+                        <button class="menu-item" onclick="switchProfileTab('activity')">
+                            <img src="icons/archive.jpg" alt="Личный кабинет" class="feature-image" style="width: 50px; height: 50px;"> Активность
+                        </button>
+                        <button class="menu-item" onclick="switchProfileTab('settings')">
+                            <img src="icons/shester.jpg" alt="Личный кабинет" class="feature-image" style="width: 50px; height: 50px;"> Настройки
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Основной контент -->
+                <div class="profile-content">
+                    <div id="profile-tab" class="profile-tab-content active">
+                        <div class="content-header">
+                            <h2>Основная информация</h2>
+                            <button class="cta-button" onclick="editProfile()">Редактировать</button>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-group">
+                                <label>Имя и фамилия</label>
+                                <div class="info-value">Иван Петров</div>
+                            </div>
+                            <div class="info-group">
+                                <label>Специализация</label>
+                                <div class="info-value">Промышленный дизайн, Транспортный дизайн</div>
+                            </div>
+                            <div class="info-group">
+                                <label>Email</label>
+                                <div class="info-value">ivan.petrov@example.com</div>
+                            </div>
+                            <div class="info-group">
+                                <label>Телефон</label>
+                                <div class="info-value">+7 (999) 123-45-67</div>
+                            </div>
+                            <div class="info-group full-width">
+                                <label>О себе</label>
+                                <div class="info-value">Промышленный дизайнер с 8-летним опытом. Специализируюсь на транспортном дизайне и бытовой технике. Участник международных выставок и конкурсов.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="projects-tab" class="profile-tab-content">
+                        <div class="content-header">
+                            <h2>Мои проекты</h2>
+                            <button class="cta-button" onclick="showProjectModal()">+ Новый проект</button>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Проекты пользователя -->
+                        </div>
+                    </div>
+
+                    <div id="activity-tab" class="profile-tab-content">
+                        <div class="content-header">
+                            <h2>История активности</h2>
+                        </div>
+                        <div class="activity-list">
+                            <!-- Активность пользователя -->
+                        </div>
+                    </div>
+
+                    <div id="settings-tab" class="profile-tab-content">
+                        <div class="content-header">
+                            <h2>Настройки аккаунта</h2>
+                        </div>
+                        <div class="settings-form">
+                            <!-- Форма настроек -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Промдизайн.ру</h4>
+                    <p>Цифровая платформа для изучения и популяризации промышленного дизайна в России</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Главная</a>
+                        <a href="archive.html">Архив</a>
+                        <a href="community.html">Сообщество</a>
+                        <a href="career.html">Карьера</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2024 Цифровая платформа промышленного дизайна России. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function switchProfileTab(tabName) {
+            document.querySelectorAll('.profile-tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function editProfile() {
+            showNotification('Редактирование профиля', 'info');
+        }
+    </script>
+</body>
+</html>

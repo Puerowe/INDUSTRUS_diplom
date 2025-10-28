@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальный тур - INDUSTRUS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Обновленный Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                        <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                        <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                        <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                        <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                        <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                        <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                        <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                        <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                        <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                        <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                        <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='profile.html'">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="portal-arcade">
+                <div class="portal-arch arch-1"></div>
+                <div class="portal-arch arch-2"></div>
+                <div class="portal-arch arch-3"></div>
+                <div class="vanishing-point"></div>
+                <div class="portal-glow"></div>
+                <div class="industrial-element elem-1"></div>
+                <div class="industrial-element elem-2"></div>
+                <div class="industrial-element elem-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Виртуальный тур</h1>
+            <h2>Исследуйте музей промышленного дизайна в 3D</h2>
+            <p>Погрузитесь в интерактивную экскурсию по лучшим образцам промышленного дизайна от советской эпохи до современности</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Возможности виртуального тура</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="icons/3d_view.jpg" alt="3D просмотр" class="feature-image">
+                    </div>
+                    <h3>3D-просмотр объектов</h3>
+                    <p>Исследуйте объекты со всех сторон в интерактивном 3D-режиме с возможностью приближения и детального изучения</p>
+                    <div class="feature-stats">
+                        <span>360° обзор</span>
+                        <span>Детализация</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="icons/virtual_walk.jpg" alt="Виртуальная прогулка" class="feature-image">
+                    </div>
+                    <h3>Виртуальная прогулка</h3>
+                    <p>Прогуляйтесь по виртуальным залам музея, как если бы вы находились там лично</p>
+                    <div class="feature-stats">
+                        <span>Иммерсивный опыт</span>
+                        <span>Навигация</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="icons/ar_view.jpg" alt="AR просмотр" class="feature-image">
+                    </div>
+                    <h3>AR-режим</h3>
+                    <p>Примерьте объекты в своем пространстве с помощью технологии дополненной реальности</p>
+                    <div class="feature-stats">
+                        <span>Дополненная реальность</span>
+                        <span>Интерактив</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content" style="margin-top: 60px;">
+                <div style="text-align: center; padding: 60px 20px;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🚧</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--graphite);">Раздел в разработке</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px; line-height: 1.6;">
+                        Виртуальный тур скоро будет доступен. Мы работаем над созданием immersive 3D-опыта для полного погружения в мир промышленного дизайна.
+                    </p>
+                    <button class="cta-button" onclick="location.href='archive.html'" style="margin-top: 30px;">
+                        Исследовать архив
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="pages/archive-objects.html">Объекты</a>
+                        <a href="pages/archive-collections.html">Коллекции</a>
+                        <a href="pages/archive-authors.html">Авторы</a>
+                        <a href="pages/archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="pages/community-forum.html">Форум</a>
+                        <a href="pages/community-projects.html">Проекты</a>
+                        <a href="pages/community-experts.html">Эксперты</a>
+                        <a href="pages/community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="events.html">События</a>
+                        <a href="career.html">Карьера</a>
+                        <a href="virtual-tour.html">Виртуальный тур</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промдизайн.ру - Цифровая платформа промышленного дизайна</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Обновленный Header -->
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html" class="logo">
+            <span class="logo-text">INDUSTRUS</span>
+        </a>
+        <nav class="nav">
+            <div class="nav-item dropdown">
+                <a href="events.html" class="nav-link" data-translate="events">События</a>
+                <div class="dropdown-menu">
+                    <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
+                    <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
+                    <a href="pages/events-competitions.html" data-translate="competitions">Конкурсы</a>
+                    <a href="pages/events-conferences.html" data-translate="conferences">Конференции</a>
+                </div>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item dropdown">
+                <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                <div class="dropdown-menu">
+                    <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
+                    <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
+                    <a href="pages/archive-authors.html" data-translate="authors">Авторы</a>
+                    <a href="pages/archive-timeline.html" data-translate="timeline">Таймлайн</a>
+                </div>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item dropdown">
+                <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                <div class="dropdown-menu">
+                    <a href="pages/community-forum.html" data-translate="forum">Форум</a>
+                    <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
+                    <a href="pages/community-experts.html" data-translate="experts">Эксперты</a>
+                    <a href="pages/community-blogs.html" data-translate="blogs">Блоги</a>
+                </div>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item dropdown">
+                <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                <div class="dropdown-menu">
+                    <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
+                    <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
+                    <a href="pages/career-investments.html" data-translate="investments">Инвестиции</a>
+                </div>
+            </div>
+            <div class="nav-divider"></div>
+            <a href="contacts.html" class="nav-link" data-translate="contacts">Контакты</a>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="language-switcher">
+                <button class="language-btn" onclick="toggleLanguage()">RU</button>
+            </div>
+            <div class="user-profile" onclick="location.href='profile.html'">
+                <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-squares">
+                <div class="square square-1"></div>
+                <div class="square square-2"></div>
+                <div class="square square-3"></div>
+                <div class="square square-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 data-translate="virtual_museum">Виртуальный музей промышленного дизайна</h1>
+            <h2 data-translate="museum_description">Исследуйте наследие российского дизайна от советской эпохи до современности</h2>
+            <p data-translate="objects_count">Более 10,000 объектов, архивные материалы и современные проекты в едином цифровом пространстве</p>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="location.href='archive.html'" data-translate="explore_archive">
+                    Исследовать архив
+                </button>
+                <button class="cta-button secondary" onclick="location.href='virtual-tour.html'" data-translate="virtual_tour">
+                    Виртуальный тур
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features animated-section-bg">
+        <div class="container">
+            <h2 class="section-title content-appear" data-translate="platform_features">Возможности платформы</h2>
+            <div class="features-grid">
+                <div class="feature-card content-appear delay-1" onclick="location.href='archive.html'">
+                    <div class="feature-icon">
+                        <img src="icons/archive.jpg" alt="Цифровой архив" class="feature-image">
+                    </div>
+                    <h3 data-translate="digital_archive">Цифровой архив</h3>
+                    <p>10,000+ объектов промышленного дизайна с подробными описаниями, чертежами и историческими справками</p>
+                    <div class="feature-stats">
+                        <span class="counter-animated" data-count="15000">15,000+ фото</span>
+                        <span class="counter-animated" data-count="5000">5,000+ чертежей</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='community.html'">
+                    <div class="feature-icon">
+                        <img src="icons/prof_com.jpg" alt="Профессиональное сообщество" class="feature-image">
+                    </div>
+                    <h3>Профессиональное сообщество</h3>
+                    <p>Присоединяйтесь к 5,000+ дизайнеров, инженеров и исследователей для обмена опытом и коллабораций</p>
+                    <div class="feature-stats">
+                        <span>127 онлайн</span>
+                        <span>45 стран</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='events.html'">
+                    <div class="feature-icon">
+                        <img src="icons/even_vistav.jpg" alt="События и выставки" class="feature-image">
+                    </div>
+                    <h3>События и выставки</h3>
+                    <p>Участвуйте в вебинарах, выставках и конференциях. Будьте в курсе последних тенденций индустрии</p>
+                    <div class="feature-stats">
+                        <span>15+ мероприятий</span>
+                        <span>5 активных конкурсов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="archive-preview">
+        <div class="container">
+            <h2 class="section-title" data-translate="history_timeline">История промышленного дизайна в России</h2>
+            
+            <div class="timeline">
+                <div class="timeline-year" onclick="location.href='pages/archive-timeline.html?decade=1960'">
+                    <div class="timeline-marker">1962</div>
+                    <div style="font-size: 17px; line-height: 1.2;">Основание ВНИИТЭ</div>
+                </div>
+                <div class="timeline-year" onclick="location.href='pages/archive-timeline.html?decade=1970'">
+                    <div class="timeline-marker">1975</div>
+                    <div style="font-size: 17px; line-height: 1.2;">Конгресс ИКСИД</div>
+                </div>
+                <div class="timeline-year" onclick="location.href='pages/archive-timeline.html?decade=1990'">
+                    <div class="timeline-marker">1991</div>
+                    <div style="font-size: 17px; line-height: 1.2;">Новая эра</div>
+                </div>
+                <div class="timeline-year" onclick="location.href='pages/archive-timeline.html?decade=2020'">
+                    <div class="timeline-marker">2020</div>
+                    <div style="font-size: 17px; line-height: 1.2;">Цифровизация</div>
+                </div>
+            </div>
+
+            <div class="objects-grid">
+                <div class="object-card" onclick="location.href='pages/object-detail.html?id=2'">
+                    <div class="object-image">
+                        <img src="icons/zil_moscow.jpg" alt="Холодильник ЗИЛ-Москва" class="object-img">
+                    </div>
+                    <div class="object-info">
+                        <div class="object-name">Холодильник "ЗИЛ-Москва"</div>
+                        <div class="object-meta">1965 • Завод имени Лихачёва</div>
+                        <div class="object-description">Легендарный советский холодильник, символ эпохи</div>
+                    </div>
+                </div>
+                
+                <div class="object-card" onclick="location.href='pages/object-detail.html?id=1'">
+                    <div class="object-image">
+                        <img src="icons/zenit.jpg" alt="Фотоаппарат Зенит-Е" class="object-img">
+                    </div>
+                    <div class="object-info">
+                        <div class="object-name">Фотоаппарат "Зенит-Е"</div>
+                        <div class="object-meta">1970 • Красногорский механический завод</div>
+                        <div class="object-description">Первый массовый зеркальный фотоаппарат в СССР</div>
+                    </div>
+                </div>
+                
+                <div class="object-card" onclick="location.href='pages/object-detail.html?id=3'">
+                    <div class="object-image">
+                        <img src="icons/moskvich.jpg" alt="Фотоаппарат Зенит-Е" class="object-img">
+                    </div>
+                    <div class="object-info">
+                        <div class="object-name">"Москвич-412"</div>
+                        <div class="object-meta">1970 • АЗЛК</div>
+                        <div class="object-description">Советский легковой автомобиль с передовым дизайном</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-actions" style="text-align: center; margin-top: 40px;">
+                <button class="cta-button secondary" onclick="location.href='archive.html'">
+                    Смотреть весь архив
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Preview -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-translate="upcoming_events">Ближайшие события</h2>
+            <div class="features-grid">
+                <div class="feature-card" onclick="location.href='pages/event-detail.html?type=webinar&id=1'">
+                    <div class="feature-icon">
+                        <img src="icons/vebinar.jpg" alt="Вебинар" class="feature-image">
+                    </div>
+                    <h3>Инновации в автомобильном дизайне</h3>
+                    <p>Вебинар с экспертами ГАЗ. Обсуждение последних тенденций и новых материалов</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> 21 ноября</span>
+                        <span><img src="icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img"> 147 участников</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='pages/event-detail.html?type=exhibition&id=2'">
+                    <div class="feature-icon">
+                        <img src="icons/even_vistav.jpg" alt="События и выставки" class="feature-image">
+                    </div>
+                    <h3>Выставка "Дизайн-революция 2024"</h3>
+                    <p>Крупнейшая выставка промышленного дизайна с участием ведущих компаний</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> 25-30 ноября</span>
+                        <span><img src="icons/company.jpg" alt="Новые материалы" class="discussion-img"> 45 компаний</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='pages/event-detail.html?type=competition&id=3'">
+                    <div class="feature-icon">
+                        <img src="icons/konkurs.jpg" alt="Конкурсы" class="feature-image">
+                    </div>
+                    <h3>Конкурс молодых дизайнеров</h3>
+                    <p>Тема: "Устойчивый дизайн для городов будущего". Призовой фонд 500,000 ₽</p>
+                    <div class="feature-stats">
+                        <span><img src="icons/calendar.jpg" alt="Новые материалы" class="discussion-img"> До 30 ноября</span>
+                        <span><img src="icons/priz_fond.jpg" alt="Новые материалы" class="discussion-img"> 500 000 ₽ призовой фонд</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-actions" style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+                <button class="cta-button" onclick="location.href='events.html'" data-translate="all_events">
+                    Все события
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="pages/archive-objects.html">Объекты</a>
+                        <a href="pages/archive-collections.html">Коллекции</a>
+                        <a href="pages/archive-authors.html">Авторы</a>
+                        <a href="pages/archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="pages/community-forum.html">Форум</a>
+                        <a href="pages/community-projects.html">Проекты</a>
+                        <a href="pages/community-experts.html">Эксперты</a>
+                        <a href="pages/community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="events.html">События</a>
+                        <a href="career.html">Карьера</a>
+                        <a href="virtual-tour.html">Виртуальный тур</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
