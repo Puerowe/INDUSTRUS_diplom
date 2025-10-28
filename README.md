@@ -1,0 +1,1 @@
+# INDUSTRUS_diplom
