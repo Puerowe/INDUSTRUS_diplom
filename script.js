@@ -304,6 +304,7 @@ function initializeAll() {
     setupFormHandlers();
     setupModalHandlers();
     initImageHandlers(); // ДОБАВЬТЕ ЭТУ СТРОЧКУ
+    initBurgerMenu();
     updateObjectPage();
     initCommunityPages();
     initAllAnimations();
@@ -1294,4 +1295,95 @@ function initAllAnimations() {
     initRandomAnimations();
     
     console.log('Все анимации инициализированы');
+}
+
+
+// ФУНКЦИИ ДЛЯ БУРГЕР-МЕНЮ
+function initBurgerMenu() {
+    const burgerMenu = document.getElementById('burgerMenu');
+    const nav = document.getElementById('mainNav');
+    const dropdownLinks = document.querySelectorAll('.nav-link[data-dropdown]');
+    
+    if (!burgerMenu || !nav) return;
+    
+    // Переключение основного меню
+    burgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+        
+        // Закрываем все выпадающие меню при закрытии основного меню
+        if (!nav.classList.contains('active')) {
+            dropdownLinks.forEach(link => {
+                link.classList.remove('active');
+                const dropdown = link.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
+    });
+    
+    // Обработчики для выпадающих меню в мобильной версии
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 968) {
+                e.preventDefault();
+                const dropdown = this.nextElementSibling;
+                
+                if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                    // Закрываем другие открытые выпадающие меню
+                    dropdownLinks.forEach(otherLink => {
+                        if (otherLink !== this) {
+                            otherLink.classList.remove('active');
+                            const otherDropdown = otherLink.nextElementSibling;
+                            if (otherDropdown && otherDropdown.classList.contains('dropdown-menu')) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        }
+                    });
+                    
+                    // Переключаем текущее меню
+                    this.classList.toggle('active');
+                    dropdown.classList.toggle('active');
+                }
+            }
+        });
+    });
+    
+    // Закрытие меню при клике на ссылку без выпадающего меню
+    const simpleLinks = document.querySelectorAll('.nav-link:not([data-dropdown])');
+    simpleLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 968) {
+                burgerMenu.classList.remove('active');
+                nav.classList.remove('active');
+                
+                // Закрываем все выпадающие меню
+                dropdownLinks.forEach(dropdownLink => {
+                    dropdownLink.classList.remove('active');
+                    const dropdown = dropdownLink.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Закрытие меню при ресайзе окна (если перешли на desktop)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 968) {
+            burgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+            
+            // Закрываем все выпадающие меню
+            dropdownLinks.forEach(link => {
+                link.classList.remove('active');
+                const dropdown = link.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
+    });
 }

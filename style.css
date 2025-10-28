@@ -5500,3 +5500,143 @@ body {
 .magnetic-btn:hover {
     transform: scale(1.05);
 }
+
+
+
+
+
+
+/* ===== БУРГЕР-МЕНЮ ДЛЯ МОБИЛЬНЫХ ===== */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--graphite);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Анимация бургер-меню при активации */
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Мобильная навигация */
+@media (max-width: 968px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        font-size: 16px;
+        border-bottom: 1px solid var(--aluminum);
+        width: 100%;
+    }
+    
+    .nav-divider {
+        display: none;
+    }
+    
+    /* Выпадающие меню для мобильных */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background: var(--light-gray);
+        margin-top: 10px;
+        border-radius: 8px;
+        animation: none;
+    }
+    
+    .dropdown-menu.active {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,107,53,0.1);
+    }
+    
+    .dropdown-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Стрелка для выпадающих меню */
+    .nav-link[data-dropdown]::after {
+        content: '▼';
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-link[data-dropdown].active::after {
+        transform: rotate(180deg);
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .nav {
+        padding: 15px;
+    }
+    
+    .nav-link {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+    
+    .dropdown-menu a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

@@ -13,9 +13,9 @@
             <a href="index.html" class="logo">
                 <span class="logo-text">INDUSTRUS</span>
             </a>
-            <nav class="nav">
+            <nav class="nav" id="mainNav">
                 <div class="nav-item dropdown">
-                    <a href="events.html" class="nav-link" data-translate="events">События</a>
+                    <a href="events.html" class="nav-link" data-translate="events" data-dropdown="events">События</a>
                     <div class="dropdown-menu">
                         <a href="pages/events-webinars.html" data-translate="webinars">Вебинары</a>
                         <a href="pages/events-exhibitions.html" data-translate="exhibitions">Выставки</a>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="nav-divider"></div>
                 <div class="nav-item dropdown">
-                    <a href="archive.html" class="nav-link" data-translate="archive">Архив</a>
+                    <a href="archive.html" class="nav-link" data-translate="archive" data-dropdown="archive">Архив</a>
                     <div class="dropdown-menu">
                         <a href="pages/archive-objects.html" data-translate="objects">Объекты</a>
                         <a href="pages/archive-collections.html" data-translate="collections">Коллекции</a>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="nav-divider"></div>
                 <div class="nav-item dropdown">
-                    <a href="community.html" class="nav-link" data-translate="community">Сообщество</a>
+                    <a href="community.html" class="nav-link" data-translate="community" data-dropdown="community">Сообщество</a>
                     <div class="dropdown-menu">
                         <a href="pages/community-forum.html" data-translate="forum">Форум</a>
                         <a href="pages/community-projects.html" data-translate="projects">Проекты</a>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="nav-divider"></div>
                 <div class="nav-item dropdown">
-                    <a href="career.html" class="nav-link" data-translate="career">Карьера</a>
+                    <a href="career.html" class="nav-link" data-translate="career" data-dropdown="career">Карьера</a>
                     <div class="dropdown-menu">
                         <a href="pages/career-jobs.html" data-translate="jobs">Вакансии</a>
                         <a href="pages/career-freelance.html" data-translate="freelance">Фриланс</a>
@@ -61,8 +61,13 @@
                     <button class="language-btn" onclick="toggleLanguage()">RU</button>
                 </div>
                 <div class="user-profile" onclick="location.href='profile.html'">
-                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                    <img src="icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
                 </div>
+            </div>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
