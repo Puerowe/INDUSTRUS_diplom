@@ -406,20 +406,51 @@ body {
 
 /* АДАПТИВНОСТЬ */
 @media (max-width: 768px) {
+@media (max-width: 968px) {
     .header {
         padding: 0 20px;
+        height: 60px !important;
+    }
+    
+    .header-content {
+        height: 60px !important;
     }
     
     .nav {
-        gap: 15px;
+        gap: 0;
     }
     
     .nav-link {
         font-size: 14px;
+        padding: 8px 12px;
     }
     
     .hero h1 {
         font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .objects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .timeline {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .timeline::before {
+        display: none;
     }
     
     .logo-text {
@@ -5663,4 +5694,19 @@ body {
     .header-actions {
         gap: 8px;
     }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
 }
