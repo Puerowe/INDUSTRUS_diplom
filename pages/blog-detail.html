@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="community-collab">
+                <div class="collab-circle circle-1"></div>
+                <div class="collab-circle circle-2"></div>
+                <div class="collab-circle circle-3"></div>
+                <div class="collab-circle circle-4"></div>
+                <div class="collab-line line-1"></div>
+                <div class="collab-line line-2"></div>
+                <div class="collab-line line-3"></div>
+                <div class="collab-line line-4"></div>
+                <div class="collab-line line-5"></div>
+                <div class="collab-line line-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="blog-header">
+                <div class="blog-meta">
+                    <div class="author-info" id="author-info">
+                        <div class="author-avatar" id="author-avatar">ИП</div>
+                        <div>
+                            <span class="author-name" id="author-name">Иван Петров</span>
+                            <span class="blog-date" id="blog-date">2 часа назад</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="blog-title">Тенденции автомобильного дизайна 2024</h1>
+                <div class="blog-tags" id="blog-tags">
+                    <!-- Теги будут добавлены через JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="blog-content">
+                <article class="blog-article" id="blog-article">
+                    <!-- Контент статьи будет добавлен через JS -->
+                </article>
+
+                <div class="article-stats" id="article-stats">
+                    <!-- Статистика будет добавлена через JS -->
+                </div>
+
+                <div class="article-actions">
+                    <button class="action-btn">❤️ Лайк</button>
+                    <button class="action-btn">💬 Комментировать</button>
+                    <button class="action-btn">📤 Поделиться</button>
+                </div>
+
+                <div class="comments-section">
+                    <h3 id="comments-title">Комментарии</h3>
+                    <div class="comment-form">
+                        <textarea placeholder="Оставьте ваш комментарий..." rows="3"></textarea>
+                        <button class="cta-button">Отправить</button>
+                    </div>
+                    
+                    <div class="comments-list" id="comments-list">
+                        <!-- Комментарии будут добавлены через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Данные статей блога
+        const blogData = {
+            '1': {
+                title: 'Тенденции автомобильного дизайна 2024',
+                author: 'Иван Петров',
+                authorId: 1,
+                date: '2 часа назад',
+                tags: ['#автопром', '#тренды', '#материалы'],
+                excerpt: 'Обзор новых материалов и технологий, которые меняют облик современных автомобилей. Особое внимание - эргономике интерьеров и экологичным решениям.',
+                content: `
+                    <p>Обзор новых материалов и технологий, которые меняют облик современных автомобилей. Особое внимание - эргономике интерьеров и экологичным решениям.</p>
+                    
+                    <h2>Новые материалы в автомобилестроении</h2>
+                    <p>Современные автомобили все чаще используют переработанные материалы и экологичные альтернативы традиционному пластику. Производители активно внедряют биопластики, переработанные металлы и натуральные материалы в отделку салонов.</p>
+                    
+                    <h2>Эргономика интерьеров</h2>
+                    <p>Фокус смещается на комфорт водителя и пассажиров, с учетом длительных поездок и работы в режиме "третьего места". Пространство салона становится более гибким и адаптивным.</p>
+
+                    <h2>Электрификация и дизайн</h2>
+                    <p>Переход на электромобили открывает новые возможности для дизайнеров - отсутствие ДВС позволяет переосмыслить архитектуру автомобиля и создать более просторные интерьеры.</p>
+                `,
+                stats: {
+                    likes: 24,
+                    comments: 8,
+                    views: 147
+                },
+                comments: [
+                    {
+                        author: 'Мария Сидорова',
+                        authorId: 2,
+                        text: 'Отличная статья! Особенно интересен раздел про эко-материалы. Согласен, что будущее за устойчивыми решениями.',
+                        date: '1 час назад',
+                        likes: 3
+                    },
+                    {
+                        author: 'Алексей Козлов',
+                        authorId: 3,
+                        text: 'Интересные наблюдения по поводу эргономики. Действительно, с появлением автономного вождения интерьер приобретает новые функции.',
+                        date: '45 минут назад',
+                        likes: 1
+                    }
+                ]
+            },
+            '2': {
+                title: 'Эко-мебель: тренды и вызовы',
+                author: 'Мария Сидорова',
+                authorId: 2,
+                date: '5 часов назад',
+                tags: ['#мебель', '#экология', '#устойчивыйдизайн'],
+                excerpt: 'Как создавать мебель из переработанных материалов, не жертвуя эстетикой и функциональностью. Личный опыт и кейсы.',
+                content: `
+                    <p>Как создавать мебель из переработанных материалов, не жертвуя эстетикой и функциональностью. Личный опыт и кейсы.</p>
+                    
+                    <h2>Материалы нового поколения</h2>
+                    <p>Переработанный пластик, бамбук, пробка и другие экологичные материалы открывают новые горизонты для дизайнеров мебели. Важно не только выбрать правильный материал, но и продумать его жизненный цикл.</p>
+                    
+                    <h2>Технологии производства</h2>
+                    <p>Современные технологии позволяют создавать прочную и долговечную мебель из, казалось бы, неподходящих материалов. 3D-печать, прессование и новые методы соединения элементов.</p>
+
+                    <h2>Эстетика устойчивости</h2>
+                    <p>Эко-мебель не должна выглядеть "дешево" или "кустарно". Современный дизайн доказывает, что экологичность и эстетика могут идти рука об руку.</p>
+
+                    <h2>Кейс: модульная мебель для городских пространств</h2>
+                    <p>Опыт создания модульной мебели из переработанного пластика для общественных пространств. От концепции до реализации.</p>
+                `,
+                stats: {
+                    likes: 18,
+                    comments: 5,
+                    views: 89
+                },
+                comments: [
+                    {
+                        author: 'Иван Петров',
+                        authorId: 1,
+                        text: 'Отличный пример того, как экологичность может стать конкурентным преимуществом. Особенно понравился кейс с модульной мебелью.',
+                        date: '3 часа назад',
+                        likes: 2
+                    }
+                ]
+            },
+            '3': {
+                title: 'CAD в современном промышленном дизайне',
+                author: 'Алексей Козлов',
+                authorId: 3,
+                date: 'Вчера',
+                tags: ['#cad', '#3dмоделирование', '#проектирование'],
+                excerpt: 'Как современные CAD-системы изменили workflow промышленных дизайнеров и какие возможности открывают новые технологии.',
+                content: `
+                    <p>Как современные CAD-системы изменили workflow промышленных дизайнеров и какие возможности открывают новые технологии.</p>
+                    
+                    <h2>Эволюция CAD-систем</h2>
+                    <p>От простых чертежных программ к комплексным системам, охватывающим весь жизненный цикл продукта. Современные CAD-системы интегрируют проектирование, анализ и визуализацию.</p>
+                    
+                    <h2>Параметрическое моделирование</h2>
+                    <p>Возможность быстрого изменения геометрии через параметры открывает новые горизонты для итеративного дизайна и оптимизации.</p>
+
+                    <h2>Интеграция с производством</h2>
+                    <p>Прямая связь CAD-моделей с системами ЧПУ и 3D-печати сокращает время от концепции до прототипа.</p>
+
+                    <h2>Облачные технологии и коллаборация</h2>
+                    <p>Современные CAD-системы позволяют командам работать над проектами одновременно из разных точек мира.</p>
+                `,
+                stats: {
+                    likes: 32,
+                    comments: 12,
+                    views: 215
+                },
+                comments: [
+                    {
+                        author: 'Иван Петров',
+                        authorId: 1,
+                        text: 'Полностью согласен про параметрическое моделирование. Это реально изменило подход к проектированию сложных поверхностей.',
+                        date: '20 часов назад',
+                        likes: 5
+                    },
+                    {
+                        author: 'Мария Сидорова',
+                        authorId: 2,
+                        text: 'Интересно, как облачные технологии повлияли на удаленную работу дизайнеров. Есть ли рекомендации по конкретным платформам?',
+                        date: '18 часов назад',
+                        likes: 3
+                    }
+                ]
+            }
+        };
+
+        function loadBlog() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogId = urlParams.get('id') || '1';
+            const blog = blogData[blogId];
+
+            if (blog) {
+                // Обновляем заголовок страницы
+                document.title = `${blog.title} - INDUSTRUS`;
+                
+                // Заполняем основную информацию
+                document.getElementById('blog-title').textContent = blog.title;
+                document.getElementById('author-name').textContent = blog.author;
+                document.getElementById('blog-date').textContent = blog.date;
+                document.getElementById('author-avatar').textContent = blog.author.split(' ').map(n => n[0]).join('');
+
+                // Настраиваем ссылку на автора
+                const authorInfo = document.getElementById('author-info');
+                authorInfo.onclick = () => location.href = `expert-detail.html?id=${blog.authorId}`;
+
+                // Заполняем теги
+                const tagsContainer = document.getElementById('blog-tags');
+                tagsContainer.innerHTML = '';
+                blog.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'tag';
+                    tagElement.textContent = tag;
+                    tagsContainer.appendChild(tagElement);
+                });
+
+                // Заполняем контент статьи
+                document.getElementById('blog-article').innerHTML = blog.content;
+
+                // Заполняем статистику
+                document.getElementById('article-stats').innerHTML = `
+                    <span>❤️ ${blog.stats.likes} лайка</span>
+                    <span>💬 ${blog.stats.comments} комментария</span>
+                    <span>👁️ ${blog.stats.views} просмотров</span>
+                `;
+
+                // Заполняем комментарии
+                document.getElementById('comments-title').textContent = `Комментарии (${blog.stats.comments})`;
+                const commentsContainer = document.getElementById('comments-list');
+                commentsContainer.innerHTML = '';
+                blog.comments.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    commentElement.innerHTML = `
+                        <div class="comment-author" onclick="location.href='expert-detail.html?id=${comment.authorId}'">${comment.author}</div>
+                        <div class="comment-text">${comment.text}</div>
+                        <div class="comment-date">${comment.date}</div>
+                    `;
+                    commentsContainer.appendChild(commentElement);
+                });
+            }
+        }
+
+        // Загружаем данные при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadBlog);
+    </script>
+</body>
+</html>

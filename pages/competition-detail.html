@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конкурс "Лучший молодой дизайнер 2024" - Промдизайн.ру</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Конкурс "Лучший молодой дизайнер 2024"</h1>
+            <h2>Конкурс • До 30 ноября 2024 • Призовой фонд 500,000 ₽</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="competition-detail">
+                <div class="competition-header">
+                    <div class="competition-meta">
+                        <span><img src="../icons/calendar.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> До 30 ноября 2024</span>
+                        <span><img src="../icons/priz_fond.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 500,000 ₽ призовой фонд</span>
+                        <span><img src="../icons/project2.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 89 проектов уже подано</span>
+                        <span><img src="../icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 членов жюри</span>
+                    </div>
+                    
+                    <button class="cta-button" onclick="participateInCompetition()">Участвовать в конкурсе</button>
+                </div>
+
+                <div class="competition-description">
+                    <h3>О конкурсе</h3>
+                    <p>Ежегодный конкурс для молодых дизайнеров в возрасте до 35 лет. Тема этого года: "Устойчивый дизайн для городов будущего".</p>
+                    
+                    <h3>Номинации</h3>
+                    <ul>
+                        <li><strong>Лучший промышленный дизайн</strong> - проекты бытовой техники, электроники, мебели</li>
+                        <li><strong>Лучший транспортный дизайн</strong> - концепты автомобилей, общественного транспорта</li>
+                        <li><strong>Лучший экологический дизайн</strong> - проекты с использованием переработанных материалов</li>
+                        <li><strong>Приз зрительских симпатий</strong> - голосование открыто для всех пользователей платформы</li>
+                    </ul>
+
+                    <h3>Требования к участникам</h3>
+                    <div class="requirements">
+                        <div class="requirement-item">
+                            <strong>Возраст:</strong> до 35 лет
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Опыт:</strong> не менее 2 лет в дизайне
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Формат работ:</strong> PDF презентация + 3D модели
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Язык:</strong> русский или английский
+                        </div>
+                    </div>
+
+                    <h3>Жюри конкурса</h3>
+                    <div class="jury-grid">
+                        <div class="jury-member">
+                            <div class="jury-avatar" style="background: var(--orange); color: white;">ИП</div>
+                            <div class="jury-info">
+                                <strong>Петров И.В.</strong>
+                                <span>Главный дизайнер ГАЗ</span>
+                            </div>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-avatar" style="background: var(--blue); color: white;">МС</div>
+                            <div class="jury-info">
+                                <strong>Сидорова М.К.</strong>
+                                <span>Дизайнер мебели, преподаватель БВШД</span>
+                            </div>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-avatar" style="background: var(--green); color: white;">ДК</div>
+                            <div class="jury-info">
+                                <strong>Козлов Д.А.</strong>
+                                <span>Руководитель СберДизайн</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Этапы конкурса</h3>
+                    <div class="competition-timeline">
+                        <div class="timeline-stage active">
+                            <div class="stage-date">1-30 ноября</div>
+                            <div class="stage-title">Прием заявок</div>
+                        </div>
+                        <div class="timeline-stage">
+                            <div class="stage-date">1-15 декабря</div>
+                            <div class="stage-title">Оценка жюри</div>
+                        </div>
+                        <div class="timeline-stage">
+                            <div class="stage-date">20 декабря</div>
+                            <div class="stage-title">Объявление победителей</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

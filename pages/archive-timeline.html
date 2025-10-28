@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймлайн - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Обновленный Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="archive-grid-markers">
+                <div class="grid-line line-h-1"></div>
+                <div class="grid-line line-h-2"></div>
+                <div class="grid-line line-h-3"></div>
+                <div class="grid-line line-v-1"></div>
+                <div class="grid-line line-v-2"></div>
+                <div class="grid-line line-v-3"></div>
+                <div class="grid-marker marker-1"></div>
+                <div class="grid-marker marker-2"></div>
+                <div class="grid-marker marker-3"></div>
+                <div class="grid-marker marker-4"></div>
+                <div class="grid-marker marker-5"></div>
+                <div class="grid-marker marker-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>История промышленного дизайна</h1>
+            <h2>Таймлайн ключевых событий и объектов</h2>
+            <p>Исследуйте хронологию развития промышленного дизайна в России от первых экспериментов до современных инноваций</p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="features">
+        <div class="container">
+            <div class="timeline-container">
+                <div class="timeline-enhanced">
+                    <div class="timeline-era" onclick="location.href='archive-objects.html?period=1960'">
+                        <div class="timeline-year">1962</div>
+                        <div class="timeline-content">
+                            <h3>Основание ВНИИТЭ</h3>
+                            <p>Создание Всесоюзного научно-исследовательского института технической эстетики — ключевого центра развития промышленного дизайна в СССР. Институт стал методологическим центром, объединившим лучших специалистов страны.</p>
+                            <div class="timeline-objects">
+                                <div class="object-mini-card" onclick="location.href='object-detail.html?id=1'">
+                                    <div class="object-mini-image">
+                                        <img src="../icons/zenit.jpg" alt="Зенит-Е" class="object-img">
+                                    </div>
+                                    <span>Зенит-Е</span>
+                                </div>
+                                <div class="object-mini-card" onclick="location.href='object-detail.html?id=2'">
+                                    <div class="object-mini-image">
+                                        <img src="../icons/zil_moscow.jpg" alt="ЗИЛ-Москва" class="object-img">
+                                    </div>
+                                    <span>ЗИЛ-Москва</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-era" onclick="location.href='archive-objects.html?period=1970'">
+                        <div class="timeline-year">1975</div>
+                        <div class="timeline-content">
+                            <h3>Конгресс ИКСИД в Москве</h3>
+                            <p>Проведение международного конгресса ICSID в Москве стало знаковым событием, подтвердившим международное признание советской школы дизайна. Конгресс собрал ведущих специалистов со всего мира.</p>
+                            <div class="era-stats">
+                                <div class="stat">
+                                    <strong>42</strong>
+                                    <span>страны-участницы</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>150+</strong>
+                                    <span>докладов</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-era" onclick="location.href='archive-objects.html?period=1990'">
+                        <div class="timeline-year">1991</div>
+                        <div class="timeline-content">
+                            <h3>Новая эра дизайна</h3>
+                            <p>Распад СССР и переход к рыночной экономике открыли новые возможности для дизайнеров. Появление частных студий, сотрудничество с международными компаниями и развитие цифровых технологий кардинально изменили отрасль.</p>
+                            <div class="timeline-features">
+                                <span class="feature-tag">Частные студии</span>
+                                <span class="feature-tag">Международное сотрудничество</span>
+                                <span class="feature-tag">Цифровизация</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-era" onclick="location.href='archive-objects.html?period=2020'">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3>Цифровая трансформация</h3>
+                            <p>Современный этап характеризуется интеграцией искусственного интеллекта, VR/AR технологий и устойчивого дизайна. Российские дизайнеры активно работают над проектами в области умных городов, экологичного транспорта и цифровых интерфейсов.</p>
+                            <div class="era-stats">
+                                <div class="stat">
+                                    <strong>AI</strong>
+                                    <span>искусственный интеллект</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>VR/AR</strong>
+                                    <span>виртуальная реальность</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>Eco</strong>
+                                    <span>устойчивый дизайн</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии - Промдизайн.ру</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="career-spiral">
+                <div class="spiral-path"></div>
+                <div class="spiral-marker marker-1"></div>
+                <div class="spiral-marker marker-2"></div>
+                <div class="spiral-marker marker-3"></div>
+                <div class="spiral-marker marker-4"></div>
+                <div class="spiral-marker marker-5"></div>
+                <div class="spiral-arrow arrow-1"></div>
+                <div class="spiral-arrow arrow-2"></div>
+                <div class="spiral-arrow arrow-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Вакансии для дизайнеров</h1>
+            <h2>Найдите работу мечты в промышленном дизайне</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="content-header">
+                <h2>Активные вакансии</h2>
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option>По дате (новые)</option>
+                        <option>По зарплате</option>
+                        <option>По компании</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="jobs-list">
+                <div class="job-card detailed" onclick="location.href='job-detail.html?id=1'">
+                    <div class="job-header">
+                        <div class="job-company">
+                            <div class="company-logo">🏭</div>
+                            <div class="company-info">
+                                <div class="company-name">ГАЗ Групп</div>
+                                <div class="job-meta">Москва • Опыт от 3 лет</div>
+                            </div>
+                        </div>
+                        <div class="job-salary">от 150 000 ₽</div>
+                    </div>
+                    
+                    <h3 class="job-title">Дизайнер автомобильных интерьеров</h3>
+                    
+                    <div class="job-description">
+                        <h4>Обязанности:</h4>
+                        <ul>
+                            <li>Разработка концептов интерьеров для новых моделей автомобилей</li>
+                            <li>Работа с материалами и эргономикой</li>
+                            <li>Взаимодействие с инженерами и технологами</li>
+                        </ul>
+                        
+                        <h4>Требования:</h4>
+                        <ul>
+                            <li>Опыт работы в автомобильном дизайне от 3 лет</li>
+                            <li>Знание SolidWorks, Rhino, Keyshot</li>
+                            <li>Понимание процессов автомобилестроения</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-tags">
+                        <span class="tag">Автопром</span>
+                        <span class="tag">3D-моделирование</span>
+                        <span class="tag">Полная занятость</span>
+                    </div>
+                    
+                    <button class="cta-button"  onclick="event.stopPropagation(); applyForJob(1)">Откликнуться на вакансию</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

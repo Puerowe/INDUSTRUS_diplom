@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эксперты - Промдизайн.ру</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="community-collab">
+                <div class="collab-circle circle-1"></div>
+                <div class="collab-circle circle-2"></div>
+                <div class="collab-circle circle-3"></div>
+                <div class="collab-circle circle-4"></div>
+                <div class="collab-line line-1"></div>
+                <div class="collab-line line-2"></div>
+                <div class="collab-line line-3"></div>
+                <div class="collab-line line-4"></div>
+                <div class="collab-line line-5"></div>
+                <div class="collab-line line-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Эксперты сообщества</h1>
+            <h2>Профессионалы промышленного дизайна</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="community-layout">
+                <div class="activity-feed">
+                    <div class="content-header">
+                        <h2>Рекомендуемые эксперты</h2>
+                        <div class="sort-options">
+                            <select class="sort-select">
+                                <option>По рейтингу</option>
+                                <option>По опыту</option>
+                                <option>По специализации</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="experts-grid-large" >
+                        <div class="expert-card-large" onclick="location.href='expert-detail.html?id=1'">
+                            <div class="expert-avatar" style="background: var(--orange); color: white; font-size: 48px;">ИП</div>
+                            <div class="expert-info">
+                                <h3>Иван Петров</h3>
+                                <p class="expert-specialization">Промышленный дизайнер</p>
+                                <p class="expert-experience">Опыт: 15 лет</p>
+                                <p class="expert-description">Специализация: транспортный дизайн, бытовая техника. Участник международных выставок.</p>
+                                <div class="expert-stats">
+                                    <span>📁 24 проекта</span>
+                                    <span>👥 127 подписчиков</span>
+                                </div>
+                                <button class="cta-button">Подписаться</button>
+                            </div>
+                        </div>
+
+                        <div class="expert-card-large" onclick="location.href='expert-detail.html?id=2'">
+                            <div class="expert-avatar" style="background: var(--blue); color: white; font-size: 48px;">МС</div>
+                            <div class="expert-info">
+                                <h3>Мария Сидорова</h3>
+                                <p class="expert-specialization">Дизайнер мебели</p>
+                                <p class="expert-experience">Опыт: 12 лет</p>
+                                <p class="expert-description">Специализация: мебельный дизайн, эргономика. Преподаватель БВШД.</p>
+                                <div class="expert-stats">
+                                    <span>📁 18 проектов</span>
+                                    <span>👥 89 подписчиков</span>
+                                </div>
+                                <button class="cta-button">Подписаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Специализации</h3>
+                        <div class="specializations-list">
+                            <button class="specialization-btn active">Все эксперты</button>
+                            <button class="specialization-btn">Транспортный дизайн</button>
+                            <button class="specialization-btn">Дизайн мебели</button>
+                            <button class="specialization-btn">Бытовая техника</button>
+                            <button class="specialization-btn">Электроника</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

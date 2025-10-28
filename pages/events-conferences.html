@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конференции - Промдизайн.ру</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                 <!-- Верхние угловые круги -->
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <!-- Нижние угловые круги -->
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Конференции</h1>
+            <h2>Профессиональные встречи и обмен опытом</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="content-header">
+                <h2>Ближайшие конференции</h2>
+                <button class="cta-button" onclick="showConferenceModal()">+ Добавить конференцию</button>
+            </div>
+
+            <div class="conferences-grid">
+                <div class="conference-card">
+                    <div class="conference-badge">Конференция</div>
+                    <h3>PROДИЗАЙН: Стратегия, Экономика, Результат</h3>
+                    <p>Практическая конференция о бизнес-аспектах дизайна. Кейсы от ведущих российских компаний</p>
+                    <div class="conference-details">
+                        <span><img src="../icons/calendar.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 декабря 2024</span>
+                        <span><img src="../icons/addres.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> Онлайн</span>
+                        <span><img src="../icons/speaker.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 спикеров</span>
+                    </div>
+                    <div class="speakers-preview">
+                        <strong>Ключевые спикеры:</strong>
+                        <span>Петров И.В. (ГАЗ)</span>
+                        <span>Сидорова М.К. (Яндекс)</span>
+                        <span>Козлов Д.А. (Сбер)</span>
+                    </div>
+                    <button class="cta-button" onclick="location.href='conference-detail.html'">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
