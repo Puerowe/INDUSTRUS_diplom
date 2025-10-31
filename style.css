@@ -5550,7 +5550,7 @@ body {
         position: fixed;
         top: 70px;
         left: -100%;
-        width: 100%;
+        width: 85%;
         height: calc(100vh - 70px);
         background: var(--white);
         flex-direction: column;
@@ -5560,13 +5560,35 @@ body {
         transition: left 0.3s ease;
         overflow-y: auto;
         z-index: 1000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1); /* Тень справа */
+        border-right: 1px solid var(--aluminum);
     }
     
     .nav.active {
         left: 0;
     }
     
+     /* Затемнение фона при открытом меню */
+    .nav::before {
+        content: '';
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+      .nav.active::before {
+        opacity: 1;
+        visibility: visible;
+        left: 85%; /* Затемнение начинается справа от меню */
+    }
+
     .nav-item {
         width: 100%;
         margin-bottom: 10px;
@@ -5622,12 +5644,22 @@ body {
     .nav-link[data-dropdown].active::after {
         transform: rotate(180deg);
     }
+
+    /* Предотвращаем скролл body при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+    }
 }
 
 /* Для очень маленьких экранов */
 @media (max-width: 480px) {
     .nav {
+        width: 90%; /* Еще уже на маленьких экранах */
         padding: 15px;
+    }
+
+    .nav.active::before {
+        left: 90%;
     }
     
     .nav-link {
@@ -5638,5 +5670,190 @@ body {
     .dropdown-menu a {
         padding: 10px 15px;
         font-size: 14px;
+    }
+}
+
+
+/* ===== ОСНОВНЫЕ СТИЛИ КАРУСЕЛИ ===== */
+.hero-carousel {
+    position: relative;
+    min-height: 400px;
+    margin-bottom: 40px;
+}
+
+.carousel-slide {
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ПРОМЫШЛЕННЫЕ КНОПКИ КАРУСЕЛИ ===== */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--orange);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0.8;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+/*.hero-carousel:hover .carousel-nav-btn {
+    opacity: 1;
+}*/
+
+.carousel-nav-btn:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+    box-shadow: 
+        0 8px 30px rgba(255, 107, 53, 0.4),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+}
+
+.carousel-nav-btn.prev {
+    left: 20px;
+}
+
+.carousel-nav-btn.next {
+    right: 20px;
+}
+
+/* Индустриальные иконки стрелок */
+.carousel-nav-btn svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.carousel-nav-btn:hover svg {
+    transform: scale(1.2);
+}
+
+/* Точки навигации */
+.carousel-dots {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    z-index: 5;
+}
+
+.carousel-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    position: relative;
+}
+
+.carousel-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.carousel-dot.active,
+.carousel-dot:hover {
+    opacity: 1;
+    border-color: var(--orange);
+    transform: scale(1.2);
+}
+
+.carousel-dot.active::before,
+.carousel-dot:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Анимация появления кнопок */
+/*@keyframes industrialAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+.hero-carousel:hover .carousel-nav-btn {
+    animation: industrialAppear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-carousel:hover .carousel-nav-btn.next {
+    animation-delay: 0.1s;
+}*/
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .carousel-nav-btn {
+        width: 50px;
+        height: 50px;
+        opacity: 0.7;
+    }
+    
+    .carousel-nav-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-nav-btn.next {
+        right: 10px;
+    }
+    
+    .carousel-nav-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /*.hero-carousel .carousel-nav-btn {
+        opacity: 0.7;
+        animation: none;
+    }*/
+    
+    .hero-carousel {
+        min-height: 450px;
     }
 }

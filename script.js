@@ -293,6 +293,88 @@ function closeAllModals() {
     });
 }
 
+// Функции для карусели hero-секции
+// ===== ПРОСТАЯ И НАДЕЖНАЯ КАРУСЕЛЬ =====
+let currentCarouselSlide = 0;
+let carouselInterval;
+
+function initCarousel() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    // Показываем первый слайд
+    showCarouselSlide(0);
+    
+    // Запускаем автоматическое переключение
+    startCarouselAutoPlay();
+    
+    // Останавливаем автослайдинг при наведении на карусель
+    const carousel = document.getElementById('heroCarousel');
+   
+    
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopCarouselAutoPlay);
+        carousel.addEventListener('mouseleave', startCarouselAutoPlay);
+    }
+}
+
+function showCarouselSlide(slideIndex) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    // Скрываем все слайды
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Убираем активный класс со всех точек
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    // Показываем выбранный слайд
+    slides[slideIndex].classList.add('active');
+    dots[slideIndex].classList.add('active');
+    
+    currentCarouselSlide = slideIndex;
+}
+
+function carouselNext() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const nextIndex = (currentCarouselSlide + 1) % slides.length;
+    showCarouselSlide(nextIndex);
+    restartCarouselAutoPlay();
+}
+
+function carouselPrev() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevIndex = (currentCarouselSlide - 1 + slides.length) % slides.length;
+    showCarouselSlide(prevIndex);
+    restartCarouselAutoPlay();
+}
+
+function carouselGoTo(slideIndex) {
+    showCarouselSlide(slideIndex);
+    restartCarouselAutoPlay();
+}
+
+function startCarouselAutoPlay() {
+    stopCarouselAutoPlay();
+    carouselInterval = setInterval(carouselNext, 5000); // 5 секунд
+}
+
+function stopCarouselAutoPlay() {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+    }
+}
+
+function restartCarouselAutoPlay() {
+    stopCarouselAutoPlay();
+    startCarouselAutoPlay();
+}
+
+
 // ОСНОВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ
 function initializeAll() {
     normalizeHeaderHeight();
@@ -308,9 +390,15 @@ function initializeAll() {
     updateObjectPage();
     initCommunityPages();
     initAllAnimations();
+    initCarousel();
     
     console.log('Все функции инициализированы');
 }
+
+// Добавьте глобальные функции для кнопок
+window.carouselNext = carouselNext;
+window.carouselPrev = carouselPrev;
+window.carouselGoTo = carouselGoTo;
 
 // ИНИЦИАЛИЗАЦИЯ НАВИГАЦИИ
 function initNavigation() {
@@ -1303,13 +1391,16 @@ function initBurgerMenu() {
     const burgerMenu = document.getElementById('burgerMenu');
     const nav = document.getElementById('mainNav');
     const dropdownLinks = document.querySelectorAll('.nav-link[data-dropdown]');
+    const body = document.body;
     
     if (!burgerMenu || !nav) return;
     
     // Переключение основного меню
     burgerMenu.addEventListener('click', function() {
+        const isOpening = !this.classList.contains('active');
         this.classList.toggle('active');
         nav.classList.toggle('active');
+        body.classList.toggle('menu-open', isOpening);
         
         // Закрываем все выпадающие меню при закрытии основного меню
         if (!nav.classList.contains('active')) {
@@ -1322,12 +1413,19 @@ function initBurgerMenu() {
             });
         }
     });
+
+    nav.addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('nav')) {
+            closeMobileMenu();
+        }
+    });
     
     // Обработчики для выпадающих меню в мобильной версии
     dropdownLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             if (window.innerWidth <= 968) {
                 e.preventDefault();
+                e.stopPropagation(); // Предотвращаем всплытие
                 const dropdown = this.nextElementSibling;
                 
                 if (dropdown && dropdown.classList.contains('dropdown-menu')) {
@@ -1357,18 +1455,25 @@ function initBurgerMenu() {
             if (window.innerWidth <= 968) {
                 burgerMenu.classList.remove('active');
                 nav.classList.remove('active');
+            }
+        });
+    });
                 
-                // Закрываем все выпадающие меню
-                dropdownLinks.forEach(dropdownLink => {
+    function closeMobileMenu() {
+        burgerMenu.classList.remove('active');
+        nav.classList.remove('active');
+        body.classList.remove('menu-open');
+
+        // Закрываем все выпадающие меню
+        dropdownLinks.forEach(dropdownLink => {
                     dropdownLink.classList.remove('active');
                     const dropdown = dropdownLink.nextElementSibling;
                     if (dropdown && dropdown.classList.contains('dropdown-menu')) {
                         dropdown.classList.remove('active');
                     }
                 });
-            }
-        });
-    });
+    };
+    
     
     // Закрытие меню при ресайзе окна (если перешли на desktop)
     window.addEventListener('resize', function() {

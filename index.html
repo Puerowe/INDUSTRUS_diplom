@@ -74,6 +74,7 @@
     </header>
 
     <!-- Hero Section -->
+<!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
             <div class="orange-squares">
@@ -84,15 +85,95 @@
             </div>
         </div>
         <div class="container">
-            <h1 data-translate="virtual_museum">Виртуальный музей промышленного дизайна</h1>
-            <h2 data-translate="museum_description">Исследуйте наследие российского дизайна от советской эпохи до современности</h2>
-            <p data-translate="objects_count">Более 10,000 объектов, архивные материалы и современные проекты в едином цифровом пространстве</p>
-            <div class="hero-actions">
-                <button class="cta-button" onclick="location.href='archive.html'" data-translate="explore_archive">
-                    Исследовать архив
+            <div class="hero-carousel" id="heroCarousel">
+                <!-- Слайд 1 -->
+                <div class="carousel-slide active">
+                    <div class="slide-content">
+                        <h1>Привет, исследователь!</h1>
+                        <h2>Ты когда-нибудь задумывался, как рождались легенды советского дизайна?</h2>
+                        <p>Погрузись в мир, где каждый винт, каждая линия — это история. От первых фотоаппаратов до культовых автомобилей. <strong>Готов открыть для себя нечто большее, чем просто музей?</strong></p>
+                        <div class="hero-actions">
+                            <button class="cta-button" onclick="location.href='archive.html'">
+                                Да, хочу приключений!
+                            </button>
+                            <button class="cta-button secondary" onclick="location.href='virtual-tour.html'">
+                                Сначала посмотреть
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 2 -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h1>Ощути пульс времени</h1>
+                        <h2>Что, если бы ты мог пройтись по цехам 70-х и увидеть, как создавались иконы?</h2>
+                        <p>От смелых экспериментов 60-х до технологических прорывов 90-х. <strong>Каждая эпоха оставила свой след — найди свой!</strong></p>
+                        <div class="hero-actions">
+                            <button class="cta-button" onclick="location.href='pages/archive-timeline.html'">
+                                Отправиться в прошлое
+                            </button>
+                            <button class="cta-button secondary" onclick="location.href='pages/archive-objects.html'">
+                                Легендарные объекты
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 3 -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h1>Ты не одинок в своей страсти!</h1>
+                        <h2>Знакомься, спорь, вдохновляйся вместе с теми, кто понимает твой взгляд на красоту</h2>
+                        <p>5000+ дизайнеров, инженеров и мечтателей ждут тебя. <strong>Здесь рождаются самые безумные и гениальные идеи!</strong></p>
+                        <div class="hero-actions">
+                            <button class="cta-button" onclick="location.href='community.html'">
+                                Хочу в команду!
+                            </button>
+                            <button class="cta-button secondary" onclick="location.href='pages/community-forum.html'">
+                                Пообщаться с единомышленниками
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 4 -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h1>Готов к вызову?</h1>
+                        <h2>Пока другие обсуждают, ты можешь создавать. Выбери свой путь:</h2>
+                        <p>Конкурсы с призами, вебинары от гуру, вакансии мечты. <strong>Твой шанс изменить правила игры!</strong></p>
+                        <div class="hero-actions">
+                            <button class="cta-button" onclick="location.href='events.html'">
+                                Бросить вызов
+                            </button>
+                            <button class="cta-button secondary" onclick="location.href='career.html'">
+                                Найти свою миссию
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Навигация -->
+            <div class="carousel-controls">
+                <button class="carousel-nav-btn prev" onclick="carouselPrev()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
-                <button class="cta-button secondary" onclick="location.href='virtual-tour.html'" data-translate="virtual_tour">
-                    Виртуальный тур
+            
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" onclick="carouselGoTo(0)"></button>
+                    <button class="carousel-dot" onclick="carouselGoTo(1)"></button>
+                    <button class="carousel-dot" onclick="carouselGoTo(2)"></button>
+                    <button class="carousel-dot" onclick="carouselGoTo(3)"></button>
+                </div>
+            
+                <button class="carousel-nav-btn next" onclick="carouselNext()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
             </div>
         </div>
