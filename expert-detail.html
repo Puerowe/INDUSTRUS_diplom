@@ -97,25 +97,23 @@
                         <div class="expert-main-info">
                             <div class="meta-info">
                                 <div class="meta-item">
-                                    <img src="../icons/experience.png" alt="Опыт" class="meta-icon">
                                     <span id="expert-experience">15+ лет опыта</span>
                                 </div>
                                 <div class="meta-item">
-                                    <img src="../icons/projects.png" alt="Проекты" class="meta-icon">
+                                    <img src="../icons/project.jpg" alt="Проекты" class="meta-icon">
                                     <span id="expert-projects">50+ проектов</span>
                                 </div>
                                 <div class="meta-item">
-                                    <img src="../icons/followers.png" alt="Подписчики" class="meta-icon">
+                                    <img src="../icons/u4astniki.jpg" alt="Подписчики" class="meta-icon">
                                     <span id="expert-followers">1.2K подписчиков</span>
                                 </div>
                                 <div class="meta-item">
-                                    <img src="../icons/rating.png" alt="Рейтинг" class="meta-icon">
                                     <span id="expert-rating">4.9/5</span>
                                 </div>
                             </div>
                             
                             <div class="section-header">
-                                <div class="section-icon">👤</div>
+                                    <img src="../icons/lich_cab.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                                 <h3>О эксперте</h3>
                             </div>
                             <p id="expert-bio" class="content-text">Загрузка биографии...</p>
@@ -124,15 +122,13 @@
                             
                             <div class="action-buttons">
                                 <button class="cta-button" onclick="followExpert()">
-                                    <img src="../icons/follow.png" alt="Подписаться" class="action-icon">
                                     Подписаться
                                 </button>
                                 <button class="cta-button secondary">
-                                    <img src="../icons/message.png" alt="Сообщение" class="action-icon">
                                     Написать сообщение
                                 </button>
                                 <button class="cta-button secondary">
-                                    <img src="../icons/share.png" alt="Поделиться" class="action-icon">
+                                    <img src="../icons/share.jpg" alt="Поделиться" class="action-icon">
                                     Поделиться
                                 </button>
                             </div>
@@ -143,7 +139,7 @@
                 <!-- Специализации -->
                 <div class="content-section">
                     <div class="section-header">
-                        <div class="section-icon">🎯</div>
+                        <img src="../icons/kurat_project.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                         <h3>Специализации</h3>
                     </div>
                     <div class="specializations-grid" id="specializations-grid">
@@ -154,7 +150,7 @@
                 <!-- Проекты -->
                 <div class="content-section">
                     <div class="section-header">
-                        <div class="section-icon">🚀</div>
+                        <img src="../icons/shester.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                         <h3>Ключевые проекты</h3>
                     </div>
                     <div class="projects-grid" id="projects-grid">
@@ -165,7 +161,7 @@
                 <!-- Публикации -->
                 <div class="content-section">
                     <div class="section-header">
-                        <div class="section-icon">📝</div>
+                        <img src="../icons/project.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                         <h3>Публикации</h3>
                     </div>
                     <div class="publications-list" id="publications-list">
@@ -176,7 +172,7 @@
                 <!-- Контакты -->
                 <div class="content-section">
                     <div class="section-header">
-                        <div class="section-icon">📞</div>
+                        <img src="../icons/phone.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                         <h3>Контакты</h3>
                     </div>
                     <div class="contacts-grid" id="contacts-grid">
@@ -244,7 +240,7 @@
                 avatar: 'ИП',
                 avatarColor: '#FF6B35',
                 experience: '15+ лет',
-                projects: '50+',
+                projectsCount: '50+',
                 followers: '1.2K',
                 rating: '4.9/5',
                 bio: 'Ведущий специалист в области транспортного дизайна с более чем 15-летним опытом. Работал над проектами для крупнейших автопроизводителей. Автор инновационных решений в области аэродинамики и эргономики транспортных средств.',
@@ -265,10 +261,10 @@
                     { title: 'Экологичные материалы в автопроме', date: '2023-09-10', type: 'Доклад', link: 'blog-detail.html?id=3' }
                 ],
                 contacts: [
-                    { type: 'email', value: 'ivan.petrov@example.com', icon: '../icons/email.png' },
-                    { type: 'website', value: 'petrov-design.ru', icon: '../icons/website.png' },
-                    { type: 'linkedin', value: 'linkedin.com/in/ivanpetrov', icon: '../icons/linkedin.png' },
-                    { type: 'telegram', value: '@ivan_petrov', icon: '../icons/telegram.png' }
+                    { type: 'email', value: 'ivan.petrov@example.com' },
+                { type: 'website', value: 'petrov-design.ru' },
+                { type: 'linkedin', value: 'linkedin.com/in/ivanpetrov' },
+                { type: 'telegram', value: '@ivan_petrov' }
                 ]
             }
         };
@@ -283,7 +279,7 @@
                 document.getElementById('expert-name').textContent = expert.name;
                 document.getElementById('expert-specialization').textContent = expert.specialization;
                 document.getElementById('expert-experience').textContent = expert.experience + ' опыта';
-                document.getElementById('expert-projects').textContent = expert.projects + ' проектов';
+                document.getElementById('expert-projects').textContent = expert.projectsCount  + ' проектов';
                 document.getElementById('expert-followers').textContent = expert.followers + ' подписчиков';
                 document.getElementById('expert-rating').textContent = expert.rating;
                 document.getElementById('expert-bio').textContent = expert.bio;
@@ -324,12 +320,45 @@
                 document.getElementById('publications-list').innerHTML = publicationsHtml;
 
                 // Контакты
-                const contactsHtml = expert.contacts.map(contact => `
-                    <div class="contact-item">
-                        <img src="${contact.icon}" alt="${contact.type}" class="contact-icon">
-                        <div class="contact-value">${contact.value}</div>
-                    </div>
-                `).join('');
+                const contactsHtml = expert.contacts.map(contact => {
+                    let iconContent = '';
+                    let contactClass = 'contact-item';
+                    
+                    switch(contact.type) {
+                        case 'email':
+                            iconContent = '✉️';
+                            contactClass += ' contact-email';
+                            break;
+                        case 'website':
+                            iconContent = '🌐';
+                            contactClass += ' contact-website';
+                            break;
+                        case 'linkedin':
+                            iconContent = '💼';
+                            contactClass += ' contact-linkedin';
+                            break;
+                        case 'telegram':
+                            iconContent = '📱';
+                            contactClass += ' contact-telegram';
+                            break;
+                        case 'phone':
+                            iconContent = '📞';
+                            contactClass += ' contact-phone';
+                            break;
+                        default:
+                            iconContent = '📋';
+                    }
+                    
+                    return `
+                        <div class="${contactClass}" onclick="copyContact('${contact.value}')">
+                            <div class="contact-icon">${iconContent}</div>
+                            <div class="contact-details">
+                                <div class="contact-type">${getContactTypeLabel(contact.type)}</div>
+                                <div class="contact-value">${contact.value}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
                 document.getElementById('contacts-grid').innerHTML = contactsHtml;
             }
         }
@@ -342,6 +371,28 @@
         }
 
         document.addEventListener('DOMContentLoaded', loadExpert);
+
+        function getContactTypeLabel(type) {
+            const labels = {
+                'email': 'Email',
+                'website': 'Веб-сайт',
+                'linkedin': 'LinkedIn',
+                'telegram': 'Telegram',
+                'phone': 'Телефон'
+            };
+            return labels[type] || type;
+        }
+
+        function copyContact(value) {
+            navigator.clipboard.writeText(value).then(() => {
+                showNotification('Контакт скопирован в буфер обмена!', 'success');
+            });
+        }
+
+        function showNotification(message, type = 'info') {
+            // Используйте существующую функцию уведомлений или создайте простую
+            alert(message); // Временное решение
+        }
     </script>
 </body>
 </html>

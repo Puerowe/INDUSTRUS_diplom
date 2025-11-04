@@ -99,83 +99,184 @@
 
     <section class="features">
         <div class="container">
-            <div class="investment-detail-content">
-                <div class="investment-main-content">
-                    <div class="investment-section">
-                        <h3>Описание проекта</h3>
-                        <p id="project-description-full">Инновационный проект по созданию экологичной мебели из переработанного пластика с современным дизайном.</p>
-                    </div>
-
-                    <div class="investment-section">
-                        <h3>Преимущества</h3>
-                        <ul id="investment-advantages">
-                            <!-- Будет заполнено через JS -->
-                        </ul>
-                    </div>
-
-                    <div class="investment-section">
-                        <h3>Бизнес-модель</h3>
-                        <ul id="business-model">
-                            <!-- Будет заполнено через JS -->
-                        </ul>
-                    </div>
-
-                    <div class="investment-section">
-                        <h3>План развития</h3>
-                        <ul id="development-plan">
-                            <!-- Будет заполнено через JS -->
-                        </ul>
-                    </div>
-
-                    <div class="investment-section">
-                        <h3>Финансовые показатели</h3>
-                        <div class="financial-metrics" id="financial-metrics">
-                            <!-- Будет заполнено через JS -->
+            <div class="detail-content">
+                <!-- Основная информация -->
+                <div class="content-section">
+                    <div class="investment-meta-large">
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <img src="../icons/addres.jpg" alt="Инвестиции" class="meta-icon" style="width: 30px; height: 30px;">
+                                <span id="investment-amount">2 000 000 ₽</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/share.jpg" alt="Доля" class="meta-icon" style="width: 30px; height: 30px;">
+                                <span id="investment-share">15% доля</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/u4astniki.jpg" alt="Инвесторы" class="meta-icon" style="width: 30px; height: 30px;">
+                                <span id="investment-investors">3 инвестора</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/calendar.jpg" alt="Срок" class="meta-icon" style="width: 30px; height: 30px;">
+                                <span id="investment-deadline">30 дней до закрытия</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="section-header">
+                        <img src="../icons/shester.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>О проекте</h3>
+                    </div>
+                    
+                    <p id="investment-description" class="content-text" style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 25px;">
+                        Стартап по производству мебели из переработанных материалов с уникальным дизайном
+                    </p>
+                    
+                    <div class="content-divider"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="cta-button large" onclick="showInvestmentContact()">
+                            Инвестировать в проект
+                        </button>
+                        <button class="cta-button secondary">
+                            Сохранить
+                        </button>
+                        <button class="cta-button secondary">
+                            Поделиться
+                        </button>
+                    </div>
+                </div>
 
+                <!-- Детали проекта -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/project.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Детали проекта</h3>
+                    </div>
+                    
+                    <div class="investment-details-grid">
+                        <div class="detail-card">
+                            <h4>Описание проекта</h4>
+                            <p id="project-description-full">Инновационный проект по созданию экологичной мебели из переработанного пластика с современным дизайном. Мы разрабатываем уникальный дизайн, сочетающий экологичность, функциональность и современную эстетику.</p>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <h4>Преимущества</h4>
+                            <ul id="investment-advantages" class="feature-list">
+                                <!-- Заполнится через JS -->
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <h4>Бизнес-модель</h4>
+                            <ul id="business-model" class="feature-list">
+                                <!-- Заполнится через JS -->
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <h4>План развития</h4>
+                            <ul id="development-plan" class="feature-list">
+                                <!-- Заполнится через JS -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Финансовые показатели -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/priz_fond.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Финансовые показатели</h3>
+                    </div>
+                    
+                    <div class="financial-metrics-grid" id="financial-metrics">
+                        <!-- Заполнится через JS -->
+                    </div>
+                    
+                    <div class="progress-stats">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Собрано средств</span>
+                                <span>750 000 ₽ / 2 000 000 ₽</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 37.5%"></div>
+                            </div>
+                            <div class="progress-percent">37.5%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Команда -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/u4astniki.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Команда проекта</h3>
+                    </div>
+                    
+                    <div class="team-grid">
+                        <div class="team-member-card">
+                            <div class="member-avatar-large">АК</div>
+                            <div class="member-info">
+                                <h4>Анна Ковалева</h4>
+                                <p class="member-role">Основатель, дизайнер</p>
+                                <p class="member-bio">Опыт в промышленном дизайне 8 лет. Выпускница Строгановки.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member-card">
+                            <div class="member-avatar-large">МП</div>
+                            <div class="member-info">
+                                <h4>Максим Петров</h4>
+                                <p class="member-role">Технический директор</p>
+                                <p class="member-bio">Инженер-технолог с 10-летним опытом работы с полимерами.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Теги и категории -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/shester.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Категории проекта</h3>
+                    </div>
+                    
                     <div class="investment-tags-large" id="investment-tags">
                         <!-- Теги будут добавлены через JS -->
                     </div>
                 </div>
 
-                <div class="investment-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Команда</h3>
-                        <div class="team-info">
-                            <div class="team-member">
-                                <div class="member-avatar">АК</div>
-                                <div class="member-details">
-                                    <p class="member-name">Анна Ковалева</p>
-                                    <p class="member-role">Основатель, дизайнер</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <div class="member-avatar">МП</div>
-                                <div class="member-details">
-                                    <p class="member-name">Максим Петров</p>
-                                    <p class="member-role">Технический директор</p>
-                                </div>
+                <!-- Контакты -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/phone.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Контакты для инвестиций</h3>
+                    </div>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                                <img src="../icons/lich_cab.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                            <div class="contact-details">
+                                <strong>Контактное лицо</strong>
+                                <p id="contact-person">Анна Ковалева</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Контакты</h3>
-                        <div class="contact-info">
-                            <p id="contact-person">Анна Ковалева</p>
-                            <p id="contact-email">a.kovaleva@ecofurniture.ru</p>
-                            <p id="contact-phone">+7 (916) 123-45-67</p>
+                        
+                        <div class="contact-card">
+                                <img src="../icons/email.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                            <div class="contact-details">
+                                <strong>Email</strong>
+                                <p id="contact-email">a.kovaleva@ecofurniture.ru</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Похожие проекты</h3>
-                        <div class="similar-investments">
-                            <div class="similar-investment" onclick="location.href='investment-detail.html?id=2'">
-                                <h4>Умная система хранения вещей</h4>
-                                <span class="amount">1 500 000 ₽</span>
-                                <span class="share">10% доля</span>
+                        
+                        <div class="contact-card">
+                                <img src="../icons/phone.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                            <div class="contact-details">
+                                <strong>Телефон</strong>
+                                <p id="contact-phone">+7 (916) 123-45-67</p>
                             </div>
                         </div>
                     </div>
@@ -366,10 +467,14 @@
                 const metricsContainer = document.getElementById('financial-metrics');
                 metricsContainer.innerHTML = '';
                 investment.financialMetrics.forEach(metric => {
-                    const div = document.createElement('div');
-                    div.className = 'metric-item';
-                    div.textContent = metric;
-                    metricsContainer.appendChild(div);
+                    const [label, value] = metric.split(': ');
+                    const metricCard = document.createElement('div');
+                    metricCard.className = 'metric-card';
+                    metricCard.innerHTML = `
+                        <span class="metric-value">${value}</span>
+                        <span class="metric-label">${label}</span>
+                    `;
+                    metricsContainer.appendChild(metricCard);
                 });
 
                 // Заполняем теги

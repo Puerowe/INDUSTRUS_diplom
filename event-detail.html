@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали события - Промдизайн.ру</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .event-detail {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .event-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .speakers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .speaker {
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+        .event-gallery {
+            margin-top: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            height: 150px;
+            background: var(--light-gray);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 id="event-title">Загрузка...</h1>
+            <h2 id="event-subtitle"></h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="event-detail">
+                <div class="event-header">
+                    <div class="event-meta" id="event-meta">
+                        <!-- Заполнится через JS -->
+                    </div>
+                    
+                    <button class="cta-button" id="register-btn">Зарегистрироваться</button>
+                </div>
+                
+                <div class="event-description">
+                    <h3>Описание мероприятия</h3>
+                    <p id="event-description">Загрузка описания...</p>
+                    
+                    <h3>Спикеры</h3>
+                    <div class="speakers-list" id="speakers-list">
+                        <!-- Заполнится через JS -->
+                    </div>
+
+                    <div id="competition-info" style="display: none;">
+                        <h3>Условия конкурса</h3>
+                        <p id="competition-terms"></p>
+                        <div class="feature-stats" id="prize-info"></div>
+                    </div>
+
+                    <div id="exhibition-info" style="display: none;">
+                        <h3>Место проведения</h3>
+                        <p id="exhibition-location"></p>
+                    </div>
+                </div>
+
+                <div class="event-gallery" id="event-gallery" style="display: none;">
+                    <h3>Галерея</h3>
+                    <div class="gallery-grid" id="gallery-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // База данных событий
+        const eventsData = {
+            // Вебинары
+            'webinar_1': {
+                title: 'Инновации в автомобильном дизайне',
+                type: 'webinar',
+                subtitle: 'Вебинар • 21 ноября, 19:00',
+                date: '21 ноября 2024, 19:00',
+                participants: '147 участников',
+                location: 'Онлайн',
+                description: 'Обсуждение последних тенденций в дизайне автомобилей, новые материалы и технологии с экспертами ГАЗ.',
+                speakers: [
+                    'Петров И.В. - Главный дизайнер ГАЗ',
+                    'Сидорова М.К. - Инженер-конструктор'
+                ],
+                hasGallery: false
+            },
+            
+            // Выставки
+            'exhibition_2': {
+                title: 'Выставка "Дизайн-революция 2024"',
+                type: 'exhibition',
+                subtitle: 'Выставка • 25-30 ноября',
+                date: '25-30 ноября 2024',
+                participants: '45 компаний',
+                location: 'Москва, Арт-центр',
+                description: 'Крупнейшая выставка промышленного дизайна с участием ведущих компаний и дизайнеров. Более 200 экспонатов от советского периода до современных разработок.',
+                speakers: [
+                    'Кузнецов А.П. - Куратор выставки',
+                    'Орлова Е.В. - Арт-директор'
+                ],
+                hasGallery: true,
+                galleryItems: ['<img src="../icons/diz_rev1.jpg" alt="Экспозиция выставки" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',
+        '<img src="../icons/diz_rev2.jpg" alt="Работы участников" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',
+        '<img src="../icons/diz_rev1.jpg" alt="Церемония награждения" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">']
+            },
+            
+            // Конкурсы
+            'competition_3': {
+                title: 'Конкурс "Лучший молодой дизайнер 2024"',
+                type: 'competition',
+                subtitle: 'Конкурс • До 30 ноября',
+                date: 'До 30 ноября 2024',
+                participants: '89 проектов',
+                location: 'Онлайн',
+                description: 'Ежегодный конкурс для молодых дизайнеров. Тема: "Устойчивый дизайн для городов будущего".',
+                speakers: [
+                    'Волков С.И. - Председатель жюри',
+                    'Николаева Т.П. - Координатор конкурса'
+                ],
+                prizeFund: '500,000 ₽',
+                terms: 'Участники должны представить концепцию устойчивого дизайна для городской среды. Работы принимаются в формате PDF с описанием и визуализацией.',
+                hasGallery: false
+            },
+            
+            // Конференции
+            'conference_4': {
+                title: 'PROДИЗАЙН: Стратегия, Экономика, Результат',
+                type: 'conference',
+                subtitle: 'Конференция • 15 декабря',
+                date: '15 декабря 2024',
+                participants: '15 спикеров',
+                location: 'Онлайн',
+                description: 'Практическая конференция о бизнес-аспектах дизайна. Кейсы от ведущих российских компаний.',
+                speakers: [
+                    'Смирнов Д.В. - Бизнес-консультант',
+                    'Федорова Л.М. - Директор по дизайну',
+                    'Громов П.С. - Венчурный инвестор'
+                ],
+                hasGallery: false
+            },
+            
+            // Прошедшие события
+            'conference_5': {
+                title: 'Конференция "Дизайн-мышление 2024"',
+                type: 'conference',
+                subtitle: 'Прошедшая конференция • 15 октября 2024',
+                date: '15 октября 2024',
+                participants: '320 участников',
+                location: 'Москва, Бизнес-центр',
+                description: 'Итоги крупнейшей конференции о дизайн-мышлении в бизнесе. Более 20 выступлений от лидеров индустрии.',
+                speakers: [
+                    'Ковалев А.Б. - Основатель студии дизайна',
+                    'Морозова И.Н. - Бизнес-тренер'
+                ],
+                hasGallery: true,
+                galleryItems: ['245 фото', '15 видео', 'Презентации']
+            },
+            
+            'workshop_6': {
+                title: 'Воркшоп по 3D-моделированию',
+                type: 'workshop',
+                subtitle: 'Прошедший воркшоп • 8 октября 2024',
+                date: '8 октября 2024',
+                participants: '48 участников',
+                location: 'Онлайн',
+                description: 'Практический воркшоп по созданию 3D-моделей для промышленного дизайна. Основы работы в Blender и SolidWorks.',
+                speakers: [
+                    'Тихонов Р.О. - 3D-дизайнер',
+                    'Белова С.М. - Инструктор'
+                ],
+                hasGallery: true,
+                galleryItems: ['45 работ участников', '189 фото', 'Методички']
+            }
+        };
+
+        function getEventId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            const id = urlParams.get('id');
+            return `${type}_${id}`;
+        }
+
+        function loadEventData() {
+            const eventId = getEventId();
+            const eventData = eventsData[eventId];
+            
+            if (!eventData) {
+                document.getElementById('event-title').textContent = 'Событие не найдено';
+                return;
+            }
+
+            // Заполняем основную информацию
+            document.getElementById('event-title').textContent = eventData.title;
+            document.getElementById('event-subtitle').textContent = eventData.subtitle;
+            document.getElementById('event-description').textContent = eventData.description;
+
+            // Заполняем мета-информацию
+            const metaHtml = `
+                <span><img src="../icons/calendar.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> ${eventData.date}</span>
+                <span><img src="../icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> ${eventData.participants}</span>
+                <span><img src="../icons/addres.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> ${eventData.location}</span>
+            `;
+            document.getElementById('event-meta').innerHTML = metaHtml;
+
+            // Заполняем спикеров
+            const speakersHtml = eventData.speakers.map(speaker => 
+                `<div class="speaker">${speaker}</div>`
+            ).join('');
+            document.getElementById('speakers-list').innerHTML = speakersHtml;
+
+            // Специфичная информация для конкурсов
+            if (eventData.type === 'competition') {
+                document.getElementById('competition-info').style.display = 'block';
+                document.getElementById('competition-terms').textContent = eventData.terms;
+                document.getElementById('prize-info').innerHTML = `
+                    <span><img src="../icons/priz_fond.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> Призовой фонд: ${eventData.prizeFund}</span>
+                `;
+            }
+
+            // Специфичная информация для выставок
+            if (eventData.type === 'exhibition') {
+                document.getElementById('exhibition-info').style.display = 'block';
+                document.getElementById('exhibition-location').textContent = eventData.location;
+            }
+
+            // Галерея
+            if (eventData.hasGallery && eventData.galleryItems) {
+                document.getElementById('event-gallery').style.display = 'block';
+                const galleryHtml = eventData.galleryItems.map(item => 
+                    `<div class="gallery-item">${item}</div>`
+                ).join('');
+                document.getElementById('gallery-grid').innerHTML = galleryHtml;
+            }
+
+            // Настройка кнопки регистрации для прошедших событий
+            if (eventData.subtitle.includes('Прошедш')) {
+                document.getElementById('register-btn').textContent = 'Смотреть материалы';
+                document.getElementById('register-btn').onclick = function() {
+                    showNotification('Переход к материалам события...', 'info');
+                };
+            } else {
+                document.getElementById('register-btn').onclick = function() {
+                    registerForEvent(eventId);
+                };
+            }
+        }
+
+        function registerForEvent(eventId) {
+            showNotification(`Регистрация на событие "${eventsData[eventId].title}"`, 'success');
+            // Здесь можно добавить логику реальной регистрации
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#4CAF50' : '#2196F3'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Загружаем данные при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadEventData);
+    </script>
+</body>
+</html>
