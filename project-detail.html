@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="community-collab">
+                <div class="collab-circle circle-1"></div>
+                <div class="collab-circle circle-2"></div>
+                <div class="collab-circle circle-3"></div>
+                <div class="collab-circle circle-4"></div>
+                <div class="collab-line line-1"></div>
+                <div class="collab-line line-2"></div>
+                <div class="collab-line line-3"></div>
+                <div class="collab-line line-4"></div>
+                <div class="collab-line line-5"></div>
+                <div class="collab-line line-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 id="project-title">Название проекта</h1>
+            <h2 id="project-subtitle">Описание проекта</h2>
+            <!-- Добавляем информацию для фриланс-проектов -->
+            <div id="freelance-info" class="freelance-info" style="display: none;">
+                <div class="project-meta-large">
+                    <span id="project-budget"></span>
+                    <span id="project-deadline"></span>
+                    <span id="project-responses"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="project-detail">
+                <div class="project-main">
+                    <div class="project-status" id="project-status"></div>
+                    
+                    <div class="project-description" id="project-description"></div>
+
+                    <!-- Блок для фриланс-проектов -->
+                    <div id="freelance-details" class="freelance-details" style="display: none;">
+                        <div class="project-section">
+                            <h3>Задачи проекта</h3>
+                            <ul id="project-tasks"></ul>
+                        </div>
+
+                        <div class="project-section">
+                            <h3>Требования к исполнителю</h3>
+                            <ul id="project-requirements"></ul>
+                        </div>
+
+                        <div class="project-section">
+                            <h3>Этапы работы</h3>
+                            <ul id="project-stages"></ul>
+                        </div>
+                    </div>
+
+                    <div class="project-progress">
+                        <h3>Прогресс проекта</h3>
+                        <div class="progress-bar">
+                            <div class="progress" id="project-progress-bar"></div>
+                        </div>
+                        <span id="project-progress-text"></span>
+                    </div>
+
+                    <div class="project-team">
+                        <h3>Команда проекта</h3>
+                        <div class="team-members" id="project-team"></div>
+                    </div>
+
+                    <div class="project-tags">
+                        <h3>Теги проекта</h3>
+                        <div class="tags-cloud" id="project-tags"></div>
+                    </div>
+
+                    <!-- Разные кнопки для разных типов проектов -->
+                    <button class="cta-button" id="project-action-button">Присоединиться к проекту</button>
+                </div>
+
+                <div class="project-sidebar">
+                    <!-- Блок для фриланс-проектов -->
+                    <div id="freelance-sidebar" class="freelance-sidebar" style="display: none;">
+                        <div class="sidebar-section">
+                            <h3>Клиент</h3>
+                            <div class="client-info">
+                                <div class="client-avatar" id="client-avatar">ТЛ</div>
+                                <div class="client-details">
+                                    <p id="client-name">ТехноЛайт</p>
+                                    <p id="client-rating">⭐ 4.8 (12 отзывов)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Контакты</h3>
+                            <div class="contact-info">
+                                <p id="contact-person">Татьяна Лебедева</p>
+                                <p id="contact-email">t.lebedeva@technolight.ru</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-stats">
+                        <h3>Статистика</h3>
+                        <div class="stats-grid" id="project-stats"></div>
+                    </div>
+
+                    <div class="project-updates">
+                        <h3>Последние обновления</h3>
+                        <div id="project-updates"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Обновленные данные проектов
+        const projectsData = {
+            // Существующие проекты сообщества
+            '1': {
+                type: 'community',
+                title: 'Эко-мебель для города',
+                subtitle: 'Разработка модульной мебели из переработанных материалов для городских пространств',
+                status: 'active',
+                progress: 60,
+                description: 'Создание модульной уличной мебели из переработанного пластика и алюминия для парков, скверов и общественных пространств.',
+                team: [
+                    { id: 3, name: 'Алексей Козлов', role: 'Руководитель' },
+                    { id: 2, name: 'Мария Сидорова', role: 'Дизайнер' }
+                ],
+                tags: ['#мебель', '#экология', '#городскаясреда'],
+                stats: { participants: 15, months: 2, likes: 127 },
+                updates: [
+                    { date: 'Сегодня', text: 'Завершена работа над концепцией модульной системы' }
+                ]
+            },
+            // Фриланс-проекты
+            'freelance-1': {
+                type: 'freelance',
+                title: 'Дизайн умного светильника',
+                subtitle: 'Разработка дизайна для умного светильника с управлением через приложение',
+                budget: '50 000 ₽',
+                deadline: '2 недели',
+                responses: '5 откликов',
+                description: 'Разработка полного цикла дизайна умного светильника для домашнего использования с возможностью управления через мобильное приложение.',
+                tasks: [
+                    'Разработка концепции дизайна',
+                    'Создание 3D-модели светильника',
+                    'Подбор материалов и цветовых решений',
+                    'Подготовка технической документации'
+                ],
+                requirements: [
+                    'Опыт работы в промышленном дизайне от 2 лет',
+                    'Знание SolidWorks/ Fusion 360',
+                    'Опыт работы с IoT устройствами',
+                    'Портфолио с похожими проектами'
+                ],
+                stages: [
+                    'Обсуждение ТЗ - 1 день',
+                    'Концепция - 3 дня',
+                    '3D-моделирование - 5 дней',
+                    'Визуализация - 2 дня'
+                ],
+                tags: ['Светильники', 'Умный дом', '3D-моделирование', 'IoT'],
+                clientName: 'ТехноЛайт',
+                clientRating: '⭐ 4.8 (12 отзывов)',
+                contactPerson: 'Татьяна Лебедева',
+                contactEmail: 't.lebedeva@technolight.ru',
+                stats: { participants: 1, months: 0, likes: 8 }
+            },
+            'freelance-2': {
+                type: 'freelance',
+                title: 'Концепт мебели для коворкинга',
+                subtitle: 'Создание модульной мебельной системы для современных коворкинг-пространств',
+                budget: '80 000 ₽',
+                deadline: '3 недели',
+                responses: '12 откликов',
+                description: 'Разработка модульной системы мебели для коворкинга, которая должна быть функциональной, мобильной и эстетически привлекательной.',
+                tasks: [
+                    'Исследование рынка и потребностей',
+                    'Разработка концепции модульной системы',
+                    'Создание 3D-моделей мебели',
+                    'Проработка эргономики'
+                ],
+                requirements: [
+                    'Опыт в дизайне мебели от 3 лет',
+                    'Знание эргономических стандартов',
+                    'Опыт работы с модульными системами',
+                    'Знание материалов и производственных процессов'
+                ],
+                stages: [
+                    'Анализ и концепция - 5 дней',
+                    'Эскизное проектирование - 4 дня',
+                    '3D-моделирование - 7 дней',
+                    'Техническая документация - 3 дня'
+                ],
+                tags: ['Мебель', 'Коворкинг', 'Модульные системы', 'Эргономика'],
+                clientName: 'WorkSpace Solutions',
+                clientRating: '⭐ 4.9 (8 отзывов)',
+                contactPerson: 'Андрей Смирнов',
+                contactEmail: 'a.smirnov@workspace.ru',
+                stats: { participants: 1, months: 0, likes: 15 }
+            }
+        };
+
+        function loadProject() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id') || '1';
+            const project = projectsData[projectId];
+
+            if (project) {
+                document.title = `${project.title} - INDUSTRUS`;
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-subtitle').textContent = project.subtitle;
+
+                if (project.type === 'freelance') {
+                    // Показываем блоки для фриланс-проектов
+                    document.getElementById('freelance-info').style.display = 'block';
+                    document.getElementById('freelance-details').style.display = 'block';
+                    document.getElementById('freelance-sidebar').style.display = 'block';
+                    
+                    // Заполняем информацию о фриланс-проекте
+                    document.getElementById('project-budget').textContent = project.budget;
+                    document.getElementById('project-deadline').textContent = project.deadline;
+                    document.getElementById('project-responses').textContent = project.responses;
+                    
+                    // Заполняем задачи, требования и этапы
+                    fillList('project-tasks', project.tasks);
+                    fillList('project-requirements', project.requirements);
+                    fillList('project-stages', project.stages);
+                    
+                    // Заполняем информацию о клиенте
+                    document.getElementById('client-name').textContent = project.clientName;
+                    document.getElementById('client-rating').textContent = project.clientRating;
+                    document.getElementById('contact-person').textContent = project.contactPerson;
+                    document.getElementById('contact-email').textContent = project.contactEmail;
+                    
+                    // Обновляем аватар клиента
+                    const clientAvatar = document.getElementById('client-avatar');
+                    clientAvatar.textContent = project.clientName.split(' ').map(n => n[0]).join('');
+                    
+                    // Меняем текст кнопки
+                    document.getElementById('project-action-button').textContent = 'Подать заявку';
+                    document.getElementById('project-action-button').onclick = applyForFreelance;
+                } else {
+                    // Показываем стандартные блоки для проектов сообщества
+                    document.getElementById('project-status').textContent = project.status === 'active' ? 'Активен' : 'Завершен';
+                    document.getElementById('project-status').className = `project-status ${project.status}`;
+                    document.getElementById('project-description').innerHTML = `<h3>О проекте</h3><p>${project.description}</p>`;
+                    document.getElementById('project-progress-bar').style.width = `${project.progress}%`;
+                    document.getElementById('project-progress-text').textContent = `${project.progress}% завершено`;
+                    
+                    // Заполняем команду, теги, статистику и обновления
+                    fillTeam(project.team);
+                    fillTags(project.tags);
+                    fillStats(project.stats);
+                    fillUpdates(project.updates);
+                    
+                    document.getElementById('project-action-button').textContent = 'Присоединиться к проекту';
+                    document.getElementById('project-action-button').onclick = joinCommunityProject;
+                }
+            }
+        }
+
+        function fillList(elementId, items) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = '';
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                container.appendChild(li);
+            });
+        }
+
+        function fillTeam(team) {
+            const container = document.getElementById('project-team');
+            container.innerHTML = '';
+            team.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'team-member';
+                memberElement.onclick = () => location.href = `expert-detail.html?id=${member.id}`;
+                memberElement.innerHTML = `
+                    <div class="member-avatar">${member.name.split(' ').map(n => n[0]).join('')}</div>
+                    <span>${member.name} (${member.role})</span>
+                `;
+                container.appendChild(memberElement);
+            });
+        }
+
+        function fillTags(tags) {
+            const container = document.getElementById('project-tags');
+            container.innerHTML = '';
+            tags.forEach(tag => {
+                const tagElement = document.createElement('span');
+                tagElement.className = 'tag';
+                tagElement.textContent = tag;
+                container.appendChild(tagElement);
+            });
+        }
+
+        function fillStats(stats) {
+            const container = document.getElementById('project-stats');
+            container.innerHTML = `
+                <div class="stat-item">
+                    <span class="stat-value">${stats.participants}</span>
+                    <span class="stat-label">Участников</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">${stats.months}</span>
+                    <span class="stat-label">Месяца</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">${stats.likes}</span>
+                    <span class="stat-label">Лайков</span>
+                </div>
+            `;
+        }
+
+        function fillUpdates(updates) {
+            const container = document.getElementById('project-updates');
+            container.innerHTML = '';
+            updates.forEach(update => {
+                const updateElement = document.createElement('div');
+                updateElement.className = 'update-item';
+                updateElement.innerHTML = `
+                    <span class="update-date">${update.date}</span>
+                    <p>${update.text}</p>
+                `;
+                container.appendChild(updateElement);
+            });
+        }
+
+        function applyForFreelance() {
+            alert('Заявка на проект отправлена! Клиент свяжется с вами в ближайшее время.');
+        }
+
+        function joinCommunityProject() {
+            alert('Заявка на участие в проекте отправлена!');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProject);
+    </script>
+</body>
+</html>

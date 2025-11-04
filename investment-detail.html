@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инвестиционный проект - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="community-collab">
+                <div class="collab-circle circle-1"></div>
+                <div class="collab-circle circle-2"></div>
+                <div class="collab-circle circle-3"></div>
+                <div class="collab-circle circle-4"></div>
+                <div class="collab-line line-1"></div>
+                <div class="collab-line line-2"></div>
+                <div class="collab-line line-3"></div>
+                <div class="collab-line line-4"></div>
+                <div class="collab-line line-5"></div>
+                <div class="collab-line line-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="investment-detail-header">
+                <div class="investment-info-main">
+                    <h1 id="investment-title">Эко-мебель из переработанного пластика</h1>
+                    <div class="investment-meta-large">
+                        <span id="investment-amount">2 000 000 ₽</span>
+                        <span id="investment-share">15% доля</span>
+                        <span id="investment-investors">3 инвестора</span>
+                    </div>
+                    <p id="investment-description">Стартап по производству мебели из переработанных материалов с уникальным дизайном</p>
+                </div>
+                <button class="cta-button large" onclick="showInvestmentContact()">Инвестировать</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="investment-detail-content">
+                <div class="investment-main-content">
+                    <div class="investment-section">
+                        <h3>Описание проекта</h3>
+                        <p id="project-description-full">Инновационный проект по созданию экологичной мебели из переработанного пластика с современным дизайном.</p>
+                    </div>
+
+                    <div class="investment-section">
+                        <h3>Преимущества</h3>
+                        <ul id="investment-advantages">
+                            <!-- Будет заполнено через JS -->
+                        </ul>
+                    </div>
+
+                    <div class="investment-section">
+                        <h3>Бизнес-модель</h3>
+                        <ul id="business-model">
+                            <!-- Будет заполнено через JS -->
+                        </ul>
+                    </div>
+
+                    <div class="investment-section">
+                        <h3>План развития</h3>
+                        <ul id="development-plan">
+                            <!-- Будет заполнено через JS -->
+                        </ul>
+                    </div>
+
+                    <div class="investment-section">
+                        <h3>Финансовые показатели</h3>
+                        <div class="financial-metrics" id="financial-metrics">
+                            <!-- Будет заполнено через JS -->
+                        </div>
+                    </div>
+
+                    <div class="investment-tags-large" id="investment-tags">
+                        <!-- Теги будут добавлены через JS -->
+                    </div>
+                </div>
+
+                <div class="investment-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Команда</h3>
+                        <div class="team-info">
+                            <div class="team-member">
+                                <div class="member-avatar">АК</div>
+                                <div class="member-details">
+                                    <p class="member-name">Анна Ковалева</p>
+                                    <p class="member-role">Основатель, дизайнер</p>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-avatar">МП</div>
+                                <div class="member-details">
+                                    <p class="member-name">Максим Петров</p>
+                                    <p class="member-role">Технический директор</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Контакты</h3>
+                        <div class="contact-info">
+                            <p id="contact-person">Анна Ковалева</p>
+                            <p id="contact-email">a.kovaleva@ecofurniture.ru</p>
+                            <p id="contact-phone">+7 (916) 123-45-67</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Похожие проекты</h3>
+                        <div class="similar-investments">
+                            <div class="similar-investment" onclick="location.href='investment-detail.html?id=2'">
+                                <h4>Умная система хранения вещей</h4>
+                                <span class="amount">1 500 000 ₽</span>
+                                <span class="share">10% доля</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Данные инвестиционных проектов
+        const investmentsData = {
+            '1': {
+                title: 'Эко-мебель из переработанного пластика',
+                amount: '2 000 000 ₽',
+                share: '15% доля',
+                investors: '3 инвестора',
+                description: 'Стартап по производству мебели из переработанных материалов с уникальным дизайном',
+                fullDescription: 'Инновационный проект по созданию экологичной мебели из переработанного пластика. Мы разрабатываем уникальный дизайн, сочетающий экологичность, функциональность и современную эстетику.',
+                advantages: [
+                    'Уникальный экологичный продукт',
+                    'Растущий рынок sustainable дизайна',
+                    'Запатентованная технология переработки',
+                    'Сильная команда с опытом в дизайне',
+                    'Готовый прототип и первые заказы'
+                ],
+                businessModel: [
+                    'Прямые продажи через онлайн-платформу',
+                    'B2B поставки для офисов и коворкингов',
+                    'Франчайзинг в регионах',
+                    'Корпоративные заказы под бренд',
+                    'Международная экспансия'
+                ],
+                developmentPlan: [
+                    'Q1 2024 - Запуск производства',
+                    'Q2 2024 - Выход на break-even',
+                    'Q3 2024 - Расширение ассортимента',
+                    'Q4 2024 - Выход в регионы',
+                    '2025 - Международная экспансия'
+                ],
+                financialMetrics: [
+                    'Окупаемость: 18 месяцев',
+                    'Прогноз выручки за первый год: 5 000 000 ₽',
+                    'Маржинальность: 45%',
+                    'ROI: 120% за 2 года'
+                ],
+                tags: ['Эко-дизайн', 'Мебель', 'Стартап', 'Устойчивое развитие'],
+                contactPerson: 'Анна Ковалева',
+                contactEmail: 'a.kovaleva@ecofurniture.ru',
+                contactPhone: '+7 (916) 123-45-67'
+            },
+            '2': {
+                title: 'Умная система хранения вещей',
+                amount: '1 500 000 ₽',
+                share: '10% доля',
+                investors: '2 инвестора',
+                description: 'Разработка умной модульной системы хранения с IoT-функционалом',
+                fullDescription: 'Инновационная система хранения с интеллектуальным управлением и модульной архитектурой для современных городских квартир.',
+                advantages: [
+                    'Уникальное IoT-решение для хранения',
+                    'Модульная система под любые помещения',
+                    'Интеграция с умным домом',
+                    'Высокий спрос на рынке smart home',
+                    'Защита от копирования технологий'
+                ],
+                businessModel: [
+                    'Продажа через ритейл-партнеров',
+                    'Прямые продажи через сайт',
+                    'B2B поставки для застройщиков',
+                    'Подписка на премиум-функции',
+                    'Лицензирование технологии'
+                ],
+                developmentPlan: [
+                    'Q1 2024 - Запуск MVP',
+                    'Q2 2024 - Массовое производство',
+                    'Q3 2024 - Выход на международный рынок',
+                    'Q4 2024 - Расширение функционала',
+                    '2025 - Разработка новых продуктов'
+                ],
+                financialMetrics: [
+                    'Окупаемость: 14 месяцев',
+                    'Прогноз выручки за первый год: 8 000 000 ₽',
+                    'Маржинальность: 55%',
+                    'ROI: 150% за 2 года'
+                ],
+                tags: ['IoT', 'Умный дом', 'Модульные системы', 'Технологии'],
+                contactPerson: 'Дмитрий Волков',
+                contactEmail: 'd.volkov@smartstorage.ru',
+                contactPhone: '+7 (915) 987-65-43'
+            }
+        };
+
+        function loadInvestment() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const investmentId = urlParams.get('id') || '1';
+            const investment = investmentsData[investmentId];
+
+            if (investment) {
+                // Обновляем заголовок страницы
+                document.title = `${investment.title} - Инвестиционный проект - INDUSTRUS`;
+                
+                // Заполняем основную информацию
+                document.getElementById('investment-title').textContent = investment.title;
+                document.getElementById('investment-amount').textContent = investment.amount;
+                document.getElementById('investment-share').textContent = investment.share;
+                document.getElementById('investment-investors').textContent = investment.investors;
+                document.getElementById('investment-description').textContent = investment.description;
+                document.getElementById('project-description-full').textContent = investment.fullDescription;
+                document.getElementById('contact-person').textContent = investment.contactPerson;
+                document.getElementById('contact-email').textContent = investment.contactEmail;
+                document.getElementById('contact-phone').textContent = investment.contactPhone;
+
+                // Заполняем преимущества
+                const advantagesContainer = document.getElementById('investment-advantages');
+                advantagesContainer.innerHTML = '';
+                investment.advantages.forEach(adv => {
+                    const li = document.createElement('li');
+                    li.textContent = adv;
+                    advantagesContainer.appendChild(li);
+                });
+
+                // Заполняем бизнес-модель
+                const businessContainer = document.getElementById('business-model');
+                businessContainer.innerHTML = '';
+                investment.businessModel.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    businessContainer.appendChild(li);
+                });
+
+                // Заполняем план развития
+                const planContainer = document.getElementById('development-plan');
+                planContainer.innerHTML = '';
+                investment.developmentPlan.forEach(step => {
+                    const li = document.createElement('li');
+                    li.textContent = step;
+                    planContainer.appendChild(li);
+                });
+
+                // Заполняем финансовые показатели
+                const metricsContainer = document.getElementById('financial-metrics');
+                metricsContainer.innerHTML = '';
+                investment.financialMetrics.forEach(metric => {
+                    const div = document.createElement('div');
+                    div.className = 'metric-item';
+                    div.textContent = metric;
+                    metricsContainer.appendChild(div);
+                });
+
+                // Заполняем теги
+                const tagsContainer = document.getElementById('investment-tags');
+                tagsContainer.innerHTML = '';
+                investment.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'tag';
+                    tagElement.textContent = tag;
+                    tagsContainer.appendChild(tagElement);
+                });
+            }
+        }
+
+        function showInvestmentContact() {
+            alert('Контактные данные отправлены на вашу почту! Свяжитесь с основателем для обсуждения деталей инвестирования.');
+        }
+
+        // Загружаем данные при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadInvestment);
+    </script>
+</body>
+</html>

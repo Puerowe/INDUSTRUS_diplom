@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выставка - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 id="exhibition-title">Загрузка...</h1>
+            <h2 id="exhibition-subtitle">Выставка промышленного дизайна</h2>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="detail-content">
+                <!-- Основная информация -->
+                <div class="content-section">
+                    <div class="exhibition-meta">
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <img src="../icons/calendar.jpg" alt="Дата" class="meta-icon" style="width: 40px; height: 40px;">
+                                <span id="exhibition-date">10-20 апреля 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/addres.jpg" alt="Место" class="meta-icon" style="width: 40px; height: 40px;">
+                                <span id="exhibition-location">Москва, ЦДХ</span>
+                            </div>
+                            <div class="meta-item">
+                                
+                                <span id="exhibition-time">10:00-20:00</span>
+                            </div>
+                            <div class="meta-item">
+                                
+                                <span id="exhibition-ticket">Бесплатно</span>
+                            </div>
+                        </div>
+                        <div class="status-badge status-active" id="exhibition-status">Идет сейчас</div>
+                    </div>
+                    
+                    <div class="section-header">
+                        
+                        <h3>О выставке</h3>
+                    </div>
+                    
+                    <div class="exhibition-description">
+                        <p id="exhibition-description" class="content-text">Загрузка описания...</p>
+                        
+                        <div class="content-divider"></div>
+                        
+                        <div class="action-buttons">
+                            <button class="cta-button" onclick="registerForExhibition()">
+                                
+                                Записаться на выставку
+                            </button>
+                            <button class="cta-button secondary">
+                               
+                                Сохранить
+                            </button>
+                            <button class="cta-button secondary">
+                                <img src="../icons/share.jpg" alt="Поделиться" class="action-icon">
+                                Поделиться
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Галерея -->
+                <div class="content-section">
+                    <div class="section-header">
+                       
+                        <h3>Галерея</h3>
+                    </div>
+                    <div class="exhibition-gallery" id="exhibition-gallery">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Экспонаты -->
+                <div class="content-section">
+                    <div class="section-header">
+                    
+                        <h3>Ключевые экспонаты</h3>
+                    </div>
+                    <div class="exhibits-grid" id="exhibits-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Участники -->
+                <div class="content-section">
+                    <div class="section-header">
+                  
+                        <h3>Участники выставки</h3>
+                    </div>
+                    <div class="participants-grid" id="participants-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Программа -->
+                <div class="content-section">
+                    <div class="section-header">
+                  
+                        <h3>Программа мероприятий</h3>
+                    </div>
+                    <div class="events-schedule" id="events-schedule">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Организаторы -->
+                <div class="content-section">
+                    <div class="section-header">
+                   
+                        <h3>Организаторы</h3>
+                    </div>
+                    <div class="organizers-list" id="organizers-list">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Данные выставки
+        const exhibitionData = {
+            '1': {
+                title: 'Ретроспектива советского промышленного дизайна',
+                subtitle: 'Выставка промышленного дизайна',
+                date: '10-20 апреля 2024',
+                location: 'Москва, ЦДХ',
+                time: '10:00-20:00',
+                ticket: 'Бесплатно',
+                status: 'active',
+                description: 'Крупнейшая выставка, посвященная истории и развитию промышленного дизайна в СССР. В экспозиции представлены уникальные объекты от послевоенного периода до 1990-х годов, включая автомобили, бытовую технику, мебель и промышленное оборудование.',
+                gallery: [
+                    { src: '../icons/exhibition1.jpg', title: 'Основной зал выставки' },
+                    { src: '../icons/exhibition2.jpg', title: 'Экспозиция автомобилей' },
+                    { src: '../icons/exhibition3.jpg', title: 'Бытовая техника 70-х' },
+                    { src: '../icons/exhibition4.jpg', title: 'Интерактивная зона' }
+                ],
+                exhibits: [
+                    { 
+                        title: 'ГАЗ-21 "Волга"', 
+                        year: '1956', 
+                        description: 'Легендарный советский автомобиль',
+                        category: 'Автомобили',
+                        image: '../icons/gaz21.jpg'
+                    },
+                    { 
+                        title: 'Телевизор "Рекорд"', 
+                        year: '1975', 
+                        description: 'Популярный черно-белый телевизор',
+                        category: 'Электроника',
+                        image: '../icons/teliv_rek.jpg'
+                    },
+                    { 
+                        title: 'Холодильник "ЗИЛ"', 
+                        year: '1960', 
+                        description: 'Символ советского быта',
+                        category: 'Бытовая техника',
+                        image: '../icons/zil_moscow.jpg'
+                    },
+                    { 
+                        title: 'Фотоаппарат "Зенит"', 
+                        year: '1970', 
+                        description: 'Зеркальная фотокамера',
+                        category: 'Фототехника',
+                        image: '../icons/zenit.jpg'
+                    }
+                ],
+                participants: [
+                    { name: 'Музей промышленного дизайна', role: 'Организатор', logo: 'МПД' },
+                    { name: 'Завод ГАЗ', role: 'Участник', logo: 'ГАЗ' },
+                    { name: 'ЛОМО', role: 'Участник', logo: 'ЛОМО' },
+                    { name: 'Завод ЗИЛ', role: 'Участник', logo: 'ЗИЛ' },
+                    { name: 'Красногорский завод', role: 'Участник', logo: 'КМЗ' },
+                    { name: 'Всероссийский музей декоративного искусства', role: 'Партнер', logo: 'ВМДИ' }
+                ],
+                schedule: [
+                    { date: '10 апреля', time: '12:00', title: 'Торжественное открытие', type: 'opening' },
+                    { date: '11 апреля', time: '15:00', title: 'Лекция: История автопрома', speaker: 'Иван Петров', type: 'lecture' },
+                    { date: '13 апреля', time: '14:00', title: 'Мастер-класс по реставрации', type: 'workshop' },
+                    { date: '15 апреля', time: '16:00', title: 'Встреча с дизайнерами', type: 'meeting' },
+                    { date: '20 апреля', time: '18:00', title: 'Закрытие выставки', type: 'closing' }
+                ],
+                organizers: [
+                    { name: 'Министерство культуры РФ', role: 'Организатор', logo: 'МК' },
+                    { name: 'Союз дизайнеров России', role: 'Организатор', logo: 'СДР' },
+                    { name: 'Центральный дом художника', role: 'Площадка', logo: 'ЦДХ' }
+                ]
+            }
+        };
+
+        function loadExhibition() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const exhibitionId = urlParams.get('id') || '1';
+            const exhibition = exhibitionData[exhibitionId];
+
+            if (exhibition) {
+                // Основная информация
+                document.getElementById('exhibition-title').textContent = exhibition.title;
+                document.getElementById('exhibition-subtitle').textContent = exhibition.subtitle;
+                document.getElementById('exhibition-date').textContent = exhibition.date;
+                document.getElementById('exhibition-location').textContent = exhibition.location;
+                document.getElementById('exhibition-time').textContent = exhibition.time;
+                document.getElementById('exhibition-ticket').textContent = exhibition.ticket;
+                document.getElementById('exhibition-description').textContent = exhibition.description;
+
+                // Статус
+                const statusElement = document.getElementById('exhibition-status');
+                statusElement.textContent = exhibition.status === 'active' ? 'Идет сейчас' : 'Завершена';
+                statusElement.className = `status-badge status-${exhibition.status === 'active' ? 'active' : 'completed'}`;
+
+                // Галерея
+                const galleryHtml = exhibition.gallery.map(item => `
+                    <div class="gallery-item">
+                        <img src="${item.src}" alt="${item.title}" class="gallery-image">
+                        <div class="gallery-caption">${item.title}</div>
+                    </div>
+                `).join('');
+                document.getElementById('exhibition-gallery').innerHTML = galleryHtml;
+
+                // Экспонаты
+                const exhibitsHtml = exhibition.exhibits.map(exhibit => `
+                    <div class="exhibit-card" onclick="location.href='object-detail.html?id=${exhibit.title.replace(/\s+/g, '_')}'">
+                        <div class="exhibit-image">
+                            <img src="${exhibit.image}" alt="${exhibit.title}">
+                        </div>
+                        <div class="exhibit-info">
+                            <div class="exhibit-category">${exhibit.category}</div>
+                            <h4>${exhibit.title}</h4>
+                            <div class="exhibit-year">${exhibit.year}</div>
+                            <p>${exhibit.description}</p>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('exhibits-grid').innerHTML = exhibitsHtml;
+
+                // Участники
+                const participantsHtml = exhibition.participants.map(participant => `
+                    <div class="participant-card">
+                        <div class="participant-logo">${participant.logo}</div>
+                        <div class="participant-info">
+                            <div class="participant-name">${participant.name}</div>
+                            <div class="participant-role">${participant.role}</div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('participants-grid').innerHTML = participantsHtml;
+
+                // Программа
+                const scheduleHtml = exhibition.schedule.map(event => `
+                    <div class="event-item ${event.type}">
+                        <div class="event-date">${event.date}</div>
+                        <div class="event-time">${event.time}</div>
+                        <div class="event-content">
+                            <div class="event-title">${event.title}</div>
+                            ${event.speaker ? `<div class="event-speaker"><img src="../icons/speaker.jpg" alt="Поделиться" class="action-icon" style="width: 40px; height: 40px;"> ${event.speaker}</div>` : ''}
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('events-schedule').innerHTML = scheduleHtml;
+
+                // Организаторы
+                const organizersHtml = exhibition.organizers.map(org => `
+                    <div class="organizer-item">
+                        <div class="organizer-logo">${org.logo}</div>
+                        <div class="organizer-info">
+                            <div class="organizer-name">${org.name}</div>
+                            <div class="organizer-role">${org.role}</div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('organizers-list').innerHTML = organizersHtml;
+            }
+        }
+
+        function registerForExhibition() {
+            showNotification('Запись на выставку открыта!', 'success');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadExhibition);
+    </script>
+</body>
+</html>

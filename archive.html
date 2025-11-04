@@ -157,6 +157,20 @@
                     </div>
 
                     <div id="objects-content" class="archive-tab-content active">
+                        <div class="view-controls">
+                            <div class="view-buttons">
+                                <button class="view-btn active" onclick="setViewMode('grid')">☰ Сетка</button>
+                                <button class="view-btn" onclick="setViewMode('list')">☷ Список</button>
+                                <button class="view-btn" onclick="setViewMode('gallery')">🖼️ Галерея</button>
+                            </div>
+                            <div class="sort-controls">
+                                <select onchange="sortObjects(this.value)">
+                                    <option value="newest">Сначала новые</option>
+                                    <option value="oldest">Сначала старые</option>
+                                    <option value="name">По названию</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="objects-grid" id="objectsGrid">
                             <div class="object-card" data-period="1970-1980" data-category="Электроника" data-material="Пластик,Металл" data-tags="фотоаппарат,электроника,пластик,металл,зенит" onclick="location.href='pages/object-detail.html?id=1'">
                                 <div class="object-image">
@@ -212,7 +226,7 @@
                             <div class="object-card" data-period="1975-1985" data-category="Электроника" data-material="Пластик,Стекло" data-tags="телевизор,электроника,пластик,стекло,рекорд" onclick="location.href='pages/object-detail.html?id=4'">
                                 <div class="object-image">
                                     <img src="icons/teliv_rek.jpg" alt="Телевизор Рекорд" class="object-img">
-                                    <div class="image-placeholder">📺 Телевизор "Рекорд"</div>
+                                    <div class="image-placeholder"> Телевизор "Рекорд"</div>
                                 </div>
                                 <div class="object-info">
                                     <div class="object-name">Телевизор "Рекорд В-312"</div>
@@ -229,6 +243,20 @@
                     </div>
 
                     <div id="collections-content" class="archive-tab-content">
+                        <div class="view-controls">
+                            <div class="view-buttons">
+                                <button class="view-btn active" onclick="setViewMode('grid')">☰ Сетка</button>
+                                <button class="view-btn" onclick="setViewMode('list')">☷ Список</button>
+                                <button class="view-btn" onclick="setViewMode('gallery')">🖼️ Галерея</button>
+                            </div>
+                            <div class="sort-controls">
+                                <select onchange="sortObjects(this.value)">
+                                    <option value="newest">Сначала новые</option>
+                                    <option value="oldest">Сначала старые</option>
+                                    <option value="name">По названию</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="objects-grid">
                             <div class="object-card" onclick="location.href='pages/collection-detail.html?id=1'">
                                 <div class="object-image">
@@ -257,6 +285,20 @@
                     </div>
 
                     <div id="authors-content" class="archive-tab-content">
+                        <div class="view-controls">
+                            <div class="view-buttons">
+                                <button class="view-btn active" onclick="setViewMode('grid')">☰ Сетка</button>
+                                <button class="view-btn" onclick="setViewMode('list')">☷ Список</button>
+                                <button class="view-btn" onclick="setViewMode('gallery')">🖼️ Галерея</button>
+                            </div>
+                            <div class="sort-controls">
+                                <select onchange="sortObjects(this.value)">
+                                    <option value="newest">Сначала новые</option>
+                                    <option value="oldest">Сначала старые</option>
+                                    <option value="name">По названию</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="objects-grid">
                             <div class="object-card" onclick="location.href='pages/author-detail.html?id=1'">
                                 <div class="object-image author-image">

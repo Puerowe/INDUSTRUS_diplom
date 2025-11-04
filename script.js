@@ -49,6 +49,100 @@ function initCommunityPages() {
     loadBlogPosts();
 }
 
+function loadAuthorData() {
+    const authorId = getAuthorId();
+    const authorData = authorsData[authorId];
+    
+    if (!authorData) {
+        document.getElementById('author-name').textContent = 'Автор не найден';
+        return;
+    }
+
+    // Основная информация
+    document.getElementById('author-name').textContent = authorData.name;
+    document.getElementById('author-subtitle').textContent = authorData.subtitle;
+    document.title = `${authorData.name} - INDUSTRUS`;
+    
+    // Аватар
+    const avatar = document.getElementById('author-avatar');
+    avatar.textContent = authorData.avatar;
+    avatar.style.background = authorData.avatarColor;
+    
+    // Дополнительная мета-информация
+    document.getElementById('author-years').textContent = `${authorData.stats.years} лет карьеры`;
+    document.getElementById('author-awards').textContent = `${authorData.stats.patents} награды`;
+    document.getElementById('author-followers').textContent = '150 подписчиков';
+    
+    // Биография
+    document.getElementById('author-bio').textContent = authorData.bio;
+    
+    // Статистика
+    const statsHtml = `
+        <div class="info-item">
+            <span class="info-label">Объектов в архиве</span>
+            <span class="info-value">${authorData.stats.objects}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Патентов</span>
+            <span class="info-value">${authorData.stats.patents}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Лет карьеры</span>
+            <span class="info-value">${authorData.stats.years}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Подписчиков</span>
+            <span class="info-value">150</span>
+        </div>
+    `;
+    document.getElementById('author-stats').innerHTML = statsHtml;
+    
+    // Специализации
+    const specializationsHtml = authorData.specializations.map(spec => 
+        `<span class="tag">${spec}</span>`
+    ).join('');
+    document.getElementById('specializations').innerHTML = specializationsHtml;
+    
+    // Работы
+    const worksHtml = authorData.works.map(work => `
+        <div class="work-card" onclick="location.href='object-detail.html?id=${work.title.replace(/\s+/g, '_')}'">
+            <div class="work-image" style="background: ${authorData.avatarColor}20; color: ${authorData.avatarColor}">
+                ${work.icon}
+            </div>
+            <div class="work-info">
+                <strong>${work.title}</strong>
+                <span class="work-meta">${work.year} • ${work.type}</span>
+                <p class="work-description">${work.description}</p>
+                <button class="cta-button secondary" style="margin-top: 10px;">Изучить объект</button>
+            </div>
+        </div>
+    `).join('');
+    document.getElementById('works-grid').innerHTML = worksHtml;
+    
+    // Карьера
+    const careerHtml = authorData.career.map(event => `
+        <div class="career-event">
+            <div class="event-year">${event.year}</div>
+            <div class="event-content">
+                <strong>${event.title}</strong>
+                <p>${event.description}</p>
+            </div>
+        </div>
+    `).join('');
+    document.getElementById('career-timeline').innerHTML = careerHtml;
+    
+    // Наследие
+    document.getElementById('legacy-description').textContent = authorData.legacy.description;
+    
+    const legacyStatsHtml = authorData.legacy.stats.map(stat => `
+        <div class="info-item">
+            <span class="info-label">${stat.label}</span>
+            <span class="info-value">${stat.value}</span>
+        </div>
+    `).join('');
+    document.getElementById('legacy-stats').innerHTML = legacyStatsHtml;
+}
+
 function loadForumTopics() {
     const topicsContainer = document.querySelector('.forum-topics');
     if (!topicsContainer) return;
@@ -374,6 +468,39 @@ function restartCarouselAutoPlay() {
     startCarouselAutoPlay();
 }
 
+function toggleFavorite(type, id) {
+    const key = `favorites_${type}`;
+    let favorites = JSON.parse(localStorage.getItem(key)) || [];
+    const index = favorites.indexOf(id);
+    
+    if (index > -1) {
+        favorites.splice(index, 1);
+        event.target.classList.remove('active');
+        showNotification('Убрано из избранного', 'info');
+    } else {
+        favorites.push(id);
+        event.target.classList.add('active');
+        showNotification('Добавлено в избранное!', 'success');
+    }
+    
+    localStorage.setItem(key, JSON.stringify(favorites));
+}
+
+function initFavorites() {
+    // Для объектов
+    const objectFavorites = JSON.parse(localStorage.getItem('favorites_object')) || [];
+    objectFavorites.forEach(id => {
+        const btn = document.querySelector(`[onclick*="toggleFavorite('object', '${id}')"]`);
+        if (btn) btn.classList.add('active');
+    });
+    
+    // Для событий
+    const eventFavorites = JSON.parse(localStorage.getItem('favorites_event')) || [];
+    eventFavorites.forEach(id => {
+        const btn = document.querySelector(`[onclick*="toggleFavorite('event', '${id}')"]`);
+        if (btn) btn.classList.add('active');
+    });
+}
 
 // ОСНОВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ
 function initializeAll() {
@@ -391,6 +518,7 @@ function initializeAll() {
     initCommunityPages();
     initAllAnimations();
     initCarousel();
+    initFavorites();
     
     console.log('Все функции инициализированы');
 }
@@ -399,6 +527,46 @@ function initializeAll() {
 window.carouselNext = carouselNext;
 window.carouselPrev = carouselPrev;
 window.carouselGoTo = carouselGoTo;
+
+
+function setViewMode(mode) {
+    const grid = document.getElementById('objectsGrid');
+    const buttons = document.querySelectorAll('.view-btn');
+    
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    grid.className = 'objects-grid ' + mode;
+}
+
+function usePortfolioTemplate(type) {
+    const templates = {
+        industrial: {
+            sections: ['Проекты', 'Чертежи', '3D модели', 'Навыки'],
+            layout: 'industrial'
+        },
+        ux: {
+            sections: ['Кейсы', 'Прототипы', 'Исследования', 'Навыки'],
+            layout: 'ux'
+        }
+    };
+    
+    localStorage.setItem('portfolioTemplate', JSON.stringify(templates[type]));
+    showNotification(`Шаблон "${type}" загружен!`, 'success');
+    window.location.href = 'pages/portfolio-editor.html';
+}
+
+function toggleReaction(btn, type) {
+    btn.classList.toggle('active');
+    
+    if (type === 'like') {
+        const count = btn.querySelector('span');
+        const current = parseInt(count.textContent);
+        count.textContent = btn.classList.contains('active') ? current + 1 : current - 1;
+    }
+    
+    showNotification(btn.classList.contains('active') ? 'Реакция добавлена!' : 'Реакция убрана', 'success');
+}
 
 // ИНИЦИАЛИЗАЦИЯ НАВИГАЦИИ
 function initNavigation() {
