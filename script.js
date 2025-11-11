@@ -341,7 +341,6 @@ function loadObjectData() {
             },
             media: [
                 { type: 'image', url: '../icons/kiev.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
-                { type: 'image', url: '../icons/kiev1.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
                 { type: 'image', url: '../icons/kiev2.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
                 { type: 'image', url: '../icons/kiev3.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
                 { type: 'image', url: '../icons/kiev4.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
