@@ -60,7 +60,7 @@
                     <button class="language-btn" onclick="toggleLanguage()">RU</button>
                 </div>
                 <div class="user-profile" onclick="location.href='../profile.html'">
-                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="feature-image">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image">
                 </div>
             </div>
         </div>
@@ -82,51 +82,101 @@
             </div>
         </div>
         <div class="container">
-            <div class="expert-header">
-                <div class="expert-avatar-large">
-                    <div id="expert-avatar" class="expert-avatar-placeholder"></div>
-                </div>
-                <div class="expert-info-main">
-                    <h1 id="expert-name">Имя эксперта</h1>
-                    <h2 id="expert-specialization">Специализация</h2>
-                    <p id="expert-details">Детали</p>
-                    <div class="expert-stats" id="expert-stats">
-                        <!-- Статистика будет добавлена через JS -->
-                    </div>
-                    <button class="cta-button">Подписаться</button>
-                </div>
-            </div>
+            <h1 id="expert-name">Загрузка...</h1>
+            <h2 id="expert-specialization">Специалист в области промышленного дизайна</h2>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <div class="expert-detail">
-                <div class="expert-content">
-                    <div class="expert-about">
-                        <h3>Обо мне</h3>
-                        <p id="expert-about-text">Описание будет загружено...</p>
+            <div class="detail-content">
+                <!-- Основная информация -->
+                <div class="content-section">
+                    <div class="expert-profile">
+                        <div class="expert-avatar-large" id="expert-avatar">ЭК</div>
+                        <div class="expert-main-info">
+                            <div class="meta-info">
+                                <div class="meta-item">
+                                    <span id="expert-experience">15+ лет опыта</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="../icons/project.jpg" alt="Проекты" class="meta-icon">
+                                    <span id="expert-projects">50+ проектов</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="../icons/u4astniki.jpg" alt="Подписчики" class="meta-icon">
+                                    <span id="expert-followers">1.2K подписчиков</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span id="expert-rating">4.9/5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="section-header">
+                                    <img src="../icons/lich_cab.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                                <h3>О эксперте</h3>
+                            </div>
+                            <p id="expert-bio" class="content-text">Загрузка биографии...</p>
+                            
+                            <div class="content-divider"></div>
+                            
+                            <div class="action-buttons">
+                                <button class="cta-button" onclick="followExpert()">
+                                    Подписаться
+                                </button>
+                                <button class="cta-button secondary">
+                                    Написать сообщение
+                                </button>
+                                <button class="cta-button secondary">
+                                    <img src="../icons/share.jpg" alt="Поделиться" class="action-icon">
+                                    Поделиться
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="expert-specializations">
+                <!-- Специализации -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/kurat_project.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
                         <h3>Специализации</h3>
-                        <div class="tags-cloud" id="expert-specializations">
-                            <!-- Специализации будут добавлены через JS -->
-                        </div>
                     </div>
-
-                    <div class="expert-projects">
-                        <h3>Последние проекты</h3>
-                        <div class="projects-grid" id="expert-projects">
-                            <!-- Проекты будут добавлены через JS -->
-                        </div>
+                    <div class="specializations-grid" id="specializations-grid">
+                        <!-- Заполнится через JS -->
                     </div>
+                </div>
 
-                    <div class="expert-articles">
-                        <h3>Статьи</h3>
-                        <div class="articles-list" id="expert-articles">
-                            <!-- Статьи будут добавлены через JS -->
-                        </div>
+                <!-- Проекты -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/shester.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Ключевые проекты</h3>
+                    </div>
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Публикации -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/project.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Публикации</h3>
+                    </div>
+                    <div class="publications-list" id="publications-list">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Контакты -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/phone.jpg" alt="Срок" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Контакты</h3>
+                    </div>
+                    <div class="contacts-grid" id="contacts-grid">
+                        <!-- Заполнится через JS -->
                     </div>
                 </div>
             </div>
@@ -186,94 +236,35 @@
         const expertsData = {
             '1': {
                 name: 'Иван Петров',
-                specialization: 'Промышленный дизайнер',
-                details: 'Опыт: 15 лет • Москва',
-                about: 'Специализируюсь на транспортном дизайне и бытовой технике. Участник международных выставок, лауреат премии "Золотой компас". Преподаватель в Британской высшей школе дизайна.',
-                specializations: ['#транспортныйдизайн', '#автопром', '#бытоваятехника', '#эргономика'],
-                stats: {
-                    projects: 24,
-                    followers: 127,
-                    rating: 4.8
-                },
-                projects: [
-                    { id: 3, title: 'Концепт электромобиля', description: 'Городской электромобиль нового поколения' },
-                    { id: 2, title: 'Умный дом будущего', description: 'Серия умных устройств для дома' }
-                ],
-                articles: [
-                    { id: 1, title: 'Тенденции автомобильного дизайна 2024', date: '2 часа назад' }
-                ]
-            },
-            '2': {
-                name: 'Мария Сидорова',
-                specialization: 'Дизайнер мебели',
-                details: 'Опыт: 12 лет • Санкт-Петербург',
-                about: 'Специализация: мебельный дизайн, эргономика. Преподаватель БВШД. Участник международных выставок мебели, автор коллекции эко-мебели для городских пространств.',
-                specializations: ['#мебель', '#эргономика', '#экодизайн', '#интерьер'],
-                stats: {
-                    projects: 18,
-                    followers: 89,
-                    rating: 4.7
-                },
-                projects: [
-                    { id: 1, title: 'Эко-мебель для города', description: 'Модульная мебель из переработанных материалов' }
-                ],
-                articles: [
-                    { id: 2, title: 'Эко-мебель: тренды и вызовы', date: '5 часов назад' }
-                ]
-            },
-            '3': {
-                name: 'Алексей Козлов',
-                specialization: 'Промышленный дизайнер',
-                details: 'Опыт: 10 лет • Екатеринбург',
-                about: 'Специализация: промышленный дизайн, проектирование. Работал над проектами для крупных производственных компаний. Эксперт в области CAD/CAM технологий и 3D-моделирования.',
-                specializations: ['#промдизайн', '#cadcam', '#3dмоделирование', '#проектирование'],
-                stats: {
-                    projects: 15,
-                    followers: 67,
-                    rating: 4.6
-                },
-                projects: [
-                    { id: 1, title: 'Эко-мебель для города', description: 'Модульная мебель из переработанных материалов' },
-                    { id: 3, title: 'Концепт электромобиля', description: 'Городской электромобиль нового поколения' }
-                ],
-                articles: [
-                    { id: 3, title: 'CAD в современном промышленном дизайне', date: 'Вчера' }
-                ]
-            },
-            '4': {
-                name: 'Сидоров П.',
-                specialization: 'Промышленный дизайн',
-                details: 'Опыт: 12 лет • Новосибирск',
-                about: 'Специализация: промышленный дизайн, проектирование промышленного оборудования. Работал над проектами для машиностроительных предприятий. Эксперт в области эргономики рабочих мест.',
-                specializations: ['#промдизайн', '#оборудование', '#эргономика', '#машиностроение'],
-                stats: {
-                    projects: 18,
-                    followers: 82,
-                    rating: 4.8
-                },
-                projects: [
-                    { id: 2, title: 'Умный дом будущего', description: 'Серия умных устройств для дома' }
-                ],
-                articles: [
-                    { id: 6, title: 'Эргономика промышленного оборудования', date: '2 дня назад' }
-                ]
-            },
-            '5': {
-                name: 'Иванов А.',
                 specialization: 'Транспортный дизайн',
-                details: 'Опыт: 15 лет • Москва',
-                about: 'Специализируюсь на транспортном дизайне. Работал над проектами для ведущих автопроизводителей. Эксперт в области аэродинамики и эргономики транспортных средств.',
-                specializations: ['#транспортныйдизайн', '#автопром', '#аэродинамика', '#эргономика'],
-                stats: {
-                    projects: 20,
-                    followers: 95,
-                    rating: 4.7
-                },
-                projects: [
-                    { id: 3, title: 'Концепт электромобиля', description: 'Городской электромобиль нового поколения' }
+                avatar: 'ИП',
+                avatarColor: '#FF6B35',
+                experience: '15+ лет',
+                projectsCount: '50+',
+                followers: '1.2K',
+                rating: '4.9/5',
+                bio: 'Ведущий специалист в области транспортного дизайна с более чем 15-летним опытом. Работал над проектами для крупнейших автопроизводителей. Автор инновационных решений в области аэродинамики и эргономики транспортных средств.',
+                specializations: [
+                    { title: 'Автомобильный дизайн', level: 'Эксперт' },
+                    { title: 'Аэродинамика', level: 'Продвинутый' },
+                    { title: 'Эргономика', level: 'Эксперт' },
+                    { title: '3D-моделирование', level: 'Продвинутый' }
                 ],
-                articles: [
-                    { id: 4, title: 'Аэродинамика в современном автодизайне', date: '3 дня назад' }
+                projects: [
+                    { title: 'ГАЗ-24 "Волга" рестайлинг', year: '2023', description: 'Модернизация классической модели', status: 'completed' },
+                    { title: 'Электромобиль "Спутник"', year: '2024', description: 'Концепт городского электромобиля', status: 'active' },
+                    { title: 'Система автономного вождения', year: '2022', description: 'Интерфейсы для автономных систем', status: 'completed' }
+                ],
+                publications: [
+                    { title: 'Будущее транспортного дизайна', date: '2024-01-15', type: 'Статья', link: 'blog-detail.html?id=1' },
+                    { title: 'Эргономика в современных автомобилях', date: '2023-11-20', type: 'Исследование', link: 'blog-detail.html?id=2' },
+                    { title: 'Экологичные материалы в автопроме', date: '2023-09-10', type: 'Доклад', link: 'blog-detail.html?id=3' }
+                ],
+                contacts: [
+                    { type: 'email', value: 'ivan.petrov@example.com' },
+                { type: 'website', value: 'petrov-design.ru' },
+                { type: 'linkedin', value: 'linkedin.com/in/ivanpetrov' },
+                { type: 'telegram', value: '@ivan_petrov' }
                 ]
             }
         };
@@ -284,77 +275,124 @@
             const expert = expertsData[expertId];
 
             if (expert) {
-                // Обновляем заголовок страницы
-                document.title = `${expert.name} - Эксперт - INDUSTRUS`;
-                
-                // Заполняем основную информацию
+                // Основная информация
                 document.getElementById('expert-name').textContent = expert.name;
                 document.getElementById('expert-specialization').textContent = expert.specialization;
-                document.getElementById('expert-details').textContent = expert.details;
-                document.getElementById('expert-about-text').textContent = expert.about;
+                document.getElementById('expert-experience').textContent = expert.experience + ' опыта';
+                document.getElementById('expert-projects').textContent = expert.projectsCount  + ' проектов';
+                document.getElementById('expert-followers').textContent = expert.followers + ' подписчиков';
+                document.getElementById('expert-rating').textContent = expert.rating;
+                document.getElementById('expert-bio').textContent = expert.bio;
 
-                // Заполняем аватар
+                // Аватар
                 const avatar = document.getElementById('expert-avatar');
-                avatar.textContent = expert.name.split(' ').map(n => n[0]).join('');
-                avatar.style.background = 'var(--orange)';
-                avatar.style.color = 'white';
-                avatar.style.fontSize = '48px';
+                avatar.textContent = expert.avatar;
+                avatar.style.background = expert.avatarColor;
 
-                // Заполняем статистику
-                const statsContainer = document.getElementById('expert-stats');
-                statsContainer.innerHTML = `
-                    <span>📁 ${expert.stats.projects} проекта</span>
-                    <span>👥 ${expert.stats.followers} подписчиков</span>
-                    <span>⭐ ${expert.stats.rating} рейтинг</span>
-                `;
+                // Специализации
+                const specializationsHtml = expert.specializations.map(spec => `
+                    <div class="specialization-item">
+                        <div class="spec-title">${spec.title}</div>
+                        <div class="spec-level">${spec.level}</div>
+                    </div>
+                `).join('');
+                document.getElementById('specializations-grid').innerHTML = specializationsHtml;
 
-                // Заполняем специализации
-                const specializationsContainer = document.getElementById('expert-specializations');
-                specializationsContainer.innerHTML = '';
-                expert.specializations.forEach(spec => {
-                    const specElement = document.createElement('span');
-                    specElement.className = 'tag';
-                    specElement.textContent = spec;
-                    specializationsContainer.appendChild(specElement);
-                });
+                // Проекты
+                const projectsHtml = expert.projects.map(project => `
+                    <div class="project-card">
+                        <div class="project-status status-${project.status}">${project.status === 'active' ? 'В работе' : 'Завершен'}</div>
+                        <h4>${project.title}</h4>
+                        <div class="project-year">${project.year}</div>
+                        <p>${project.description}</p>
+                    </div>
+                `).join('');
+                document.getElementById('projects-grid').innerHTML = projectsHtml;
 
-                // Заполняем проекты
-                const projectsContainer = document.getElementById('expert-projects');
-                projectsContainer.innerHTML = '';
-                expert.projects.forEach(project => {
-                    const projectElement = document.createElement('div');
-                    projectElement.className = 'project-card';
-                    projectElement.onclick = () => location.href = `project-detail.html?id=${project.id}`;
-                    projectElement.innerHTML = `
-                        <div class="project-image">
-                            <img src="../icons/project2.jpg" alt="${project.title}" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h4>${project.title}</h4>
-                            <p>${project.description}</p>
+                // Публикации
+                const publicationsHtml = expert.publications.map(pub => `
+                    <div class="publication-item" onclick="location.href='${pub.link}'">
+                        <div class="pub-type">${pub.type}</div>
+                        <div class="pub-title">${pub.title}</div>
+                        <div class="pub-date">${pub.date}</div>
+                    </div>
+                `).join('');
+                document.getElementById('publications-list').innerHTML = publicationsHtml;
+
+                // Контакты
+                const contactsHtml = expert.contacts.map(contact => {
+                    let iconContent = '';
+                    let contactClass = 'contact-item';
+                    
+                    switch(contact.type) {
+                        case 'email':
+                            iconContent = '✉️';
+                            contactClass += ' contact-email';
+                            break;
+                        case 'website':
+                            iconContent = '🌐';
+                            contactClass += ' contact-website';
+                            break;
+                        case 'linkedin':
+                            iconContent = '💼';
+                            contactClass += ' contact-linkedin';
+                            break;
+                        case 'telegram':
+                            iconContent = '📱';
+                            contactClass += ' contact-telegram';
+                            break;
+                        case 'phone':
+                            iconContent = '📞';
+                            contactClass += ' contact-phone';
+                            break;
+                        default:
+                            iconContent = '📋';
+                    }
+                    
+                    return `
+                        <div class="${contactClass}" onclick="copyContact('${contact.value}')">
+                            <div class="contact-icon">${iconContent}</div>
+                            <div class="contact-details">
+                                <div class="contact-type">${getContactTypeLabel(contact.type)}</div>
+                                <div class="contact-value">${contact.value}</div>
+                            </div>
                         </div>
                     `;
-                    projectsContainer.appendChild(projectElement);
-                });
-
-                // Заполняем статьи
-                const articlesContainer = document.getElementById('expert-articles');
-                articlesContainer.innerHTML = '';
-                expert.articles.forEach(article => {
-                    const articleElement = document.createElement('div');
-                    articleElement.className = 'article-item';
-                    articleElement.onclick = () => location.href = `blog-detail.html?id=${article.id}`;
-                    articleElement.innerHTML = `
-                        <h4>${article.title}</h4>
-                        <span class="article-date">${article.date}</span>
-                    `;
-                    articlesContainer.appendChild(articleElement);
-                });
+                }).join('');
+                document.getElementById('contacts-grid').innerHTML = contactsHtml;
             }
         }
 
-        // Загружаем данные при загрузке страницы
+        function followExpert() {
+            showNotification('Вы подписались на эксперта!', 'success');
+            const btn = event.target;
+            btn.innerHTML = '<img src="../icons/following.png" alt="Подписан" class="action-icon">Подписан';
+            btn.disabled = true;
+        }
+
         document.addEventListener('DOMContentLoaded', loadExpert);
+
+        function getContactTypeLabel(type) {
+            const labels = {
+                'email': 'Email',
+                'website': 'Веб-сайт',
+                'linkedin': 'LinkedIn',
+                'telegram': 'Telegram',
+                'phone': 'Телефон'
+            };
+            return labels[type] || type;
+        }
+
+        function copyContact(value) {
+            navigator.clipboard.writeText(value).then(() => {
+                showNotification('Контакт скопирован в буфер обмена!', 'success');
+            });
+        }
+
+        function showNotification(message, type = 'info') {
+            // Используйте существующую функцию уведомлений или создайте простую
+            alert(message); // Временное решение
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выставка молодых специалистов - INDUSTRUS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .young-exhibition-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .young-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .young-work-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--aluminum);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .young-work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .young-work-image {
+            height: 200px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .young-work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .young-work-image .image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-gray);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .young-work-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--graphite);
+            font-weight: 600;
+        }
+        
+        .young-work-card p {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .young-work-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--aluminum);
+        }
+        
+        .young-author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .young-author-info {
+            flex: 1;
+        }
+        
+        .young-author-name {
+            font-weight: 600;
+            color: var(--graphite);
+            margin-bottom: 2px;
+        }
+        
+        .young-author-specialization {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .young-author-link {
+            color: var(--orange);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .young-author-link:hover {
+            color: #e55a2b;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">INDUSTRUS</span>
+            </a>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="../events.html" class="nav-link">События</a>
+                    <div class="dropdown-menu">
+                        <a href="events-webinars.html">Вебинары</a>
+                        <a href="events-exhibitions.html">Выставки</a>
+                        <a href="events-competitions.html">Конкурсы</a>
+                        <a href="events-conferences.html">Конференции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../archive.html" class="nav-link">Архив</a>
+                    <div class="dropdown-menu">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../community.html" class="nav-link">Сообщество</a>
+                    <div class="dropdown-menu">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item dropdown">
+                    <a href="../career.html" class="nav-link">Карьера</a>
+                    <div class="dropdown-menu">
+                        <a href="career-jobs.html">Вакансии</a>
+                        <a href="career-freelance.html">Фриланс</a>
+                        <a href="career-investments.html">Инвестиции</a>
+                    </div>
+                </div>
+                <div class="nav-divider"></div>
+                <a href="../contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguage()">RU</button>
+                </div>
+                <div class="user-profile" onclick="location.href='../profile.html'">
+                    <img src="../icons/lich_cab.jpg" alt="Личный кабинет" class="profile-image" onerror="this.style.display='none'; this.parentElement.innerHTML='👤';">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="orange-circles">
+                <div class="circle circle-large"></div>
+                <div class="circle circle-medium circle-left"></div>
+                <div class="circle circle-medium circle-right"></div>
+                <div class="circle circle-small circle-top-left"></div>
+                <div class="circle circle-small circle-top-right"></div>
+                <div class="circle circle-tiny circle-bottom-left"></div>
+                <div class="circle circle-tiny circle-bottom-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Выставка молодых специалистов</h1>
+            <h2>Работы начинающих дизайнеров и инженеров</h2>
+            <p>Откройте для себя таланты нового поколения промышленных дизайнеров. Инновационные проекты и свежий взгляд на традиционные задачи</p>
+        </div>
+    </section>
+
+    <section class="young-exhibition-section">
+        <div class="container">
+            <h2 class="section-title">Работы участников</h2>
+            <div class="young-works-grid" id="youngWorksGrid">
+                <!-- Работы будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Виртуальный музей промышленного дизайна</h4>
+                    <p>Цифровая платформа для изучения, сохранения и популяризации промышленного дизайна в России</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Архив</h4>
+                    <div class="footer-links">
+                        <a href="archive-objects.html">Объекты</a>
+                        <a href="archive-collections.html">Коллекции</a>
+                        <a href="archive-authors.html">Авторы</a>
+                        <a href="archive-timeline.html">Таймлайн</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <div class="footer-links">
+                        <a href="community-forum.html">Форум</a>
+                        <a href="community-projects.html">Проекты</a>
+                        <a href="community-experts.html">Эксперты</a>
+                        <a href="community-blogs.html">Блоги</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ресурсы</h4>
+                    <div class="footer-links">
+                        <a href="../events.html">События</a>
+                        <a href="../career.html">Карьера</a>
+                        <a href="../virtual-tour.html">Виртуальный тур</a>
+                        <a href="../contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Виртуальный музей промышленного дизайна России. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Данные работ молодых специалистов
+        const youngWorksData = [
+            {
+                id: 1,
+                title: "Эко-концепт умного города",
+                description: "Инновационная концепция устойчивого городского развития с использованием возобновляемых материалов и умных технологий",
+                image: "../images/young-work1.jpg",
+                author: {
+                    id: 3,
+                    name: "Алексей Ковалев",
+                    avatar: "АК",
+                    specialization: "Студент МГХПА им. Строганова"
+                }
+            },
+            {
+                id: 2,
+                title: "Модульная мебель для малогабаритных пространств",
+                description: "Трансформируемая мебельная система для современных городских квартир",
+                image: "../images/young-work2.jpg",
+                author: {
+                    id: 4,
+                    name: "Екатерина Новикова",
+                    avatar: "ЕН",
+                    specialization: "Выпускник БВШД"
+                }
+            },
+            {
+                id: 3,
+                title: "Бионический дизайн бытовой техники",
+                description: "Вдохновленный природой подход к проектированию кухонной техники",
+                image: "../images/young-work3.jpg",
+                author: {
+                    id: 5,
+                    name: "Дмитрий Соколов",
+                    avatar: "ДС",
+                    specialization: "Молодой специалист"
+                }
+            },
+            {
+                id: 4,
+                title: "Интерактивная образовательная платформа",
+                description: "Дизайн интерфейса для интерактивного обучения промышленному дизайну",
+                image: "../images/young-work4.jpg",
+                author: {
+                    id: 6,
+                    name: "Анна Петрова",
+                    avatar: "АП",
+                    specialization: "Студент СПбГУПТД"
+                }
+            }
+        ];
+
+        function loadYoungWorks() {
+            const container = document.getElementById('youngWorksGrid');
+            
+            if (!container) return;
+
+            const worksHTML = youngWorksData.map(work => `
+                <div class="young-work-card" onclick="viewWorkDetail(${work.id})">
+                    <div class="young-work-image">
+                        <img src="${work.image}" alt="${work.title}" onerror="this.style.display='none';">
+                        <div class="image-placeholder">
+                            ${work.title}
+                        </div>
+                    </div>
+                    <h3>${work.title}</h3>
+                    <p>${work.description}</p>
+                    <div class="young-work-author">
+                        <div class="young-author-avatar">
+                            ${work.author.avatar}
+                        </div>
+                        <div class="young-author-info">
+                            <div class="young-author-name">${work.author.name}</div>
+                            <div class="young-author-specialization">${work.author.specialization}</div>
+                            <a href="author-detail.html?id=${work.author.id}" class="young-author-link" onclick="event.stopPropagation()">
+                                Профиль автора →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = worksHTML;
+        }
+
+        function viewWorkDetail(workId) {
+            const work = youngWorksData.find(w => w.id === workId);
+            if (work) {
+                // В реальном приложении: location.href = `work-detail.html?id=${workId}`;
+                console.log(`Открывается страница работы: "${work.title}"`);
+                alert(`В реальном приложении здесь открылась бы страница работы: "${work.title}"`);
+            }
+        }
+
+        function toggleLanguage() {
+            alert('Переключение языка - в разработке');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadYoungWorks();
+        });
+    </script>
+</body>
+</html>

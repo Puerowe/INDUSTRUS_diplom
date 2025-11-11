@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Конференция PROДИЗАЙН - Промдизайн.ру</title>
+    <title>Конференция - INDUSTRUS</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -54,7 +54,7 @@
                 <div class="nav-divider"></div>
                 <a href="../contacts.html" class="nav-link">Контакты</a>
             </nav>
-        
+            
             <div class="header-actions">
                 <div class="language-switcher">
                     <button class="language-btn" onclick="toggleLanguage()">RU</button>
@@ -65,6 +65,7 @@
             </div>
         </div>
     </header>
+
     <section class="hero">
         <div class="hero-background">
             <div class="orange-circles">
@@ -78,97 +79,119 @@
             </div>
         </div>
         <div class="container">
-            <h1>PROДИЗАЙН: Стратегия, Экономика, Результат</h1>
-            <h2>Конференция • 15 декабря 2024 • Онлайн</h2>
+            <h1 id="conference-title">Загрузка...</h1>
+            <h2 id="conference-subtitle">Международная конференция по промышленному дизайну</h2>
         </div>
     </section>
+
     <section class="features">
         <div class="container">
-            <div class="conference-detail">
-                <div class="conference-header">
+            <div class="detail-content">
+                <!-- Основная информация -->
+                <div class="content-section">
                     <div class="conference-meta">
-                        <span><img src="../icons/calendar.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 декабря 2024, 10:00-18:00</span>
-                        <span><img src="../icons/addres.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> Онлайн</span>
-                        <span><img src="../icons/speaker.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 спикеров</span>
-                        <span><img src="../icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 347 зарегистрированных участников</span>
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <img src="../icons/calendar.jpg" alt="Дата" class="meta-icon">
+                                <span id="conference-date">25-27 марта 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/addres.jpg" alt="Место" class="meta-icon">
+                                <span id="conference-location">Москва, Технопарк "Сколково"</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/u4astniki.jpg" alt="Участники" class="meta-icon">
+                                <span id="conference-participants">300+ участников</span>
+                            </div>
+                            <div class="meta-item">
+                                <span id="conference-duration">3 дня</span>
+                            </div>
+                        </div>
+                        <div class="status-badge status-upcoming" id="conference-status">Предстоящее</div>
                     </div>
                     
-                    <button class="cta-button" onclick="registerForConference()">Зарегистрироваться</button>
+                    <div class="section-header">
+                            <img src="../icons/conference.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>О конференции</h3>
+                    </div>
+                    
+                    <div class="conference-description">
+                        <p id="conference-description" class="content-text">Загрузка описания...</p>
+                        
+                        <div class="content-divider"></div>
+                        
+                        <div class="action-buttons">
+                            <button class="cta-button" onclick="registerForConference()">
+                                Зарегистрироваться
+                            </button>
+                            <button class="cta-button secondary">
+                                Сохранить
+                            </button>
+                            <button class="cta-button secondary">
+                                <img src="../icons/share.jpg" alt="Поделиться" class="action-icon">
+                                Поделиться
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="conference-description">
-                    <h3>О конференции</h3>
-                    <p>Практическая конференция о бизнес-аспектах дизайна. Кейсы от ведущих российских компаний о том, как дизайн влияет на бизнес-показатели и экономическую эффективность.</p>
-                    
-                    <h3>Программа</h3>
-                    <div class="conference-schedule">
-                        <div class="schedule-block">
-                            <div class="schedule-time">10:00 - 11:30</div>
-                            <div class="schedule-session">
-                                <h4>Открытие. Дизайн как бизнес-инструмент</h4>
-                                <p>Ключевые спикеры: Петров И.В. (ГАЗ), Козлов Д.А. (Сбер)</p>
-                            </div>
-                        </div>
-                        <div class="schedule-block">
-                            <div class="schedule-time">11:45 - 13:15</div>
-                            <div class="schedule-session">
-                                <h4>Сессия 1: ROI дизайна</h4>
-                                <p>Как измерить экономический эффект от инвестиций в дизайн</p>
-                            </div>
-                        </div>
-                        <div class="schedule-block">
-                            <div class="schedule-time">14:30 - 16:00</div>
-                            <div class="schedule-session">
-                                <h4>Сессия 2: Дизайн-стратегия</h4>
-                                <p>Интеграция дизайна в бизнес-процессы компаний</p>
-                            </div>
-                        </div>
+                <!-- Программа -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/calendar.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Программа конференции</h3>
                     </div>
-
-                    <h3>Ключевые спикеры</h3>
-                    <div class="speakers-grid">
-                        <div class="speaker-card">
-                            <div class="speaker-avatar" style="background: var(--orange); color: white;">ИП</div>
-                            <div class="speaker-info">
-                                <strong>Петров И.В.</strong>
-                                <span>Главный дизайнер ГАЗ</span>
-                                <p>Тема: "Дизайн в автомобилестроении: от концепта до производства"</p>
-                            </div>
-                        </div>
-                        <div class="speaker-card">
-                            <div class="speaker-avatar" style="background: var(--blue); color: white;">МС</div>
-                            <div class="speaker-info">
-                                <strong>Сидорова М.К.</strong>
-                                <span>Дизайнер мебели, Яндекс</span>
-                                <p>Тема: "Эргономика в цифровую эпоху"</p>
-                            </div>
-                        </div>
-                        <div class="speaker-card">
-                            <div class="speaker-avatar" style="background: var(--green); color: white;">ДК</div>
-                            <div class="speaker-info">
-                                <strong>Козлов Д.А.</strong>
-                                <span>Руководитель СберДизайн</span>
-                                <p>Тема: "Дизайн-мышление в финансовом секторе"</p>
-                            </div>
-                        </div>
+                    <div class="schedule-tabs">
+                        <button class="schedule-tab active" data-day="day1">День 1</button>
+                        <button class="schedule-tab" data-day="day2">День 2</button>
+                        <button class="schedule-tab" data-day="day3">День 3</button>
                     </div>
-
-                    <h3>Для кого эта конференция</h3>
-                    <div class="target-audience">
-                        <div class="audience-item">Руководители дизайн-отделов</div>
-                        <div class="audience-item">Product менеджеры</div>
-                        <div class="audience-item">Промышленные дизайнеры</div>
-                        <div class="audience-item">Владельцы бизнеса</div>
+                    <div class="schedule-content" id="schedule-content">
+                        <!-- Заполнится через JS -->
                     </div>
+                </div>
 
-                    <div class="conference-benefits">
-                        <h3>Что вы получите</h3>
-                        <ul>
-                            <li>Практические кейсы от ведущих компаний</li>
-                            <li>Методики расчета ROI дизайн-проектов</li>
-                            <li>Нетворкинг с лидерами индустрии</li>
-                            <li>Доступ к записям всех выступлений</li>
-                        </ul>
+                <!-- Спикеры -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <img src="../icons/speaker.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Ключевые спикеры</h3>
+                    </div>
+                    <div class="speakers-grid" id="speakers-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Темы -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/project.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Основные темы</h3>
+                    </div>
+                    <div class="topics-grid" id="topics-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Для кого -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/u4astniki.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Для кого эта конференция</h3>
+                    </div>
+                    <div class="audience-grid" id="audience-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Организаторы -->
+                <div class="content-section">
+                    <div class="section-header">
+                            <img src="../icons/company.jpg" alt="Место" class="meta-icon" style="width: 50px; height: 50px;">
+                        <h3>Организаторы</h3>
+                    </div>
+                    <div class="organizers-list" id="organizers-list">
+                        <!-- Заполнится через JS -->
                     </div>
                 </div>
             </div>
@@ -222,7 +245,185 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script>
+        // Данные конференции
+        const conferenceData = {
+            '1': {
+                title: 'Будущее промышленного дизайна 2024',
+                subtitle: 'Международная конференция по промышленному дизайну',
+                date: '25-27 марта 2024',
+                location: 'Москва, Технопарк "Сколково"',
+                participants: '300+',
+                duration: '3 дня',
+                status: 'upcoming',
+                description: 'Ежегодная международная конференция, объединяющая ведущих экспертов в области промышленного дизайна, инновационных технологий и устойчивого развития. В этом году фокус на цифровой трансформации и экологичных решениях.',
+                schedule: {
+                    day1: [
+                        { time: '09:00-10:00', title: 'Регистрация и приветственный кофе', type: 'registration' },
+                        { time: '10:00-11:00', title: 'Открытие конференции. Ключевые тренды 2024', speaker: 'Иван Петров', type: 'keynote' },
+                        { time: '11:00-12:30', title: 'Цифровая трансформация в дизайне', speaker: 'Мария Сидорова', type: 'presentation' },
+                        { time: '12:30-13:30', title: 'Обед и нетворкинг', type: 'break' },
+                        { time: '13:30-15:00', title: 'Воркшоп: Проектирование интерфейсов', speaker: 'Алексей Козлов', type: 'workshop' }
+                    ],
+                    day2: [
+                        { time: '09:30-11:00', title: 'Устойчивое развитие в промышленном дизайне', speaker: 'Елена Новикова', type: 'presentation' },
+                        { time: '11:00-12:30', title: 'Кейс-стади: Успешные проекты', speaker: 'Дмитрий Волков', type: 'case' },
+                        { time: '12:30-13:30', title: 'Обед', type: 'break' },
+                        { time: '13:30-15:30', title: 'Панельная дискуссия: Будущее материалов', speakers: ['Иван Петров', 'Мария Сидорова'], type: 'panel' }
+                    ],
+                    day3: [
+                        { time: '10:00-11:30', title: 'ИИ в промышленном дизайне', speaker: 'Сергей Иванов', type: 'presentation' },
+                        { time: '11:30-13:00', title: 'Финальные презентации проектов', type: 'presentation' },
+                        { time: '13:00-14:00', title: 'Закрытие и награждение', type: 'closing' }
+                    ]
+                },
+                speakers: [
+                    { name: 'Иван Петров', role: 'Главный дизайнер, ГАЗ', avatar: 'ИП', specialization: 'Транспортный дизайн' },
+                    { name: 'Мария Сидорова', role: 'Арт-директор, Студия "Форма"', avatar: 'МС', specialization: 'Дизайн мебели' },
+                    { name: 'Алексей Козлов', role: 'Профессор МГХПА', avatar: 'АК', specialization: 'Дизайн-образование' },
+                    { name: 'Елена Новикова', role: 'Эксперт по устойчивому развитию', avatar: 'ЕН', specialization: 'Экодизайн' }
+                ],
+                topics: [
+                    { title: 'Цифровая трансформация', description: 'Влияние цифровых технологий на процессы дизайна' },
+                    { title: 'Устойчивое развитие', description: 'Экологичные материалы и циркулярная экономика' },
+                    { title: 'Искусственный интеллект', description: 'Применение ИИ в проектировании и прототипировании' },
+                    { title: 'Будущее материалов', description: 'Инновационные материалы и smart-материалы' }
+                ],
+                audience: [
+                    { group: 'Промышленные дизайнеры', description: 'Профессионалы в области промышленного дизайна' },
+                    { group: 'Дизайн-менеджеры', description: 'Руководители дизайн-отделов и студий' },
+                    { group: 'Студенты', description: 'Обучающиеся по направлениям дизайна и архитектуры' },
+                    { group: 'Предприниматели', description: 'Владельцы производственных компаний и стартапов' }
+                ],
+                organizers: [
+                    { name: 'Ассоциация промышленных дизайнеров', role: 'Организатор', logo: 'АПД' },
+                    { name: 'МГХПА им. С.Г. Строганова', role: 'Академический партнер', logo: 'МГХПА' },
+                    { name: 'Технопарк "Сколково"', role: 'Площадка проведения', logo: 'СК' }
+                ]
+            }
+        };
+
+        function loadConference() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const conferenceId = urlParams.get('id') || '1';
+            const conference = conferenceData[conferenceId];
+
+            if (conference) {
+                // Основная информация
+                document.getElementById('conference-title').textContent = conference.title;
+                document.getElementById('conference-subtitle').textContent = conference.subtitle;
+                document.getElementById('conference-date').textContent = conference.date;
+                document.getElementById('conference-location').textContent = conference.location;
+                document.getElementById('conference-participants').textContent = `${conference.participants} участников`;
+                document.getElementById('conference-duration').textContent = conference.duration;
+                document.getElementById('conference-description').textContent = conference.description;
+
+                // Статус
+                const statusElement = document.getElementById('conference-status');
+                statusElement.textContent = conference.status === 'upcoming' ? 'Предстоящее' : 'Завершено';
+                statusElement.className = `status-badge status-${conference.status === 'upcoming' ? 'upcoming' : 'completed'}`;
+
+                // Загружаем программу первого дня по умолчанию
+                loadSchedule('day1');
+
+                // Спикеры
+                const speakersHtml = conference.speakers.map(speaker => `
+                    <div class="speaker-card" onclick="location.href='expert-detail.html?id=${speaker.name.replace(/\s+/g, '_')}'">
+                        <div class="speaker-avatar">${speaker.avatar}</div>
+                        <div class="speaker-info">
+                            <div class="speaker-name">${speaker.name}</div>
+                            <div class="speaker-role">${speaker.role}</div>
+                            <div class="speaker-specialization">${speaker.specialization}</div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('speakers-grid').innerHTML = speakersHtml;
+
+                // Темы
+                const topicsHtml = conference.topics.map(topic => `
+                    <div class="topic-card">
+                        <h4>${topic.title}</h4>
+                        <p>${topic.description}</p>
+                    </div>
+                `).join('');
+                document.getElementById('topics-grid').innerHTML = topicsHtml;
+
+                // Аудитория
+                const audienceHtml = conference.audience.map(audience => `
+                    <div class="audience-item">
+                        <h4>${audience.group}</h4>
+                        <p>${audience.description}</p>
+                    </div>
+                `).join('');
+                document.getElementById('audience-grid').innerHTML = audienceHtml;
+
+                // Организаторы
+                const organizersHtml = conference.organizers.map(org => `
+                    <div class="organizer-item">
+                        <div class="organizer-logo">${org.logo}</div>
+                        <div class="organizer-info">
+                            <div class="organizer-name">${org.name}</div>
+                            <div class="organizer-role">${org.role}</div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('organizers-list').innerHTML = organizersHtml;
+            }
+        }
+
+        function loadSchedule(day) {
+            const conference = conferenceData['1'];
+            const schedule = conference.schedule[day];
+            
+            if (!schedule) {
+                console.error('No schedule found for day:', day);
+                return;
+            }
+            
+            // Обновляем активную вкладку
+            document.querySelectorAll('.schedule-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('data-day') === day) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            const scheduleHtml = schedule.map(session => `
+                <div class="schedule-session ${session.type}">
+                    <div class="session-time">${session.time}</div>
+                    <div class="session-content">
+                        <div class="session-title">${session.title}</div>
+                        ${session.speaker ? `<div class="session-speaker"><img src="../icons/speaker.jpg" alt="Место" class="meta-icon" style="width: 30px; height: 30px;"> ${session.speaker}</div>` : ''}
+                        ${session.speakers ? `<div class="session-speakers"><img src="../icons/speaker.jpg" alt="Место" class="meta-icon" style="width: 30px; height: 30px;"> ${session.speakers.join(', ')}</div>` : ''}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('schedule-content').innerHTML = scheduleHtml;
+        }
+
+        function registerForConference() {
+            alert('Регистрация на конференцию открыта!');
+        }
+
+        function showNotification(message, type) {
+            // Простая реализация уведомления
+            alert(message);
+        }
+
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            loadConference();
+            
+            // Добавляем обработчики для вкладок
+            const tabs = document.querySelectorAll('.schedule-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const day = this.getAttribute('data-day');
+                    loadSchedule(day);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-[file content end]

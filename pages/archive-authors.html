@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторы - Промдизайн.ру</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .active-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -132,23 +142,115 @@
                     </div>
 
                     <div class="authors-grid">
+                        <!-- Автор 1 -->
                         <div class="author-card" onclick="location.href='author-detail.html?id=1'">
                             <div class="author-avatar" style="background: var(--orange); color: white; font-size: 48px;">ИП</div>
                             <div class="author-info">
                                 <h3>Иван Петров</h3>
                                 <p class="author-specialization">Промышленный дизайнер</p>
                                 <p class="author-period">1960-1980</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
                                 <p class="author-stats">12 объектов в архиве</p>
                             </div>
                         </div>
 
+                        <!-- Автор 2 -->
                         <div class="author-card" onclick="location.href='author-detail.html?id=2'">
                             <div class="author-avatar" style="background: var(--blue); color: white; font-size: 48px;">МС</div>
                             <div class="author-info">
                                 <h3>Мария Сидорова</h3>
                                 <p class="author-specialization">Дизайнер мебели</p>
                                 <p class="author-period">1970-1990</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
                                 <p class="author-stats">8 объектов в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 3 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=3'">
+                            <div class="author-avatar" style="background: #4A90E2; color: white; font-size: 48px;">АК</div>
+                            <div class="author-info">
+                                <h3>Алексей Ковалев</h3>
+                                <p class="author-specialization">Молодой специалист</p>
+                                <p class="author-period">2020-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">3 объекта в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 4 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=4'">
+                            <div class="author-avatar" style="background: #9C27B0; color: white; font-size: 48px;">ЕН</div>
+                            <div class="author-info">
+                                <h3>Екатерина Новикова</h3>
+                                <p class="author-specialization">Молодой дизайнер</p>
+                                <p class="author-period">2021-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">5 объектов в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 5 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=5'">
+                            <div class="author-avatar" style="background: #4CAF50; color: white; font-size: 48px;">ДС</div>
+                            <div class="author-info">
+                                <h3>Дмитрий Соколов</h3>
+                                <p class="author-specialization">Инженер-дизайнер</p>
+                                <p class="author-period">2022-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">4 объекта в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 6 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=6'">
+                            <div class="author-avatar" style="background: #2196F3; color: white; font-size: 48px;">АП</div>
+                            <div class="author-info">
+                                <h3>Анна Петрова</h3>
+                                <p class="author-specialization">UI/UX дизайнер</p>
+                                <p class="author-period">2020-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">6 объектов в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 7 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=7'">
+                            <div class="author-avatar" style="background: #FF9800; color: white; font-size: 48px;">МИ</div>
+                            <div class="author-info">
+                                <h3>Михаил Иванов</h3>
+                                <p class="author-specialization">Дизайнер инструментов</p>
+                                <p class="author-period">2021-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">3 объекта в архиве</p>
+                            </div>
+                        </div>
+
+                        <!-- Автор 8 -->
+                        <div class="author-card" onclick="location.href='author-detail.html?id=8'">
+                            <div class="author-avatar" style="background: #E91E63; color: white; font-size: 48px;">СВ</div>
+                            <div class="author-info">
+                                <h3>София Васильева</h3>
+                                <p class="author-specialization">Архитектор-дизайнер</p>
+                                <p class="author-period">2019-настоящее время</p>
+                                <div class="author-status" id="authorStatus-1" style="display: none;">
+                                    <span class="active-badge">🟢 Открыт к предложениям</span>
+                                </div>
+                                <p class="author-stats">7 объекта в архиве</p>
                             </div>
                         </div>
                     </div>
@@ -211,6 +313,18 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Список активных авторов (id 3-8)
+            const activeAuthors = ['3', '4', '5', '6', '7', '8'];
+            
+            activeAuthors.forEach(authorId => {
+                const statusElement = document.getElementById('authorStatus-' + authorId);
+                if (statusElement) {
+                    statusElement.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

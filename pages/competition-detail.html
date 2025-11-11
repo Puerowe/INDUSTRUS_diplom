@@ -79,92 +79,115 @@
             </div>
         </div>
         <div class="container">
-            <h1>Конкурс "Лучший молодой дизайнер 2024"</h1>
+            <h1 id="competition-title">Загрузка...</h1>
             <h2>Конкурс • До 30 ноября 2024 • Призовой фонд 500,000 ₽</h2>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <div class="competition-detail">
-                <div class="competition-header">
+            <div class="detail-content">
+                <!-- Основная информация -->
+                <div class="content-section">
+    
                     <div class="competition-meta">
-                        <span><img src="../icons/calendar.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> До 30 ноября 2024</span>
-                        <span><img src="../icons/priz_fond.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 500,000 ₽ призовой фонд</span>
-                        <span><img src="../icons/project2.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 89 проектов уже подано</span>
-                        <span><img src="../icons/u4astniki.jpg" alt="Новые материалы" class="discussion-img" style="width: 30px; height: 30px;"> 15 членов жюри</span>
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <img src="../icons/calendar.jpg" alt="Дата" class="meta-icon">
+                                <span id="competition-date">15 января - 20 февраля 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/calendar.jpg" alt="Категория" class="meta-icon">
+                                <span id="competition-category">Промышленный дизайн</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/u4astniki.jpg" alt="Участники" class="meta-icon">
+                                <span id="competition-participants">45 участников</span>
+                            </div>
+                            <div class="meta-item">
+                                <img src="../icons/priz_fond.jpg" alt="Приз" class="meta-icon">
+                                <span id="competition-prize">500,000 ₽</span>
+                            </div>
+                        </div>
+                        <div class="status-badge status-active" id="competition-status">Активный</div>
                     </div>
                     
-                    <button class="cta-button" onclick="participateInCompetition()">Участвовать в конкурсе</button>
+                    <div class="section-header">
+                        <h3>Описание конкурса</h3>
+                    </div>
+                    <div class="competition-description">
+                            <p id="competition-description" class="content-text">Загрузка описания...</p>
+                            <div class="content-divider"></div>
+                            <div class="action-buttons">
+                                <button class="cta-button" onclick="registerForCompetition()">
+                                
+                                    Участвовать в конкурсе
+                                </button>
+                                <button class="cta-button secondary">
+                                
+                                    Сохранить
+                                </button>
+                                <button class="cta-button secondary">
+                                    <img src="../icons/share.jpg" alt="Поделиться" class="action-icon">
+                                    Поделиться
+                                </button>
+                            </div>
+                    </div>    
+                    
                 </div>
 
-                <div class="competition-description">
-                    <h3>О конкурсе</h3>
-                    <p>Ежегодный конкурс для молодых дизайнеров в возрасте до 35 лет. Тема этого года: "Устойчивый дизайн для городов будущего".</p>
-                    
-                    <h3>Номинации</h3>
-                    <ul>
-                        <li><strong>Лучший промышленный дизайн</strong> - проекты бытовой техники, электроники, мебели</li>
-                        <li><strong>Лучший транспортный дизайн</strong> - концепты автомобилей, общественного транспорта</li>
-                        <li><strong>Лучший экологический дизайн</strong> - проекты с использованием переработанных материалов</li>
-                        <li><strong>Приз зрительских симпатий</strong> - голосование открыто для всех пользователей платформы</li>
-                    </ul>
+                <!-- Требования -->
+                <div class="content-section">
+                    <div class="section-header">
 
-                    <h3>Требования к участникам</h3>
-                    <div class="requirements">
-                        <div class="requirement-item">
-                            <strong>Возраст:</strong> до 35 лет
-                        </div>
-                        <div class="requirement-item">
-                            <strong>Опыт:</strong> не менее 2 лет в дизайне
-                        </div>
-                        <div class="requirement-item">
-                            <strong>Формат работ:</strong> PDF презентация + 3D модели
-                        </div>
-                        <div class="requirement-item">
-                            <strong>Язык:</strong> русский или английский
-                        </div>
+                        <h3>Требования к участникам</h3>
                     </div>
-
-                    <h3>Жюри конкурса</h3>
-                    <div class="jury-grid">
-                        <div class="jury-member">
-                            <div class="jury-avatar" style="background: var(--orange); color: white;">ИП</div>
-                            <div class="jury-info">
-                                <strong>Петров И.В.</strong>
-                                <span>Главный дизайнер ГАЗ</span>
-                            </div>
-                        </div>
-                        <div class="jury-member">
-                            <div class="jury-avatar" style="background: var(--blue); color: white;">МС</div>
-                            <div class="jury-info">
-                                <strong>Сидорова М.К.</strong>
-                                <span>Дизайнер мебели, преподаватель БВШД</span>
-                            </div>
-                        </div>
-                        <div class="jury-member">
-                            <div class="jury-avatar" style="background: var(--green); color: white;">ДК</div>
-                            <div class="jury-info">
-                                <strong>Козлов Д.А.</strong>
-                                <span>Руководитель СберДизайн</span>
-                            </div>
-                        </div>
+                    <div class="requirements-grid" id="requirements-grid">
+                        <!-- Заполнится через JS -->
                     </div>
+                </div>
 
-                    <h3>Этапы конкурса</h3>
-                    <div class="competition-timeline">
-                        <div class="timeline-stage active">
-                            <div class="stage-date">1-30 ноября</div>
-                            <div class="stage-title">Прием заявок</div>
-                        </div>
-                        <div class="timeline-stage">
-                            <div class="stage-date">1-15 декабря</div>
-                            <div class="stage-title">Оценка жюри</div>
-                        </div>
-                        <div class="timeline-stage">
-                            <div class="stage-date">20 декабря</div>
-                            <div class="stage-title">Объявление победителей</div>
-                        </div>
+                <!-- Этапы конкурса -->
+                <div class="content-section">
+                    <div class="section-header">
+
+                        <h3>Этапы конкурса</h3>
+                    </div>
+                    <div class="timeline-vertical" id="competition-timeline">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Призы -->
+                <div class="content-section">
+                    <div class="section-header">
+
+                        <h3>Призовой фонд</h3>
+                    </div>
+                    <div class="prizes-grid" id="prizes-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Жюри -->
+                <div class="content-section">
+                    <div class="section-header">
+
+                        <h3>Состав жюри</h3>
+                    </div>
+                    <div class="jury-grid" id="jury-grid">
+                        <!-- Заполнится через JS -->
+                    </div>
+                </div>
+
+                <!-- Организаторы -->
+                <div class="content-section">
+                    <div class="section-header">
+         
+                        <h3>Организаторы</h3>
+                    </div>
+                    <div class="organizers-list" id="organizers-list">
+                        <!-- Заполнится через JS -->
                     </div>
                 </div>
             </div>
@@ -219,5 +242,162 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        // Данные конкурса
+        const competitionData = {
+            '1': {
+                title: 'Конкурс промышленного дизайна "Инновация-2024"',
+                date: '15 января - 20 февраля 2024',
+                category: 'Промышленный дизайн',
+                participants: 45,
+                prize: '500,000 ₽',
+                status: 'active',
+                description: 'Ежегодный всероссийский конкурс промышленного дизайна, направленный на выявление и поддержку талантливых дизайнеров. В этом году тема конкурса - "Устойчивое развитие и экологичность в промышленном дизайне".',
+                requirements: [
+                    {
+                        title: 'Общие требования',
+                        items: ['Участники должны быть гражданами РФ', 'Возраст от 18 лет', 'Наличие профильного образования или опыта работы']
+                    },
+                    {
+                        title: 'Требования к работам',
+                        items: ['Оригинальность концепции', 'Соответствие теме конкурса', 'Техническая реализуемость', 'Экологичность материалов']
+                    },
+                    {
+                        title: 'Документы',
+                        items: ['Заполненная заявка', 'Портфолио работ', 'Концепция проекта', 'Техническое описание']
+                    }
+                ],
+                timeline: [
+                    {
+                        stage: 'Регистрация',
+                        date: '15 января - 15 февраля',
+                        description: 'Подача заявок и необходимых документов',
+                        active: false
+                    },
+                    {
+                        stage: 'Отборочный тур',
+                        date: '16 - 18 февраля',
+                        description: 'Рассмотрение заявок жюри, отбор финалистов',
+                        active: false
+                    },
+                    {
+                        stage: 'Финальная защита',
+                        date: '19 февраля',
+                        description: 'Презентация проектов перед жюри',
+                        active: true
+                    },
+                    {
+                        stage: 'Объявление результатов',
+                        date: '20 февраля',
+                        description: 'Церемония награждения победителей',
+                        active: false
+                    }
+                ],
+                prizes: [
+                    { place: '1 место', amount: '250,000 ₽', type: 'gold', description: 'Грант на реализацию проекта' },
+                    { place: '2 место', amount: '150,000 ₽', type: 'silver', description: 'Стажировка в ведущей компании' },
+                    { place: '3 место', amount: '100,000 ₽', type: 'bronze', description: 'Профессиональное оборудование' }
+                ],
+                jury: [
+                    { name: 'Иван Петров', role: 'Промышленный дизайнер', avatar: 'ИП' },
+                    { name: 'Мария Сидорова', role: 'Арт-директор', avatar: 'МС' },
+                    { name: 'Алексей Козлов', role: 'Профессор дизайна', avatar: 'АК' },
+                    { name: 'Елена Новикова', role: 'Эксперт по устойчивому развитию', avatar: 'ЕН' }
+                ],
+                organizers: [
+                    { name: 'Союз промышленных дизайнеров России', role: 'Организатор', logo: 'СПД' },
+                    { name: 'Министерство промышленности и торговли', role: 'Партнер', logo: 'МПТ' },
+                    { name: 'Технопарк "Инновация"', role: 'Площадка проведения', logo: 'ТИ' }
+                ]
+            }
+        };
+
+        function loadCompetition() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const competitionId = urlParams.get('id') || '1';
+            const competition = competitionData[competitionId];
+
+            if (competition) {
+                // Основная информация
+                document.getElementById('competition-title').textContent = competition.title;
+                document.getElementById('competition-date').textContent = competition.date;
+                document.getElementById('competition-category').textContent = competition.category;
+                document.getElementById('competition-participants').textContent = `${competition.participants} участников`;
+                document.getElementById('competition-prize').textContent = competition.prize;
+                document.getElementById('competition-description').textContent = competition.description;
+
+                // Статус
+                const statusElement = document.getElementById('competition-status');
+                statusElement.textContent = competition.status === 'active' ? 'Активный' : 'Завершен';
+                statusElement.className = `status-badge status-${competition.status === 'active' ? 'active' : 'completed'}`;
+
+                // Требования
+                const requirementsHtml = competition.requirements.map(req => `
+                    <div class="requirement-item">
+                        <h4>${req.title}</h4>
+                        <ul>
+                            ${req.items.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+                document.getElementById('requirements-grid').innerHTML = requirementsHtml;
+
+                // Таймлайн
+                const timelineHtml = competition.timeline.map(stage => `
+                    <div class="timeline-stage">
+                        <div class="stage-marker ${stage.active ? 'active' : ''}">
+                            ${stage.active ? '✓' : ''}
+                        </div>
+                        <div class="stage-content">
+                            <div class="stage-date">${stage.date}</div>
+                            <div class="stage-title">${stage.stage}</div>
+                            <p>${stage.description}</p>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('competition-timeline').innerHTML = timelineHtml;
+
+                // Призы
+                const prizesHtml = competition.prizes.map(prize => `
+                    <div class="prize-card ${prize.type}">
+                        <div class="prize-place">${prize.place}</div>
+                        <div class="prize-amount">${prize.amount}</div>
+                        <div class="prize-description">${prize.description}</div>
+                    </div>
+                `).join('');
+                document.getElementById('prizes-grid').innerHTML = prizesHtml;
+
+                // Жюри
+                const juryHtml = competition.jury.map(member => `
+                    <div class="jury-member" onclick="location.href='expert-detail.html?id=${member.name.replace(/\s+/g, '_')}'">
+                        <div class="jury-avatar">${member.avatar}</div>
+                        <div class="jury-name">${member.name}</div>
+                        <div class="jury-role">${member.role}</div>
+                    </div>
+                `).join('');
+                document.getElementById('jury-grid').innerHTML = juryHtml;
+
+                // Организаторы
+                const organizersHtml = competition.organizers.map(org => `
+                    <div class="organizer-item">
+                        <div class="organizer-logo">${org.logo}</div>
+                        <div class="organizer-info">
+                            <div class="organizer-name">${org.name}</div>
+                            <div class="organizer-role">${org.role}</div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('organizers-list').innerHTML = organizersHtml;
+            }
+        }
+
+        function registerForCompetition() {
+            showNotification('Регистрация на конкурс открыта! Заполните заявку.', 'success');
+            // Здесь можно добавить логику открытия модального окна с формой
+        }
+
+        // Загружаем данные при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadCompetition);
+    </script>
 </body>
 </html>

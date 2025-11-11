@@ -95,8 +95,28 @@
         <div class="container">
             <div class="object-detail">
                 <div class="object-gallery">
-                    <div class="main-image" style="height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 20px;">
-                        <span>Загрузка изображения...</span>
+                    <div class="gallery-main">
+                        <div class="main-media" id="mainMedia">
+                            <div class="media-placeholder">
+                                <span>Загрузка медиа...</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Навигация галереи -->
+                        <div class="gallery-nav">
+                            <button class="nav-btn prev" onclick="galleryPrev()">❮</button>
+                            <button class="nav-btn next" onclick="galleryNext()">❯</button>
+                        </div>
+                        
+                        <!-- Счетчик медиа -->
+                        <div class="gallery-counter">
+                            <span id="currentMedia">1</span> / <span id="totalMedia">0</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Миниатюры -->
+                    <div class="gallery-thumbnails" id="galleryThumbnails">
+                        <!-- Миниатюры будут добавляться через JavaScript -->
                     </div>
                 </div>
                 
