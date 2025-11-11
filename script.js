@@ -208,7 +208,9 @@ function loadObjectData() {
                 materials: 'Пластик, Металл',
                 category: 'Электроника'
             },
-            images: ['../icons/zenit.jpg']
+            media: [
+                { type: 'image', url: '../icons/zenit.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' }
+            ]
         },
         '2': {
             title: 'Холодильник "ЗИЛ-Москва"',
@@ -220,7 +222,9 @@ function loadObjectData() {
                 materials: 'Металл, Пластик, Резина',
                 category: 'Бытовая техника'
             },
-            images: ['../icons/zil_moscow.jpg']
+            media: [
+                { type: 'image', url: '../icons/zil_moscow.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' }
+                ]
         },
         '3': {
             title: '"Москвич-412"',
@@ -232,7 +236,9 @@ function loadObjectData() {
                 materials: 'Металл, Стекло, Пластик',
                 category: 'Автомобили'
             },
-            images: ['../icons/moskvich.jpg']
+            media: [
+                { type: 'image', url: '../icons/moskvich.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
         },
         '4': {
             title: 'Телевизор "Рекорд В-312"',
@@ -244,7 +250,9 @@ function loadObjectData() {
                 materials: 'Пластик, Стекло, Металл',
                 category: 'Электроника'
             },
-            images: ['../icons/teliv_rek.jpg']
+            media: [
+                { type: 'image', url: '../icons/teliv_rek.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
         },
         '5': {
             title: 'Фотоаппарат "ФЭД-2"',
@@ -256,7 +264,10 @@ function loadObjectData() {
                 materials: 'Металл, Стекло, Кожа',
                 category: 'Фототехника'
             },
-            images: ['../icons/fed2.jpg']
+            media: [
+                { type: 'image', url: '../icons/fed2.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
+            
         },
         '6': {
             title: 'Фотоаппарат "Смена-8М"',
@@ -268,7 +279,10 @@ function loadObjectData() {
                 materials: 'Пластик, Стекло',
                 category: 'Фототехника'
             },
-            images: ['../icons/smena8m.jpg']
+            media: [
+                { type: 'image', url: '../icons/smena8m.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
+            
         },
         '7': {
             title: 'Вспышка "Фотон"',
@@ -280,7 +294,10 @@ function loadObjectData() {
                 materials: 'Пластик, Металл',
                 category: 'Фотовспышки'
             },
-            images: ['../icons/foton.jpg']
+            media: [
+                { type: 'image', url: '../icons/foton.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
+            
         },
         '8': {
             title: 'Радиола "Вега-108"',
@@ -292,7 +309,10 @@ function loadObjectData() {
                 materials: 'Дерево, Пластик, Металл',
                 category: 'Радиотехника'
             },
-            images: ['../icons/vega108.jpg']
+            media: [
+                { type: 'image', url: '../icons/vega108.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
+            
         },
         '9': {
             title: 'Магнитофон "Весна-202"',
@@ -304,7 +324,110 @@ function loadObjectData() {
                 materials: 'Пластик, Металл',
                 category: 'Аудиотехника'
             },
-            images: ['../icons/vesna.jpg']
+            media: [
+                { type: 'image', url: '../icons/vesna.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                ]
+           
+        },
+        '10': {
+            title: 'Фотоаппарат "Киев-4"',
+            subtitle: '1960 • Киевский завод «Арсенал»',
+            description: 'Дальномерный фотоаппарат, основанный на немецком Contax II. Выпускался на Киевском заводе «Арсенал» с 1957 по 1980 год. Отличался высоким качеством сборки и точной механикой.',
+            specs: {
+                production: '1957-1980',
+                manufacturer: 'Киевский завод «Арсенал»',
+                materials: 'Металл, Стекло, Кожа',
+                category: 'Фототехника'
+            },
+            media: [
+                { type: 'image', url: '../icons/kiev.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev1.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev2.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev3.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev4.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev5.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev6.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev7.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'image', url: '../icons/kiev8.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
+                { type: 'video', url: '../icons/zen.mov', title: 'Обзор фотоаппарата Зенит-Е'},
+                { type: 'video', url: '../icons/zen2.mov', title: 'Обзор фотоаппарата Зенит-Е' },
+                { type: 'video', url: '../icons/zen3.mov', title: 'Обзор фотоаппарата Зенит-Е' }
+            ]
+        },
+        '11': {
+            title: 'Будильник "Час-2"',
+            subtitle: '1965 • Московский часовой завод',
+            description: 'Механический будильник с маятниковым механизмом. Производился на Московском часовом заводе. Отличался громким звонком и надежностью.',
+            specs: {
+                production: '1960-1970',
+                manufacturer: 'Московский часовой завод',
+                materials: 'Пластик, Металл, Стекло',
+                category: 'Часы'
+            },
+            media: [
+                { type: 'image', url: '../icons/watch.jpg', title: 'Будильник Час-2' },
+                { type: 'image', url: '../icons/watch1.jpg', title: 'Будильник Час-2' },
+                { type: 'image', url: '../icons/watch2.jpg', title: 'Будильник Час-2' },
+                { type: 'video', url: '../icons/time.mov', title: 'Обзор фотоаппарата Зенит-Е'},
+            ]
+        },
+        '12': {
+            title: 'Нивелир Н3',
+            subtitle: '1972 • Уральский оптико-механический завод',
+            description: 'Технический нивелир для геодезических работ. Использовался в строительстве, картографии и при проведении изыскательских работ.',
+            specs: {
+                production: '1970-1980',
+                manufacturer: 'Уральский оптико-механический завод',
+                materials: 'Металл, Стекло, Пластик',
+                category: 'Инструменты'
+            },
+            media: [
+                { type: 'image', url: '../icons/nevelir.jpg', title: 'Нивелир Н3' },
+                { type: 'image', url: '../icons/nevelir1.jpg', title: 'Нивелир Н3' },
+                { type: 'image', url: '../icons/nevelir2.jpg', title: 'Нивелир Н3' },
+                { type: 'image', url: '../icons/nevelir3.jpg', title: 'Нивелир Н3' },
+                { type: 'image', url: '../icons/nevelir4.jpg', title: 'Нивелир Н3' },
+                { type: 'image', url: '../icons/nevelir5.jpg', title: 'Нивелир Н3' },
+            ]
+        },
+        '13': {
+            title: 'Фотоаппарат "Любитель-2"',
+            subtitle: '1955 • ЛОМО',
+            description: 'Двухобъективный зеркальный фотоаппарат (TLR) для любительской съемки. Производился на Ленинградском оптико-механическом объединении. Простой в использовании и доступный по цене.',
+            specs: {
+                production: '1955-1980',
+                manufacturer: 'ЛОМО (Ленинградское оптико-механическое объединение)',
+                materials: 'Пластик, Стекло, Металл',
+                category: 'Фототехника'
+            },
+            media: [
+                { type: 'image', url: '../icons/lubitel.jpg', title: 'Фотоаппарат Любитель-2' },
+                { type: 'image', url: '../icons/lubitel1.jpg', title: 'Фотоаппарат Любитель-2' },
+                { type: 'image', url: '../icons/lubitel2.jpg', title: 'Фотоаппарат Любитель-2' },
+                { type: 'image', url: '../icons/lubitel3.jpg', title: 'Фотоаппарат Любитель-2' },
+            ]
+        },
+        '14': {
+            title: 'Телефонный аппарат СТА-2',
+            subtitle: '1965 • Завод "Красная Заря"',
+            description: 'Стационарный телефонный аппарат с дисковым номеронабирателем. Выпускался в различных цветовых вариантах, включая ярко-желтый. Характерная особенность - прозрачная пластиковая вставка для записи номера.',
+            specs: {
+                production: '1960-1970',
+                manufacturer: 'Завод "Красная Заря"',
+                materials: 'Пластик, Металл',
+                category: 'Телефон'
+            },
+            media: [
+                { type: 'image', url: '../icons/cta.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta1.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta2.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta3.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta4.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta5.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta6.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'image', url: '../icons/cta7.jpg', title: 'Телефонный аппарат СТА-2' },
+                { type: 'video', url: '../icons/teleph.mov', title: 'Обзор фотоаппарата Зенит-Е'},
+            ]
         },
     };
     
@@ -340,14 +463,18 @@ function updateObjectPage() {
         specItems[3].innerHTML = `<strong>Категория:</strong> ${objectData.specs.category}`;
     }
     
-    // Обновляем основное изображение (если есть)
-    const mainImage = document.querySelector('.main-image');
-    if (mainImage && objectData.images && objectData.images[0]) {
-        mainImage.innerHTML = `<img src="${objectData.images[0]}" alt="${objectData.title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`;
+    // Инициализируем галерею
+    if (objectData.media) {
+        initGallery(objectData.media);
     }
     
     console.log('Данные объекта загружены:', objectData.title);
 }
+
+// ДОБАВЬТЕ ГОЛОБАЛЬНЫЕ ФУНКЦИИ ДЛЯ КНОПОК
+window.galleryNext = galleryNext;
+window.galleryPrev = galleryPrev;
+window.switchMedia = switchMedia;
 
 function shareObject() {
     const currentUrl = window.location.href;
@@ -502,6 +629,26 @@ function initFavorites() {
     });
 }
 
+// УПРАВЛЕНИЕ ГАЛЕРЕЕЙ С КЛАВИАТУРЫ
+function initGalleryKeyboard() {
+    document.addEventListener('keydown', function(e) {
+        if (!document.querySelector('.object-detail')) return;
+        
+        switch(e.key) {
+            case 'ArrowLeft':
+                galleryPrev();
+                break;
+            case 'ArrowRight':
+                galleryNext();
+                break;
+            case 'Escape':
+                // Можно добавить закрытие полноэкранного режима
+                break;
+        }
+    });
+}
+
+
 // ОСНОВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ
 function initializeAll() {
     normalizeHeaderHeight();
@@ -519,6 +666,7 @@ function initializeAll() {
     initAllAnimations();
     initCarousel();
     initFavorites();
+    initGalleryKeyboard();
     
     console.log('Все функции инициализированы');
 }
@@ -605,6 +753,166 @@ function initInteractiveElements() {
             }
         });
     });
+}
+
+// ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ДЛЯ ГАЛЕРЕИ
+let currentMediaIndex = 0;
+let objectMedia = [];
+
+// ФУНКЦИЯ ДЛЯ ИНИЦИАЛИЗАЦИИ ГАЛЕРЕИ
+function initGallery(mediaData) {
+    objectMedia = mediaData;
+    currentMediaIndex = 0;
+    
+    const totalMediaElement = document.getElementById('totalMedia');
+    const currentMediaElement = document.getElementById('currentMedia');
+    
+    if (totalMediaElement) {
+        totalMediaElement.textContent = objectMedia.length;
+    }
+    
+    if (objectMedia.length > 0) {
+        renderMedia(currentMediaIndex);
+        renderThumbnails();
+        updateGalleryCounter();
+    } else {
+        showMediaPlaceholder();
+    }
+}
+
+// ФУНКЦИЯ ДЛЯ ОТОБРАЖЕНИЯ МЕДИА
+function renderMedia(index) {
+    const mainMedia = document.getElementById('mainMedia');
+    const mediaItem = objectMedia[index];
+    
+    if (!mainMedia || !mediaItem) return;
+    
+    mainMedia.innerHTML = '';
+    
+    if (mediaItem.type === 'image') {
+        const imgElement = document.createElement('img');
+        imgElement.src = mediaItem.url;
+        imgElement.alt = mediaItem.title || 'Изображение объекта';
+        imgElement.className = 'media-image';
+        mainMedia.appendChild(imgElement);
+    } else if (mediaItem.type === 'video') {
+        const videoContainer = document.createElement('div');
+        videoContainer.className = 'media-item active';
+        
+        const videoElement = document.createElement('video');
+        videoElement.src = mediaItem.url;
+        videoElement.controls = true;
+        videoElement.className = 'media-video';
+        
+        const videoIcon = document.createElement('div');
+        videoIcon.className = 'video-icon';
+        videoIcon.innerHTML = '🎥 Видео';
+        
+        videoContainer.appendChild(videoElement);
+        videoContainer.appendChild(videoIcon);
+        mainMedia.appendChild(videoContainer);
+    } else if (mediaItem.type === 'youtube') {
+        const videoContainer = document.createElement('div');
+        videoContainer.className = 'media-item active';
+        videoContainer.style.position = 'relative';
+        videoContainer.style.width = '100%';
+        videoContainer.style.height = '100%';
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${mediaItem.videoId}`;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        
+        const videoIcon = document.createElement('div');
+        videoIcon.className = 'video-icon';
+        videoIcon.innerHTML = '📺 YouTube';
+        
+        videoContainer.appendChild(iframe);
+        videoContainer.appendChild(videoIcon);
+        mainMedia.appendChild(videoContainer);
+    }
+}
+
+// ФУНКЦИЯ ДЛЯ ОТОБРАЖЕНИЯ МИНИАТЮР
+function renderThumbnails() {
+    const thumbnailsContainer = document.getElementById('galleryThumbnails');
+    if (!thumbnailsContainer) return;
+    
+    thumbnailsContainer.innerHTML = '';
+    
+    objectMedia.forEach((media, index) => {
+        const thumbnail = document.createElement('div');
+        thumbnail.className = `thumbnail ${index === currentMediaIndex ? 'active' : ''} ${media.type !== 'image' ? 'video' : ''}`;
+        thumbnail.onclick = () => switchMedia(index);
+        
+        if (media.type === 'image') {
+            const img = document.createElement('img');
+            img.src = media.url;
+            img.alt = `Миниатюра ${index + 1}`;
+            thumbnail.appendChild(img);
+        } else {
+            // Для видео показываем первую картинку или плейсхолдер
+            const placeholder = document.createElement('div');
+            placeholder.style.width = '100%';
+            placeholder.style.height = '100%';
+            placeholder.style.background = 'linear-gradient(135deg, var(--orange) 0%, var(--blue) 100%)';
+            placeholder.style.display = 'flex';
+            placeholder.style.alignItems = 'center';
+            placeholder.style.justifyContent = 'center';
+            placeholder.style.color = 'white';
+            placeholder.style.fontSize = '12px';
+            placeholder.innerHTML = media.type === 'youtube' ? 'YouTube' : 'Видео';
+            thumbnail.appendChild(placeholder);
+        }
+        
+        thumbnailsContainer.appendChild(thumbnail);
+    });
+}
+
+// ФУНКЦИЯ ДЛЯ ПЕРЕКЛЮЧЕНИЯ МЕДИА
+function switchMedia(index) {
+    if (index < 0 || index >= objectMedia.length) return;
+    
+    currentMediaIndex = index;
+    renderMedia(currentMediaIndex);
+    renderThumbnails();
+    updateGalleryCounter();
+}
+
+// ФУНКЦИИ НАВИГАЦИИ
+function galleryNext() {
+    if (currentMediaIndex < objectMedia.length - 1) {
+        switchMedia(currentMediaIndex + 1);
+    } else {
+        switchMedia(0); // Циклическая навигация
+    }
+}
+
+function galleryPrev() {
+    if (currentMediaIndex > 0) {
+        switchMedia(currentMediaIndex - 1);
+    } else {
+        switchMedia(objectMedia.length - 1); // Циклическая навигация
+    }
+}
+
+// ОБНОВЛЕНИЕ СЧЕТЧИКА
+function updateGalleryCounter() {
+    const currentElement = document.getElementById('currentMedia');
+    if (currentElement) {
+        currentElement.textContent = currentMediaIndex + 1;
+    }
+}
+
+// ПОКАЗ ПЛЕЙСХОЛДЕРА
+function showMediaPlaceholder() {
+    const mainMedia = document.getElementById('mainMedia');
+    if (mainMedia) {
+        mainMedia.innerHTML = '<div class="media-placeholder"><span>Нет доступных медиа материалов</span></div>';
+    }
 }
 
 // ИНИЦИАЛИЗАЦИЯ ПЕРЕКЛЮЧАТЕЛЯ ЯЗЫКА

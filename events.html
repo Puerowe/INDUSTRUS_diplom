@@ -120,10 +120,12 @@
                 <button class="filter-btn" onclick="filterEvents('exhibition')">Выставки</button>
                 <button class="filter-btn" onclick="filterEvents('competition')">Конкурсы</button>
                 <button class="filter-btn" onclick="filterEvents('conference')">Конференции</button>
+                <button class="filter-btn" onclick="location.href='pages/events-young-exhibition.html'">Выставки молодых специалистов</button>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card webinar-event" onclick="location.href='pages/event-detail.html?type=webinar&id=1'">
+                    <div class="event-badge webinar soon">Скоро</div>
                     <div class="event-badge webinar">Вебинар</div>
                     <div class="feature-icon">
                         <img src="icons/vebinar.jpg" alt="Инновации в автомобильном дизайне" class="feature-image">
@@ -315,14 +317,35 @@
         
             filterBtns.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-        
+    
+            // Анимация карточек
             cards.forEach(card => {
-                if (filter === 'all' || card.classList.contains(filter + '-event')) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.pointerEvents = 'none'; // блокируем клики во время анимации
             });
+    
+            // Затем показываем только нужные
+            setTimeout(() => {
+                cards.forEach((card, index) => {
+                    const shouldShow = filter === 'all' || card.classList.contains(filter + '-event');
+            
+                    if (shouldShow) {
+                        card.style.display = 'block';
+                
+                        // Анимация появления с задержкой
+                        setTimeout(() => {
+                            card.style.transition = 'all 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                            card.style.pointerEvents = 'auto';
+                        }, index * 80); // небольшая задержка для эффекта каскада
+                    } else {
+                        card.style.display = 'none';
+                        card.style.pointerEvents = 'auto';
+                    }
+                });
+            }, 50); // небольшая задержка перед показом
         }
 
         function showEventForm() {
