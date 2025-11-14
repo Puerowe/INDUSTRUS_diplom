@@ -133,6 +133,12 @@
         .young-author-link:hover {
             color: #e55a2b;
         }
+        .young-work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Сначала скрываем, пока не загрузится */
+        }
     </style>
 </head>
 <body>
@@ -277,7 +283,7 @@
                 id: 1,
                 title: "Эко-концепт умного города",
                 description: "Инновационная концепция устойчивого городского развития с использованием возобновляемых материалов и умных технологий",
-                image: "../images/young-work1.jpg",
+                image: "../icons/eko.jpg",
                 author: {
                     id: 3,
                     name: "Алексей Ковалев",
@@ -289,7 +295,7 @@
                 id: 2,
                 title: "Модульная мебель для малогабаритных пространств",
                 description: "Трансформируемая мебельная система для современных городских квартир",
-                image: "../images/young-work2.jpg",
+                image: "../icons/modul.png",
                 author: {
                     id: 4,
                     name: "Екатерина Новикова",
@@ -301,7 +307,7 @@
                 id: 3,
                 title: "Бионический дизайн бытовой техники",
                 description: "Вдохновленный природой подход к проектированию кухонной техники",
-                image: "../images/young-work3.jpg",
+                image: "../icons/bio.jpg",
                 author: {
                     id: 5,
                     name: "Дмитрий Соколов",
@@ -313,7 +319,7 @@
                 id: 4,
                 title: "Интерактивная образовательная платформа",
                 description: "Дизайн интерфейса для интерактивного обучения промышленному дизайну",
-                image: "../images/young-work4.jpg",
+                image: "../icons/inter.jpg",
                 author: {
                     id: 6,
                     name: "Анна Петрова",
@@ -331,7 +337,9 @@
             const worksHTML = youngWorksData.map(work => `
                 <div class="young-work-card" onclick="viewWorkDetail(${work.id})">
                     <div class="young-work-image">
-                        <img src="${work.image}" alt="${work.title}" onerror="this.style.display='none';">
+                        <img src="${work.image}" alt="${work.title}" 
+                             onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="image-placeholder">
                             ${work.title}
                         </div>
@@ -361,7 +369,7 @@
             if (work) {
                 // В реальном приложении: location.href = `work-detail.html?id=${workId}`;
                 console.log(`Открывается страница работы: "${work.title}"`);
-                alert(`В реальном приложении здесь открылась бы страница работы: "${work.title}"`);
+                alert(`Скоро здесь будет страница работы: "${work.title}"`);
             }
         }
 
