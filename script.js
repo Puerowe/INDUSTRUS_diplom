@@ -348,9 +348,9 @@ function loadObjectData() {
                 { type: 'image', url: '../icons/kiev6.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
                 { type: 'image', url: '../icons/kiev7.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
                 { type: 'image', url: '../icons/kiev8.jpg', title: 'Фотоаппарат Зенит-Е - вид спереди' },
-                { type: 'video', url: '../icons/zen.mov', title: 'Обзор фотоаппарата Зенит-Е'},
-                { type: 'video', url: '../icons/zen2.mov', title: 'Обзор фотоаппарата Зенит-Е' },
-                { type: 'video', url: '../icons/zen3.mov', title: 'Обзор фотоаппарата Зенит-Е' }
+                { type: 'video', url: '../icons/zen.mp4', title: 'Обзор фотоаппарата Зенит-Е'},
+                { type: 'video', url: '../icons/zen2.mp4', title: 'Обзор фотоаппарата Зенит-Е' },
+                { type: 'video', url: '../icons/zen3.mp4', title: 'Обзор фотоаппарата Зенит-Е' }
             ]
         },
         '11': {
@@ -367,7 +367,7 @@ function loadObjectData() {
                 { type: 'image', url: '../icons/watch.jpg', title: 'Будильник Час-2' },
                 { type: 'image', url: '../icons/watch1.jpg', title: 'Будильник Час-2' },
                 { type: 'image', url: '../icons/watch2.jpg', title: 'Будильник Час-2' },
-                { type: 'video', url: '../icons/time.mov', title: 'Обзор фотоаппарата Зенит-Е'},
+                { type: 'video', url: '../icons/time.mp4', title: 'Обзор фотоаппарата Зенит-Е'},
             ]
         },
         '12': {
@@ -425,7 +425,7 @@ function loadObjectData() {
                 { type: 'image', url: '../icons/cta5.jpg', title: 'Телефонный аппарат СТА-2' },
                 { type: 'image', url: '../icons/cta6.jpg', title: 'Телефонный аппарат СТА-2' },
                 { type: 'image', url: '../icons/cta7.jpg', title: 'Телефонный аппарат СТА-2' },
-                { type: 'video', url: '../icons/teleph.mov', title: 'Обзор фотоаппарата Зенит-Е'},
+                { type: 'video', url: '../icons/teleph.mp4', title: 'Обзор фотоаппарата Зенит-Е'},
             ]
         },
     };
