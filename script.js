@@ -793,7 +793,9 @@ function renderMedia(index) {
         imgElement.src = mediaItem.url;
         imgElement.alt = mediaItem.title || 'Изображение объекта';
         imgElement.className = 'media-image';
+        imgElement.loading = 'lazy';
         mainMedia.appendChild(imgElement);
+        
     } else if (mediaItem.type === 'video') {
         const videoContainer = document.createElement('div');
         videoContainer.className = 'media-item active';
@@ -802,6 +804,31 @@ function renderMedia(index) {
         videoElement.src = mediaItem.url;
         videoElement.controls = true;
         videoElement.className = 'media-video';
+        videoElement.preload = 'metadata';
+        videoElement.playsinline = true;
+        videoElement.webkitPlaysinline = true;
+        
+        // Добавляем поддержку разных форматов
+        const sourceElement = document.createElement('source');
+        sourceElement.src = mediaItem.url;
+        
+        // Определяем тип видео по расширению
+        if (mediaItem.url.toLowerCase().endsWith('.mov')) {
+            sourceElement.type = 'video/quicktime';
+        } else if (mediaItem.url.toLowerCase().endsWith('.mp4')) {
+            sourceElement.type = 'video/mp4';
+        } else if (mediaItem.url.toLowerCase().endsWith('.webm')) {
+            sourceElement.type = 'video/webm';
+        }
+        
+        videoElement.appendChild(sourceElement);
+        
+        // Сообщение для браузеров, которые не поддерживают видео
+        const fallbackMessage = document.createElement('p');
+        fallbackMessage.textContent = 'Ваш браузер не поддерживает воспроизведение видео.';
+        fallbackMessage.style.padding = '20px';
+        fallbackMessage.style.textAlign = 'center';
+        videoElement.appendChild(fallbackMessage);
         
         const videoIcon = document.createElement('div');
         videoIcon.className = 'video-icon';
@@ -810,6 +837,9 @@ function renderMedia(index) {
         videoContainer.appendChild(videoElement);
         videoContainer.appendChild(videoIcon);
         mainMedia.appendChild(videoContainer);
+        
+        // Пытаемся загрузить видео
+        videoElement.load();
     } else if (mediaItem.type === 'youtube') {
         const videoContainer = document.createElement('div');
         videoContainer.className = 'media-item active';
